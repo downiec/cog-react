@@ -6,11 +6,34 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode. This will only show the Cog-React front-end
+as it looks and behaves outside of COG.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+You will also see any lint errors in the console.<br>
+
+### `npm run COG`
+
+Starts up a forked instance of the COG Django application. Then it will copy over static files from this Cog-React
+front-end application and place them in the appropriate directory in order to view the react front-end as it would
+appear within the COG application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
+
+#### `Important!`
+
+When first setting up, you must make sure to update the COG_start.sh script to use the correct path to your local COG directory. Line 6 in the script:
+COG_CONFIG_DIR=~/Desktop/COG_devel/COG/
+Needs to be changed to match the path to your COG repository.
+The COG fork used for development: https://github.com/downiec/COG
+
+
+#### Note:
+If you are routed to the login screen, you can login by:
+* Click the button near the ‘OpenID’ label.
+* Select ‘LLNL Test Dev IDP’ from the drop down.
+* Click ‘login’
+* Enter username and password.
+* Click ‘SUBMIT’
 
 ### `npm test`
 

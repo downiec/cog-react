@@ -10,8 +10,6 @@ import {
 } from "./dataProvider";
 import {
   Button,
-  ListGroup,
-  ListGroupItem,
   PopoverBody,
   PopoverHeader,
   UncontrolledCollapse,
