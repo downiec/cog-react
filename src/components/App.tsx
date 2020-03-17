@@ -1,27 +1,28 @@
 import * as React from "react";
 import bindDecorator from "bind-decorator";
-import { Col, Container, Label, Row } from "reactstrap";
+import { Button, Col, Container, Label, Row } from "reactstrap";
 import { ValueType } from "react-select/src/types";
-import Selector from "./Selector";
+import { Selector } from "./Selector";
 import {
-  SelectorOption,
+  applyFilters,
   createOptionList,
   ExperimentInfo,
-  ModelInfo,
-  applyFilters,
   filterByActivity,
-  getOptionListValues,
   filterByFrequency,
-  VariableGroup,
-  filterByRealm
+  filterByRealm,
+  getOptionListData,
+  getOptionListValues,
+  ModelInfo,
+  SelectorOption,
+  VariableGroup
 } from "../data/dataProvider";
 
 import {
   activityData,
   experimentData,
   frequencyData,
-  realmData,
-  modelData
+  modelData,
+  realmData
 } from "../data/output/appdata";
 import {
   colorByActivity,
@@ -30,6 +31,7 @@ import {
   colorShadesGreen
 } from "../data/dataRenderer";
 import { variableData } from "../data/output/variableData";
+import { getCookie } from "../utilities/mainUtils";
 
 const labelStyle: React.CSSProperties = {
   fontWeight: "bold",
@@ -37,116 +39,194 @@ const labelStyle: React.CSSProperties = {
 };
 
 export interface IAppProps {
-  //activityList: { [id: string]: string };
-  //experimentList: { [id: string]: ExperimentInfo };
+  post_url: string;
+  user_info: any;
+  activities: any;
+  experiments: any;
+  token: string;
 }
 
 export interface IAppState {
-  activities: ValueType<SelectorOption<string>>;
-  experiments: ValueType<SelectorOption<ExperimentInfo>>;
-  frequencies: ValueType<SelectorOption<string>>;
-  realms: ValueType<SelectorOption<string>>;
-  variables: ValueType<SelectorOption<VariableGroup>>;
-  models: ValueType<SelectorOption<ModelInfo>>;
-  selectedActivities: string[];
-  SelectedExperiments: ExperimentInfo[];
-  selectedFrequencies: string[];
-  selectedRealms: string[];
-  selectedVariables: string[];
-  selectedModels: ModelInfo[];
+  filteredActivities: ValueType<SelectorOption<string>>;
+  filteredExperiments: ValueType<SelectorOption<ExperimentInfo>>;
+  filteredFrequencies: ValueType<SelectorOption<string>>;
+  filteredRealms: ValueType<SelectorOption<string>>;
+  filteredVariables: ValueType<SelectorOption<VariableGroup>>;
+  filteredModels: ValueType<SelectorOption<ModelInfo>>;
+  selectedActivities: ValueType<SelectorOption<string>>;
+  selectedExperiments: ValueType<SelectorOption<ExperimentInfo>>;
+  selectedFrequencies: ValueType<SelectorOption<string>>;
+  selectedRealms: ValueType<SelectorOption<string>>;
+  selectedVariables: ValueType<SelectorOption<VariableGroup>>;
+  selectedModels: ValueType<SelectorOption<ModelInfo>>;
+  selectedActivityIds: string[];
+  selectedExperimentInfo: ExperimentInfo[];
+  selectedFrequencyNames: string[];
+  selectedRealmNames: string[];
+  selectedVariableNames: string[];
+  selectedModelInfo: ModelInfo[];
 }
 
 export default class App extends React.Component<IAppProps, IAppState> {
-  allActivities = createOptionList(activityData, colorByName);
-  allExperiments = createOptionList<ExperimentInfo>(
+  public allActivities = createOptionList(activityData, colorByName);
+  public allExperiments = createOptionList<ExperimentInfo>(
     experimentData,
     colorByActivity
   );
-  allFrequencies = createOptionList(frequencyData, colorShadesBlue);
-  allRealms = createOptionList(realmData, colorShadesGreen);
-  allVariables = createOptionList<VariableGroup>(variableData, colorByName);
-  allModels = createOptionList<ModelInfo>(modelData, colorByName);
+  public allFrequencies = createOptionList(frequencyData, colorShadesBlue);
+  public allRealms = createOptionList(realmData, colorShadesGreen);
+  public allVariables = createOptionList<VariableGroup>(
+    variableData,
+    colorByName
+  );
+  public allModels = createOptionList<ModelInfo>(modelData, colorByName);
 
   constructor(props: IAppProps) {
     super(props);
     this.state = {
-      activities: this.allActivities,
-      experiments: this.allExperiments,
-      frequencies: this.allFrequencies,
-      realms: this.allRealms,
-      variables: this.allVariables,
-      models: this.allModels,
-      selectedActivities: [],
-      SelectedExperiments: [],
-      selectedFrequencies: [],
-      selectedRealms: [],
-      selectedVariables: [],
-      selectedModels: []
+      filteredActivities: this.allActivities,
+      filteredExperiments: this.allExperiments,
+      filteredFrequencies: this.allFrequencies,
+      filteredRealms: this.allRealms,
+      filteredVariables: this.allVariables,
+      filteredModels: this.allModels,
+      selectedActivities: null,
+      selectedExperiments: null,
+      selectedFrequencies: null,
+      selectedRealms: null,
+      selectedVariables: null,
+      selectedModels: null,
+      selectedActivityIds: [],
+      selectedExperimentInfo: [],
+      selectedFrequencyNames: [],
+      selectedRealmNames: [],
+      selectedVariableNames: [],
+      selectedModelInfo: []
     };
   }
 
   @bindDecorator
-  public activityHandler(
+  public clearAll(): void {
+    this.setState({
+      filteredActivities: this.allActivities,
+      filteredExperiments: this.allExperiments,
+      filteredFrequencies: this.allFrequencies,
+      filteredRealms: this.allRealms,
+      filteredVariables: this.allVariables,
+      filteredModels: this.allModels,
+      selectedActivities: null,
+      selectedExperiments: null,
+      selectedFrequencies: null,
+      selectedRealms: null,
+      selectedVariables: null,
+      selectedModels: null,
+      selectedActivityIds: [],
+      selectedExperimentInfo: [],
+      selectedFrequencyNames: [],
+      selectedRealmNames: [],
+      selectedVariableNames: [],
+      selectedModelInfo: []
+    });
+  }
+
+  @bindDecorator
+  public async submitSelections(): Promise<void> {
+    // Generate the request with form data
+    const request: Request = this.generateRequest();
+    console.log(request.body);
+    // Send request and await for response
+    const success = await this.sendRequest(request);
+    // Clear form
+    if (success) {
+      this.clearAll();
+    }
+  }
+
+  @bindDecorator
+  public async activityHandler(
     activitySelection: ValueType<SelectorOption<string>>
-  ): void {
-    let newSelection: string[] = getOptionListValues(activitySelection);
+  ): Promise<void> {
+    const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
       this.allExperiments,
       [filterByActivity],
       newSelection
     );
     this.setState({
-      selectedActivities: newSelection,
-      experiments: filteredExperiments
+      selectedActivities: activitySelection,
+      selectedActivityIds: newSelection,
+      filteredExperiments
     });
   }
 
   @bindDecorator
-  public experimentHandler(
+  public async experimentHandler(
     experimentSelection: ValueType<SelectorOption<any>>
-  ): void {}
+  ): Promise<void> {
+    const newSelection: ExperimentInfo[] = getOptionListData(
+      experimentSelection
+    );
+    this.setState({
+      selectedExperiments: experimentSelection,
+      selectedExperimentInfo: newSelection
+    });
+  }
 
   @bindDecorator
-  public frequencyHandler(
+  public async frequencyHandler(
     frequencySelection: ValueType<SelectorOption<any>>
-  ): void {
-    let newSelection: string[] = getOptionListValues(frequencySelection);
+  ): Promise<void> {
+    const newSelection: string[] = getOptionListValues(frequencySelection);
     const filteredVariables = applyFilters<VariableGroup>(
       this.allVariables,
       [filterByFrequency, filterByRealm],
       newSelection
     );
     this.setState({
-      selectedFrequencies: newSelection,
-      variables: filteredVariables
+      selectedFrequencies: frequencySelection,
+      selectedFrequencyNames: newSelection,
+      filteredVariables
     });
   }
 
   @bindDecorator
-  public realmHandler(
-    frequencySelection: ValueType<SelectorOption<any>>
-  ): void {
-    let newSelection: string[] = getOptionListValues(frequencySelection);
+  public async realmHandler(
+    realmSelection: ValueType<SelectorOption<any>>
+  ): Promise<void> {
+    const newSelection: string[] = getOptionListValues(realmSelection);
     const filteredVariables = applyFilters<VariableGroup>(
       this.allVariables,
       [filterByFrequency, filterByRealm],
       newSelection
     );
     this.setState({
-      selectedFrequencies: newSelection,
-      variables: filteredVariables
+      selectedRealms: realmSelection,
+      selectedRealmNames: newSelection,
+      filteredVariables
     });
   }
 
   @bindDecorator
-  public variableHandler(
-    frequencySelection: ValueType<SelectorOption<any>>
-  ): void {}
+  public async variableHandler(
+    variableSelection: ValueType<SelectorOption<any>>
+  ): Promise<void> {
+    const newSelection: string[] = getOptionListValues(variableSelection);
+    this.setState({
+      selectedVariables: variableSelection,
+      selectedVariableNames: newSelection
+    });
+  }
 
   @bindDecorator
-  public modelHandler(
+  public async modelHandler(
     modelSelection: ValueType<SelectorOption<any>>
-  ): void {}
+  ): Promise<void> {
+    const newSelection: ModelInfo[] = getOptionListData(modelSelection);
+    this.setState({
+      selectedModels: modelSelection,
+      selectedModelInfo: newSelection
+    });
+  }
 
   public render(): JSX.Element {
     return (
@@ -164,12 +244,13 @@ export default class App extends React.Component<IAppProps, IAppState> {
           </Col>
           <Col style={{ textAlign: "left", padding: 0 }} xs="9">
             <Selector
-              options={this.state.activities}
+              options={this.state.filteredActivities}
+              selectedOptions={this.state.selectedActivities}
               selectionHandler={this.activityHandler}
             />
           </Col>
         </Row>
-        {this.state.experiments && (
+        {this.state.filteredExperiments && (
           <Row>
             <Col style={{ textAlign: "right", padding: 0 }} xs="3">
               <Label style={labelStyle} className="mr-sm-2">
@@ -178,7 +259,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
             </Col>
             <Col style={{ textAlign: "left", padding: 0 }} xs="9">
               <Selector
-                options={this.state.experiments}
+                options={this.state.filteredExperiments}
+                selectedOptions={this.state.selectedExperiments}
                 selectionHandler={this.experimentHandler}
               />
             </Col>
@@ -196,7 +278,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
           </Col>
           <Col style={{ textAlign: "left", padding: 0 }} xs="9">
             <Selector
-              options={this.state.frequencies}
+              options={this.state.filteredFrequencies}
+              selectedOptions={this.state.selectedFrequencies}
               selectionHandler={this.frequencyHandler}
             />
           </Col>
@@ -209,7 +292,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
           </Col>
           <Col style={{ textAlign: "left", padding: 0 }} xs="9">
             <Selector
-              options={this.state.realms}
+              options={this.state.filteredRealms}
+              selectedOptions={this.state.selectedRealms}
               selectionHandler={this.realmHandler}
             />
           </Col>
@@ -222,7 +306,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
           </Col>
           <Col style={{ textAlign: "left", padding: 0 }} xs="9">
             <Selector
-              options={this.state.variables}
+              options={this.state.filteredVariables}
+              selectedOptions={this.state.selectedVariables}
               selectionHandler={this.variableHandler}
             />
           </Col>
@@ -239,12 +324,64 @@ export default class App extends React.Component<IAppProps, IAppState> {
           </Col>
           <Col style={{ textAlign: "left", padding: 0 }} xs="9">
             <Selector
-              options={this.state.models}
+              options={this.state.filteredModels}
+              selectedOptions={this.state.selectedModels}
               selectionHandler={this.modelHandler}
             />
           </Col>
         </Row>
+        <Row>
+          <Button onClick={this.submitSelections}>Submit</Button>
+        </Row>
       </Container>
     );
+  }
+
+  private async sendRequest(request: Request): Promise<any> {
+    // Perform fetch to send data
+    const response: Response = await fetch(request);
+    if (response.status >= 200 && response.status < 300) {
+      const jsonResponse = await response.json();
+      window.alert(`Form data submitted:\n${jsonResponse}`)
+      return jsonResponse;
+    }
+    console.log(
+      `Something went wrong with request to API server! \n\
+Status: ${response.status}. Response Text: ${response.statusText}`
+    );
+    window.alert(`Form submission failed.`);
+    return response.json();
+  }
+
+  @bindDecorator
+  private generateRequest(): Request {
+    const data: any = {};
+    data.activity_ids = this.state.selectedActivityIds;
+    data.experiment_ids = this.state.selectedExperimentInfo.map(
+      (experiment: ExperimentInfo) => {
+        return experiment.experiment_id;
+      }
+    );
+    data.frequencies = this.state.selectedFrequencyNames;
+    data.realms = this.state.selectedRealmNames;
+    data.variables = this.state.selectedVariableNames;
+    data.models = this.state.selectedModelInfo.map((model: ModelInfo) => {
+      return model.source_id;
+    });
+
+    // Get required csrf toekn for posting request.
+    const csrftoken = getCookie("csrftoken");
+
+    const request: Request = new Request(this.props.post_url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "X-CSRFToken": csrftoken ? csrftoken : "",
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    });
+
+    return request;
   }
 }

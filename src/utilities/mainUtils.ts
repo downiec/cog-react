@@ -18,7 +18,7 @@ export function convertStrToColor(
   newStr = newStr.repeat(6);
 
   // Obtain number from string ascii values then reduce range to RGB color range
-  const baseNum: number = convertStrToNum(newStr,16777215);
+  const baseNum: number = convertStrToNum(newStr, 16777215);
 
   // Convert value to RGB value array
   const colors: color = chromaJs(baseNum).rgb();
@@ -55,3 +55,20 @@ function convertStrToNum(str: string, maxVal: number): number {
   return value;
 }
 
+// The following function are copying from
+// https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
+export function getCookie(name: string) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    let cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].trim();
+      // Does this cookie string begin with the name we want?
+      if (cookie.substring(0, name.length + 1) === name + "=") {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}

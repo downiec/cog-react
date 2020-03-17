@@ -4,9 +4,9 @@ import {
   areVariables,
   ExperimentInfo,
   isExperiment,
+  isModel,
   SelectorOption,
-  VariableInfo,
-  isModel
+  VariableInfo
 } from "./dataProvider";
 import {
   Button,
@@ -86,7 +86,7 @@ function renderData(
   buttonTxt: string,
   dataHeaders: string[],
   data: any[]
-) {
+): JSX.Element {
   const color: chromaJs.Color = chromaJs(option.color);
   const id = `info_${option.label}`;
   return (
@@ -210,80 +210,6 @@ export function renderOption(
   }
 
   if (areVariables(option.data)) {
-    if (option.data.length > 1) {
-      /*const color: chromaJs.Color = chromaJs(option.color);
-      const id = `info_${option.label}`;
-      return (
-        <div>
-          <Button
-            style={{
-              color: color.css(),
-              backgroundColor: color.alpha(0).css(),
-              borderColor: color.alpha(0).css()
-            }}
-            id={id}
-            type="button"
-          >
-            {option.label}
-          </Button>
-          <UncontrolledPopover trigger="legacy" placement="bottom" target={id}>
-            <PopoverHeader
-              style={{
-                color: color.css(),
-                backgroundColor: color.alpha(0.1).css(),
-                borderColor: color.alpha(0.5).css(),
-                fontSize: "1.5em",
-                minWidth: "250px"
-              }}
-              className="clearfix"
-            >
-              Multiple Variables
-            </PopoverHeader>
-            <PopoverBody
-              style={{
-                color: color
-                  .desaturate()
-                  .darken()
-                  .css(),
-                backgroundColor: "FFF",
-                borderColor: color.alpha(0.5).css()
-              }}
-            >
-              {option.data.map((variable, index) => {
-                return (
-                  <div key={index}>
-                    {renderData(
-                      option,
-                      "Comment",
-                      variable.comment,
-                      "More Info",
-                      [
-                        "Standard Name",
-                        "Long Name",
-                        "Modeling Realm",
-                        "Dimensions",
-                        "Frequency",
-                        "Units",
-                        "Out Name"
-                      ],
-                      [
-                        variable.standard_name,
-                        variable.long_name,
-                        variable.modeling_realm,
-                        variable.dimensions,
-                        variable.frequency,
-                        variable.units,
-                        variable.out_name
-                      ]
-                    )}
-                  </div>
-                );
-              })}
-            </PopoverBody>
-          </UncontrolledPopover>
-        </div>
-      );*/
-    }
     return renderData(
       option,
       "Comment",
