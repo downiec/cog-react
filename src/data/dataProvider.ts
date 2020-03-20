@@ -57,12 +57,12 @@ export function isVariable(object: any): object is VariableInfo {
 }
 
 export interface ModelInfo {
-  institution_id: string[],
-  label: string,
-  label_extended: string,
-  release_year: string,
-  source_id: string,
-  activity_participation: string[]
+  institution_id: string[];
+  label: string;
+  label_extended: string;
+  release_year: string;
+  source_id: string;
+  activity_participation: string[];
 }
 export function isModel(object: any): object is ModelInfo {
   return object.source_id !== undefined;
@@ -123,20 +123,19 @@ export function applyFilters<T>(
     });
 
     return newList;
-  }  {
-    const addOption: boolean = filterFunctions
-      .map(func => {
-        // Map filter functions to get boolean array
-        return func(dataList as SelectorOption<T>, otherData);
-      }) // Return true if any result was true
-      .some((result: boolean) => {
-        return result;
-      });
+  }
+  const addOption: boolean = filterFunctions
+    .map(func => {
+      // Map filter functions to get boolean array
+      return func(dataList as SelectorOption<T>, otherData);
+    }) // Return true if any result was true
+    .some((result: boolean) => {
+      return result;
+    });
 
-    // Add option to list if all filters for item passed
-    if (addOption) {
-      return dataList;
-    }
+  // Add option to list if all filters for item passed
+  if (addOption) {
+    return dataList;
   }
 
   return;
@@ -153,7 +152,7 @@ export function getOptionListValues(
     list.forEach((option: SelectorOption<string>) => {
       newList.push(option.value);
     });
-  } else if (list){
+  } else if (list) {
     const option = list as SelectorOption<string>;
     newList = [option.value];
   }
