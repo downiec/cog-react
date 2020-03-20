@@ -133,9 +133,9 @@ export default class App extends React.Component<IAppProps, IAppState> {
   public async submitSelections(): Promise<void> {
     // Generate the request with form data
     const request: Request = this.generateRequest();
-    console.log(request.body);
     // Send request and await for response
     const success = await this.sendRequest(request);
+    console.log(success);
     // Clear form
     if (success) {
       this.clearAll();
@@ -339,18 +339,21 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
   private async sendRequest(request: Request): Promise<any> {
     // Perform fetch to send data
-    const response: Response = await fetch(request);
-    if (response.status >= 200 && response.status < 300) {
-      const jsonResponse = await response.json();
-      window.alert(`Form data submitted:\n${jsonResponse}`)
-      return jsonResponse;
-    }
-    console.log(
-      `Something went wrong with request to API server! \n\
+    try {
+      const response: Response = await fetch(request);
+      if (response.status >= 200 && response.status < 300) {
+        const jsonResponse = await response.json();
+        return jsonResponse;
+      }
+      console.log(
+        `Something went wrong with request to API server! \n\
 Status: ${response.status}. Response Text: ${response.statusText}`
-    );
-    window.alert(`Form submission failed.`);
-    return response.json();
+      );
+      window.alert(`Form submission failed.`);
+      return { Error: response.statusText };
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   @bindDecorator
