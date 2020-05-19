@@ -1,13 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+To install, do the following:
+```
+# Clone cog-react repo and COG fork, they should be in the same directory
+git clone https://github.com/downiec/COG
+git clone https://github.com/downiec/cog-react.git
+
+# Go into cog-react repo and install
+cd cog-react
+npm install
+
+# You should now be able to run scripts as described below.
+```
+
 ## Available Scripts
 
-In the project directory, you can run:
+In the cog-react repo, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode. This will only show the Cog-React front-end
-as it looks and behaves outside of COG.<br>
+as it looks and behaves OUTSIDE of COG.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -15,22 +30,17 @@ You will also see any lint errors in the console.<br>
 
 ### `npm run COG`
 
+#### IMPORTANT You will need the COG setup files containing config files in order to interact with COG server.  
+
 Starts up a forked instance of the COG Django application. Then it will copy over static files from this Cog-React
 front-end application and place them in the appropriate directory in order to view the react front-end as it would
 appear within the COG application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
-
-#### `Important!`
-
-When first setting up, you must make sure to update the COG_start.sh script to use the correct path to your local COG directory. Line 6 in the script:
-COG_CONFIG_DIR=~/Desktop/COG_devel/COG/
-Needs to be changed to match the path to your COG repository.
-The COG fork used for development: https://github.com/downiec/COG
-
 
 #### Note:
 If you are routed to the login screen, you can login by:
 * Click the button near the ‘OpenID’ label.
 * Select ‘LLNL Test Dev IDP’ from the drop down.
+*Or use: 'DOE Lawrence Livermore National Laboratory' (LLNL) if Test Dev doesn't work.
 * Click ‘login’
 * Enter username and password.
 * Click ‘SUBMIT’
@@ -50,6 +60,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+<!--
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -65,3 +76,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+-->

@@ -60,9 +60,9 @@ function convertStrToNum(str: string, maxVal: number): number {
 export function getCookie(name: string) {
   let cookieValue = null;
   if (document.cookie && document.cookie !== "") {
-    let cookies = document.cookie.split(";");
+    const cookies = document.cookie.split(";");
     for (let i = 0; i < cookies.length; i++) {
-      let cookie = cookies[i].trim();
+      const cookie = cookies[i].trim();
       // Does this cookie string begin with the name we want?
       if (cookie.substring(0, name.length + 1) === name + "=") {
         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
@@ -72,3 +72,15 @@ export function getCookie(name: string) {
   }
   return cookieValue;
 }
+
+export const memoize = (fn: any) => {
+  const cache: any = {};
+  return (...args: any) => {
+    const stringArgs: any = JSON.stringify(args);
+    const result: any = (cache[stringArgs] =
+      typeof cache[stringArgs] === "undefined"
+        ? fn(...args)
+        : cache[stringArgs]);
+    return result;
+  };
+};

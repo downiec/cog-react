@@ -12,13 +12,16 @@
     "@types/reactstrap": "^8.0.6",
     "bind-decorator": "^1.0.11",
     "chroma-js": "^2.1.0",
+    "fibers": "^5.0.0",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
+    "node-sass": "^4.14.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "^3.2.0",
+    "react-scripts": "^3.4.1",
     "react-select": "^3.0.8",
-    "reactstrap": "^8.1.1"
+    "reactstrap": "^8.1.1",
+    "sass": "^1.26.5"
   },
   "scripts": {
     "start": "react-scripts start",
