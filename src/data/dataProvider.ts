@@ -1,8 +1,34 @@
 import { ValueType } from "react-select/src/types";
+import { importData } from "./dataImporter";
+import { DATA } from "./../constants";
+import { memoize } from "../utilities/mainUtils";
+import {
+  colorByActivity,
+  colorByName,
+  colorShadesBlue,
+  colorShadesGreen
+} from "../data/dataRenderer";
 
 export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;
 
 export type VariableGroup = VariableInfo[];
+
+export function getAllData(data: DATA): any {
+  switch (data) {
+    case DATA.EXPERIMENTS:
+      return createOptionList(importData(data), colorByActivity);
+    case DATA.FREQUENCIES:
+      return createOptionList(importData(data), colorShadesBlue);
+    case DATA.REALMS:
+      return createOptionList(importData(data), colorShadesGreen);
+    default:
+      return createOptionList(importData(data), colorByName);
+  }
+}
+
+export const getAll: (data: DATA) => ValueType<SelectorOption<any>> = memoize(
+  getAllData
+);
 
 export function areVariables(object: any): object is VariableGroup {
   return Array.isArray(object) && isVariable(object[0]);

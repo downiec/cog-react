@@ -1,5 +1,14 @@
 import chromaJs from "chroma-js";
 
+export enum DATA {
+  ACTIVITIES,
+  EXPERIMENTS,
+  FREQUENCIES,
+  REALMS,
+  VARIABLES,
+  MODELS
+}
+
 export const customStyles = {
   control: (styles: any) => ({ ...styles, backgroundColor: "white" }),
   option: (styles: any, { data, isDisabled, isFocused, isSelected }: any) => {

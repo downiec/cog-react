@@ -1,5 +1,5 @@
 import React from "react";
-import Select from "react-select";
+import Autocomplete from "react-select";
 import animated from "react-select/animated";
 import { ValueType } from "react-select/src/types";
 import ErrorBoundary from "./ErrorBoundary";
@@ -24,13 +24,15 @@ const animatedComponents: SelectComponents<SelectorOption<any>> = animated();
 export interface ISelectorProps {
   options: ValueType<SelectorOption<any>>;
   selectedOptions: ValueType<SelectorOption<any>>;
-  selectionHandler: (selection: ValueType<SelectorOption<any>>) => Promise<void>;
+  selectionHandler: (
+    selection: ValueType<SelectorOption<any>>
+  ) => Promise<void>;
 }
 
 export function Selector(props: ISelectorProps): JSX.Element {
   return (
     <ErrorBoundary errorRender={errorRender}>
-      <Select
+      <Autocomplete
         backspaceRemovesValue={true}
         closeMenuOnSelect={false}
         openMenuOnClick={!props.selectedOptions}

@@ -5,11 +5,11 @@ import { ValueType } from "react-select/src/types";
 import { Selector } from "./Selector";
 import {
   applyFilters,
-  createOptionList,
   ExperimentInfo,
   filterByActivity,
   filterByFrequency,
   filterByRealm,
+  getAll,
   getOptionListData,
   getOptionListValues,
   ModelInfo,
@@ -17,20 +17,7 @@ import {
   VariableGroup
 } from "../data/dataProvider";
 
-import {
-  activityData,
-  experimentData,
-  frequencyData,
-  modelData,
-  realmData
-} from "../data/output/appdata";
-import {
-  colorByActivity,
-  colorByName,
-  colorShadesBlue,
-  colorShadesGreen
-} from "../data/dataRenderer";
-import { variableData } from "../data/output/variableData";
+import { DATA } from "./../constants";
 import { getCookie } from "../utilities/mainUtils";
 
 const labelStyle: React.CSSProperties = {
@@ -43,7 +30,6 @@ export interface IAppProps {
   user_info: any;
   activities: any;
   experiments: any;
-  token: string;
 }
 
 export interface IAppState {
@@ -68,28 +54,16 @@ export interface IAppState {
 }
 
 export default class App extends React.Component<IAppProps, IAppState> {
-  public allActivities = createOptionList(activityData, colorByName);
-  public allExperiments = createOptionList<ExperimentInfo>(
-    experimentData,
-    colorByActivity
-  );
-  public allFrequencies = createOptionList(frequencyData, colorShadesBlue);
-  public allRealms = createOptionList(realmData, colorShadesGreen);
-  public allVariables = createOptionList<VariableGroup>(
-    variableData,
-    colorByName
-  );
-  public allModels = createOptionList<ModelInfo>(modelData, colorByName);
 
   constructor(props: IAppProps) {
     super(props);
     this.state = {
-      filteredActivities: this.allActivities,
-      filteredExperiments: this.allExperiments,
-      filteredFrequencies: this.allFrequencies,
-      filteredRealms: this.allRealms,
-      filteredVariables: this.allVariables,
-      filteredModels: this.allModels,
+      filteredActivities: getAll(DATA.ACTIVITIES),
+      filteredExperiments: getAll(DATA.EXPERIMENTS),
+      filteredFrequencies: getAll(DATA.FREQUENCIES),
+      filteredRealms: getAll(DATA.REALMS),
+      filteredVariables: getAll(DATA.VARIABLES),
+      filteredModels: getAll(DATA.MODELS),
       selectedActivities: null,
       selectedExperiments: null,
       selectedFrequencies: null,
@@ -108,12 +82,12 @@ export default class App extends React.Component<IAppProps, IAppState> {
   @bindDecorator
   public clearAll(): void {
     this.setState({
-      filteredActivities: this.allActivities,
-      filteredExperiments: this.allExperiments,
-      filteredFrequencies: this.allFrequencies,
-      filteredRealms: this.allRealms,
-      filteredVariables: this.allVariables,
-      filteredModels: this.allModels,
+      filteredActivities: getAll(DATA.ACTIVITIES),
+      filteredExperiments: getAll(DATA.EXPERIMENTS),
+      filteredFrequencies: getAll(DATA.FREQUENCIES),
+      filteredRealms: getAll(DATA.REALMS),
+      filteredVariables: getAll(DATA.VARIABLES),
+      filteredModels: getAll(DATA.MODELS),
       selectedActivities: null,
       selectedExperiments: null,
       selectedFrequencies: null,
@@ -148,7 +122,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
   ): Promise<void> {
     const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
-      this.allExperiments,
+      getAll(DATA.EXPERIMENTS),
       [filterByActivity],
       newSelection
     );
@@ -178,7 +152,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
   ): Promise<void> {
     const newSelection: string[] = getOptionListValues(frequencySelection);
     const filteredVariables = applyFilters<VariableGroup>(
-      this.allVariables,
+      getAll(DATA.VARIABLES),
       [filterByFrequency, filterByRealm],
       newSelection
     );
@@ -195,7 +169,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
   ): Promise<void> {
     const newSelection: string[] = getOptionListValues(realmSelection);
     const filteredVariables = applyFilters<VariableGroup>(
-      this.allVariables,
+      getAll(DATA.VARIABLES),
       [filterByFrequency, filterByRealm],
       newSelection
     );
