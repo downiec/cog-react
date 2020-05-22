@@ -1,6 +1,6 @@
 {
   "name": "cog-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@types/chroma-js": "^1.4.3",
@@ -9,9 +9,10 @@
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "@types/react-select": "^3.0.8",
-    "@types/reactstrap": "^8.0.6",
+    "antd": "^4.2.4",
     "bind-decorator": "^1.0.11",
     "chroma-js": "^2.1.0",
+    "dayjs": "^1.8.27",
     "fibers": "^5.0.0",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
@@ -20,7 +21,6 @@
     "react-dom": "^16.11.0",
     "react-scripts": "^3.4.1",
     "react-select": "^3.0.8",
-    "reactstrap": "^8.1.1",
     "sass": "^1.26.5"
   },
   "scripts": {
@@ -49,12 +49,15 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "prettier-tslint": "^0.4.2",
-    "tslint": "^5.20.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "1.19.1",
     "typescript": "^3.6.4"
   }
 }

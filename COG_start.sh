@@ -5,6 +5,9 @@
 #Build the React Application
 npm run build
 
+#Export config directory
+export COG_CONFIG_DIR=../COG/
+
 #Update latest React App files
 echo "Removing old js files."
 rm ../COG/cog/static/cog/cog-react/js/*

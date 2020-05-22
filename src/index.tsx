@@ -6,14 +6,11 @@ import * as serviceWorker from "./serviceWorker";
 
 declare global {
   interface Window {
-    react_mount: any;
+    react_mount: any; // eslint-disable-line
     token: string;
     props: {
       token: string;
-      post_url: string;
-      user_info: any;
-      activities: any;
-      experiments: any;
+      post_url: string; // eslint-disable-line
     };
   }
 }
@@ -21,6 +18,7 @@ declare global {
 try {
   const regex = /value='(.+)'/gm;
   let m;
+  // eslint-disable-next-line
   if ((m = regex.exec(window.token)) !== null) {
     window.props.token = m[1];
   }
@@ -32,12 +30,7 @@ try {
     window.react_mount // a reference to the #react div that we render to
   );
 } catch (error) {
-  const props: IAppProps = {
-    post_url: "",
-    user_info: {},
-    activities: {},
-    experiments: {}
-  };
+  const props: IAppProps = { post_url: "" }; // eslint-disable-line
 
   // Renders the react app in a dev server apart from COG and Django
   reactDom.render(
