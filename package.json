@@ -21,6 +21,7 @@
     "react-dom": "^16.11.0",
     "react-scripts": "^3.4.1",
     "react-select": "^3.0.8",
+    "react-windowed-select": "^2.0.2",
     "sass": "^1.26.5"
   },
   "scripts": {

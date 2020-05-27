@@ -80,7 +80,9 @@ const initialState: ISubscribeState = {
   },
 };
 
-export default function CreateSubscriptions(props: ISubscribeProps): JSX.Element {
+export default function CreateSubscriptions(
+  props: ISubscribeProps
+): JSX.Element {
   const [state, setState] = useState<ISubscribeState>(initialState);
 
   const submitClicked = (): void => {
@@ -207,13 +209,16 @@ export default function CreateSubscriptions(props: ISubscribeProps): JSX.Element
     field: FIELDS,
     handler: (selection: ValueType<SelectorOption<any>>) => Promise<void>
   ): JSX.Element => (
-    <Row align="middle">
+    <Row align="stretch">
       <Col flex="300px">
         <Divider orientation="right">
           <Title level={4}>{header}</Title>
         </Divider>
       </Col>
-      <Col flex="auto">
+      <Col
+        flex="auto"
+        style={{ paddingLeft: "30px", paddingRight: "30px", minWidth: "300px" }}
+      >
         <Selector
           options={state[field].filtered}
           selectedOptions={state[field].selected}
@@ -260,8 +265,10 @@ export default function CreateSubscriptions(props: ISubscribeProps): JSX.Element
         </Divider>
       </Row>
       {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
-      <Row>
-        <Button onClick={submitClicked}>Submit</Button>
+      <Row align="middle">
+        <Divider orientation="center">
+          <Button onClick={submitClicked}>Submit</Button>
+        </Divider>
       </Row>
     </Layout>
   );

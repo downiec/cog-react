@@ -1,17 +1,54 @@
 import { ValueType } from "react-select/src/types";
 import { importData } from "./dataImporter";
-import { DATA } from "./../constants";
+import { DATA } from "../constants";
 import { memoize } from "../utilities/mainUtils";
 import {
   colorByActivity,
   colorByName,
   colorShadesBlue,
-  colorShadesGreen
-} from "../data/dataRenderer";
+  colorShadesGreen,
+} from "./dataRenderer";
 
 export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;
 
 export type VariableGroup = VariableInfo[];
+
+export function isExperiment(object: any): object is ExperimentInfo {
+  return object.experiment_id !== undefined;
+}
+
+export function isVariable(object: any): object is VariableInfo {
+  return object.standard_name !== undefined;
+}
+
+export function isModel(object: any): object is ModelInfo {
+  return object.source_id !== undefined;
+}
+
+export function createOptionList<T>(
+  data: { [key: string]: T },
+  colorFunc?: (value: [string, T]) => string
+): ValueType<SelectorOption<T>> {
+  if (!data) {
+    return null;
+  }
+
+  const options = new Array<SelectorOption<T>>();
+  const entries = Object.entries(data);
+
+  entries.forEach((value: [string, T]) => {
+    const col: string = colorFunc ? colorFunc(value) : "black";
+
+    options.push({
+      label: value[0],
+      value: value[0],
+      data: value[1],
+      color: col,
+    });
+  });
+
+  return options;
+}
 
 export function getAllData(data: DATA): any {
   switch (data) {
@@ -56,9 +93,6 @@ export interface ExperimentInfo {
   sub_experiment_id: string[];
   tier: string;
 }
-export function isExperiment(object: any): object is ExperimentInfo {
-  return object.experiment_id !== undefined;
-}
 
 export interface VariableInfo {
   frequency: string;
@@ -78,9 +112,6 @@ export interface VariableInfo {
   ok_min_mean_abs: string;
   ok_max_mean_abs: string;
 }
-export function isVariable(object: any): object is VariableInfo {
-  return object.standard_name !== undefined;
-}
 
 export interface ModelInfo {
   institution_id: string[];
@@ -89,34 +120,6 @@ export interface ModelInfo {
   release_year: string;
   source_id: string;
   activity_participation: string[];
-}
-export function isModel(object: any): object is ModelInfo {
-  return object.source_id !== undefined;
-}
-
-export function createOptionList<T>(
-  data: { [key: string]: T },
-  colorFunc?: (value: [string, T]) => string
-): ValueType<SelectorOption<T>> {
-  if (!data) {
-    return null;
-  }
-
-  const options = new Array<SelectorOption<T>>();
-  const entries = Object.entries(data);
-
-  entries.forEach((value: [string, T]) => {
-    const col: string = colorFunc ? colorFunc(value) : "black";
-
-    options.push({
-      label: value[0],
-      value: value[0],
-      data: value[1],
-      color: col
-    });
-  });
-
-  return options;
 }
 
 export function applyFilters<T>(
@@ -134,7 +137,7 @@ export function applyFilters<T>(
     // For each data item, if it passes through all filters, add it to newlist
     dataList.forEach((data: SelectorOption<T>) => {
       const addOption: boolean = filterFunctions
-        .map(func => {
+        .map((func) => {
           // Map filter functions to get boolean array
           return func(data, otherData);
         }) // Return true if any result was true
@@ -151,7 +154,7 @@ export function applyFilters<T>(
     return newList;
   }
   const addOption: boolean = filterFunctions
-    .map(func => {
+    .map((func) => {
       // Map filter functions to get boolean array
       return func(dataList as SelectorOption<T>, otherData);
     }) // Return true if any result was true
@@ -163,8 +166,6 @@ export function applyFilters<T>(
   if (addOption) {
     return dataList;
   }
-
-  return;
 }
 
 export function getOptionListValues(
@@ -193,11 +194,15 @@ export function getOptionListData<T>(list: ValueType<SelectorOption<T>>): T[] {
   }
   if (Array.isArray(list)) {
     list.forEach((option: SelectorOption<T>) => {
-      newList.push(option.data);
+      if (option) {
+        newList.push(option.data);
+      }
     });
   } else {
     const option = list as SelectorOption<T>;
-    newList = [option.data];
+    if (option) {
+      newList = [option.data];
+    }
   }
 
   return newList;
@@ -225,7 +230,7 @@ export const filterByFrequency = (
   }
 
   return option.data
-    .map(varInfo => {
+    .map((varInfo) => {
       return varInfo.frequency;
     })
     .some((varFreq: string) => {
@@ -242,7 +247,7 @@ export const filterByRealm = (
   }
 
   return option.data
-    .map(varInfo => {
+    .map((varInfo) => {
       return varInfo.modeling_realm;
     })
     .some((varRealm: string) => {

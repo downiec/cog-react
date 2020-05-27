@@ -1,18 +1,18 @@
 import React from "react";
-import Autocomplete from "react-select";
+import { Layout } from "antd";
+import Autocomplete from "react-windowed-select";
 import animated from "react-select/animated";
 import { ValueType } from "react-select/src/types";
-import ErrorBoundary from "./ErrorBoundary";
-import { Container } from "reactstrap";
 import { SelectComponents } from "react-select/src/components";
+import ErrorBoundary from "./ErrorBoundary";
 import { SelectorOption } from "../data/dataProvider";
 import { customStyles } from "../constants";
 import { renderOption } from "../data/dataRenderer";
 
 const errorRender: JSX.Element = (
-  <Container>
+  <Layout>
     <h5>An error occured with this dropdown</h5>
-  </Container>
+  </Layout>
 );
 
 const customRender = (data: SelectorOption<any>): JSX.Element | undefined => {
@@ -33,14 +33,16 @@ export function Selector(props: ISelectorProps): JSX.Element {
   return (
     <ErrorBoundary errorRender={errorRender}>
       <Autocomplete
-        backspaceRemovesValue={true}
+        isMulti
+        isSearchable
+        isClearable
+        backspaceRemovesValue
         closeMenuOnSelect={false}
         openMenuOnClick={!props.selectedOptions}
         components={animatedComponents}
-        isMulti={true}
-        isSearchable={true}
-        isClearable={true}
-        onChange={async (value: ValueType<SelectorOption<any>>) => {
+        onChange={async (
+          value: ValueType<SelectorOption<any>>
+        ): Promise<void> => {
           await props.selectionHandler(value);
         }}
         options={
@@ -50,9 +52,9 @@ export function Selector(props: ISelectorProps): JSX.Element {
         }
         value={props.selectedOptions}
         styles={customStyles}
-        placeholder={"Make selection"}
+        placeholder="Make selection"
         formatOptionLabel={customRender}
-        noOptionsMessage={(obj: { inputValue: string }) => {
+        noOptionsMessage={(obj: { inputValue: string }): string => {
           return obj.inputValue
             ? `'${obj.inputValue}' was not found.`
             : "No options available.";

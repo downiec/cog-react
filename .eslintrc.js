@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
+    "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "comma-dangle": "off",
     "consistent-return": "off",
@@ -41,6 +42,8 @@ module.exports = {
     ],
     "react/destructuring-assignment": "off",
     "react/no-unused-state": "warn",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-one-expression-per-line": "off",
     "prefer-destructuring": "off",
     "import/extensions": [
       "error",
