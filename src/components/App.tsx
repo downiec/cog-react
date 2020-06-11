@@ -1,22 +1,38 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Menu, Layout } from "antd";
-import CreateSubscriptions, { ISubscribeState } from "./AddSubscriptions";
-import ViewSubscriptions from "./ViewSubscriptions";
-import { ExperimentInfo, ModelInfo } from "../data/dataProvider";
+import { ValueType } from "react-select";
+import CreateSubscriptions, { ISubscribeState } from "./CreateSubscriptions";
+import ViewSubscriptions, { ICurrentSubsState } from "./ViewSubscriptions";
+import {
+  ExperimentInfo,
+  ModelInfo,
+  isExperiment,
+  isVariable,
+  VariableInfo,
+  isModel,
+  SelectorOption,
+  getOptionListData,
+} from "../data/dataProvider";
 import { getCookie } from "../utilities/mainUtils";
+import { Subscription, Freq, FIELDS } from "../customTypes";
 
 export interface IAppProps {
   post_url: string; // eslint-disable-line
+  loadedSubs: { [name: string]: Subscription };
 }
 
 export interface IAppState {
   submitSubscriptions: boolean;
+  currentSubs: { [name: string]: Subscription };
 }
 
-const initialState: IAppState = { submitSubscriptions: true };
-
 export default function App(props: IAppProps): JSX.Element {
+  const initialState: IAppState = {
+    submitSubscriptions: true,
+    currentSubs: props.loadedSubs,
+  };
+
   const [state, setState] = useState<IAppState>(initialState);
   const { Content } = Layout;
 
@@ -30,29 +46,64 @@ export default function App(props: IAppProps): JSX.Element {
       }
       console.error(`Something went wrong with request to API server! \n\
   Status: ${response.status}. Response Text: ${response.statusText}`);
-      window.alert("Form submission failed.");
+      // window.alert("Form submission failed.");
       return { Error: response.statusText };
     } catch (error) {
       console.error(error);
+      return undefined;
     }
   };
 
-  const generateRequest = (subState: ISubscribeState): Request => {
-    const data: any = {};
-    data.activity_ids = subState.activities.selectedIds; // eslint-disable-line
-    // eslint-disable-next-line
-    data.experiment_ids = subState.experiments.selectedIds.map(
-      (experiment: ExperimentInfo) => experiment.experiment_id
-    );
-    data.frequencies = subState.frequencies.selectedIds;
-    data.realms = subState.realms.selectedIds;
-    data.variables = subState.variables.selectedIds;
-    data.models = subState.models.selectedIds.map(
-      (model: ModelInfo) => model.source_id
-    );
+  function getSubscriptions(
+    options: ValueType<SelectorOption<any>>,
+    frequency: Freq
+  ): Subscription[] {
+    const subs: Subscription[] = [];
+    if (!options) {
+      return subs;
+    }
+    const dataList = getOptionListData(options);
+    console.log(dataList);
+    if (isExperiment(dataList[0])) {
+      const experiments = dataList;
+      experiments.forEach((opt: ExperimentInfo) => {
+        subs.push({
+          name: opt.experiment_id,
+          type: FIELDS.experiments,
+          frequency,
+          data: opt,
+        });
+      });
+    }
+    if (isVariable(dataList[0][0])) {
+      const variables = dataList.map((elem: VariableInfo[]) => {
+        return elem[0];
+      });
+      variables.forEach((opt: VariableInfo, idx: number) => {
+        subs.push({
+          name: opt.out_name,
+          type: FIELDS.variables,
+          frequency,
+          data: dataList[idx],
+        });
+      });
+    }
+    if (isModel(dataList[0])) {
+      const models = dataList;
+      models.forEach((opt: ModelInfo) => {
+        subs.push({
+          name: opt.source_id,
+          type: FIELDS.models,
+          frequency,
+          data: opt,
+        });
+      });
+    }
 
-    console.log(data);
+    return subs;
+  }
 
+  const generateRequest = (formData: {}): Request => {
     // Get required csrf toekn for posting request.
     const csrftoken = getCookie("csrftoken");
 
@@ -60,7 +111,7 @@ export default function App(props: IAppProps): JSX.Element {
     const { post_url } = props;
     const request: Request = new Request(post_url, {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
       headers: {
         "X-CSRFToken": csrftoken || "",
         "Content-Type": "application/json",
@@ -71,20 +122,58 @@ export default function App(props: IAppProps): JSX.Element {
     return request;
   };
 
-  const submitSelections = async (subState: ISubscribeState): Promise<void> => {
-    // Generate the request with form data
-    const request: Request = generateRequest(subState);
+  const updateSubscriptions = async (
+    newSubs: ICurrentSubsState
+  ): Promise<void> => {
+    console.log("Success!");
+  };
+
+  const submitSubscriptions = async (
+    subState: ISubscribeState
+  ): Promise<void> => {
+
+    // Generate data object from form state
+    const data: { [name: string]: Subscription } = state.currentSubs;
+
+    getSubscriptions(
+      subState.experiments.selected,
+      subState.notificationFreq
+    ).forEach((sub: Subscription) => {
+      data[`${sub.type}_${sub.name}`] = sub;
+    });
+
+    getSubscriptions(
+      subState.variables.selected,
+      subState.notificationFreq
+    ).forEach((sub: Subscription) => {
+      data[`${sub.type}_${sub.name}`] = sub;
+    });
+
+    getSubscriptions(
+      subState.models.selected,
+      subState.notificationFreq
+    ).forEach((sub: Subscription) => {
+      data[`${sub.type}_${sub.name}`] = sub;
+    });
+
+    console.log(data);
+
+    // Update current cubscriptions state
+    setState({ ...state, currentSubs: data });
+
+    // Generate the request using data object
+    const request: Request = generateRequest(data);
     // Send request and await for response
     const success = await sendRequest(request);
     console.log(success);
   };
 
   const addSubscriptions = (): void => {
-    setState({ submitSubscriptions: true });
+    setState({ ...state, submitSubscriptions: true });
   };
 
   const viewSubscriptions = (): void => {
-    setState({ submitSubscriptions: false });
+    setState({ ...state, submitSubscriptions: false });
   };
 
   return (
@@ -95,9 +184,12 @@ export default function App(props: IAppProps): JSX.Element {
           <Menu.Item onClick={viewSubscriptions}>View Subscriptions</Menu.Item>
         </Menu>
         {state.submitSubscriptions ? (
-          <CreateSubscriptions submitSelections={submitSelections} />
+          <CreateSubscriptions submitSubscriptions={submitSubscriptions} />
         ) : (
-          <ViewSubscriptions submitSelections={submitSelections} />
+          <ViewSubscriptions
+            updateSubscriptions={updateSubscriptions}
+            currentSubs={state.currentSubs}
+          />
         )}
       </Content>
     </Layout>

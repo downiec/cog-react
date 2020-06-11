@@ -1,6 +1,5 @@
 import { ValueType } from "react-select/src/types";
-import { importData } from "./dataImporter";
-import { DATA } from "../constants";
+import importData from "./dataImporter";
 import { memoize } from "../utilities/mainUtils";
 import {
   colorByActivity,
@@ -8,20 +7,26 @@ import {
   colorShadesBlue,
   colorShadesGreen,
 } from "./dataRenderer";
-
-export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;
-
-export type VariableGroup = VariableInfo[];
+import { FIELDS } from "../customTypes";
 
 export function isExperiment(object: any): object is ExperimentInfo {
+  if (!object) {
+    return false;
+  }
   return object.experiment_id !== undefined;
 }
 
 export function isVariable(object: any): object is VariableInfo {
+  if (!object) {
+    return false;
+  }
   return object.standard_name !== undefined;
 }
 
 export function isModel(object: any): object is ModelInfo {
+  if (!object) {
+    return false;
+  }
   return object.source_id !== undefined;
 }
 
@@ -50,24 +55,37 @@ export function createOptionList<T>(
   return options;
 }
 
-export function getAllData(data: DATA): any {
-  switch (data) {
-    case DATA.EXPERIMENTS:
-      return createOptionList(importData(data), colorByActivity);
-    case DATA.FREQUENCIES:
-      return createOptionList(importData(data), colorShadesBlue);
-    case DATA.REALMS:
-      return createOptionList(importData(data), colorShadesGreen);
+function getOptionList(dataType: FIELDS, data: { [key: string]: any }): any {
+  switch (dataType) {
+    case FIELDS.experiments:
+      return createOptionList(data, colorByActivity);
+    case FIELDS.frequencies:
+      return createOptionList(data, colorShadesBlue);
+    case FIELDS.realms:
+      return createOptionList(data, colorShadesGreen);
     default:
-      return createOptionList(importData(data), colorByName);
+      return createOptionList(data, colorByName);
   }
 }
 
-export const getAll: (data: DATA) => ValueType<SelectorOption<any>> = memoize(
-  getAllData
+function getAllOptions(dataType: FIELDS): any {
+  const data = importData(dataType);
+  return getOptionList(dataType, data);
+}
+
+export function getOption(
+  dataType: FIELDS,
+  id: string
+): ValueType<SelectorOption<any>> {
+  const data = importData(dataType);
+  return getOptionList(dataType, data[id]);
+}
+
+export const getAll: (data: FIELDS) => ValueType<SelectorOption<any>> = memoize(
+  getAllOptions
 );
 
-export function areVariables(object: any): object is VariableGroup {
+export function areVariables(object: any): object is VariableInfo[] {
   return Array.isArray(object) && isVariable(object[0]);
 }
 
@@ -151,8 +169,10 @@ export function applyFilters<T>(
       }
     });
 
+    // eslint-disable-next-line consistent-return
     return newList;
   }
+
   const addOption: boolean = filterFunctions
     .map((func) => {
       // Map filter functions to get boolean array
@@ -164,6 +184,7 @@ export function applyFilters<T>(
 
   // Add option to list if all filters for item passed
   if (addOption) {
+    // eslint-disable-next-line consistent-return
     return dataList;
   }
 }
@@ -222,7 +243,7 @@ export const filterByActivity = (
 };
 
 export const filterByFrequency = (
-  option: SelectorOption<VariableGroup>,
+  option: SelectorOption<VariableInfo[]>,
   frequencies: string[]
 ): boolean => {
   if (!frequencies || frequencies.length < 1) {
@@ -230,7 +251,7 @@ export const filterByFrequency = (
   }
 
   return option.data
-    .map((varInfo) => {
+    .map((varInfo: VariableInfo) => {
       return varInfo.frequency;
     })
     .some((varFreq: string) => {
@@ -239,7 +260,7 @@ export const filterByFrequency = (
 };
 
 export const filterByRealm = (
-  option: SelectorOption<VariableGroup>,
+  option: SelectorOption<VariableInfo[]>,
   realms: string[]
 ): boolean => {
   if (!realms || realms.length < 1) {
@@ -247,7 +268,7 @@ export const filterByRealm = (
   }
 
   return option.data
-    .map((varInfo) => {
+    .map((varInfo: VariableInfo) => {
       return varInfo.modeling_realm;
     })
     .some((varRealm: string) => {

@@ -3,29 +3,10 @@ import {
   experimentData,
   frequencyData,
   modelData,
-  realmData
-} from "../data/output/appdata";
+  realmData,
+} from "./output/appdata";
 import { variableData } from "./output/variableData";
-import { DATA } from "./../constants";
-
-export function importData(data: DATA): any {
-  switch (data) {
-    case DATA.ACTIVITIES:
-      return importActivities();
-    case DATA.EXPERIMENTS:
-      return importExperiments();
-    case DATA.FREQUENCIES:
-      return importFrequencies();
-    case DATA.REALMS:
-      return importRealms();
-    case DATA.VARIABLES:
-      return importVariables();
-    case DATA.MODELS:
-      return importModels();
-    default:
-      return {}
-  }
-}
+import { FIELDS } from "../customTypes";
 
 function importActivities(): any {
   return activityData;
@@ -49,4 +30,23 @@ function importVariables(): any {
 
 function importModels(): any {
   return modelData;
+}
+
+export default function importData(data: FIELDS): any {
+  switch (data) {
+    case FIELDS.activities:
+      return importActivities();
+    case FIELDS.experiments:
+      return importExperiments();
+    case FIELDS.frequencies:
+      return importFrequencies();
+    case FIELDS.realms:
+      return importRealms();
+    case FIELDS.variables:
+      return importVariables();
+    case FIELDS.models:
+      return importModels();
+    default:
+      return {};
+  }
 }

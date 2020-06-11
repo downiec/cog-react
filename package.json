@@ -13,7 +13,6 @@
     "bind-decorator": "^1.0.11",
     "chroma-js": "^2.1.0",
     "dayjs": "^1.8.27",
-    "fibers": "^5.0.0",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
     "node-sass": "^4.14.1",
@@ -54,10 +53,12 @@
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "fibers": "^5.0.0",
     "prettier": "1.19.1",
     "typescript": "^3.6.4"
   }

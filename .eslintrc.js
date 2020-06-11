@@ -8,6 +8,7 @@ module.exports = {
     "airbnb",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   globals: {
     Atomics: "readonly",
@@ -23,10 +24,10 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-    "arrow-body-style": "off",
-    "class-methods-use-this": "off",
-    "comma-dangle": "off",
-    "consistent-return": "off",
+    //"arrow-body-style": "off",
+    //"class-methods-use-this": "off",
+    //"comma-dangle": "off",
+    //"consistent-return": "off",
     "no-console": ["warn", { allow: ["error"] }],
     "no-unused-vars": "warn",
     quotes: ["warn", "double"],
@@ -44,7 +45,7 @@ module.exports = {
     "react/no-unused-state": "warn",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off",
-    "prefer-destructuring": "off",
+    //"prefer-destructuring": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

@@ -68,6 +68,7 @@ function showData(
       </div>
     );
   }
+  return undefined;
 }
 
 function defaultOption(option: SelectorOption<any>): JSX.Element {
@@ -158,11 +159,9 @@ function DataPopover(props: IDataRenderProps): JSX.Element {
   );
 }
 
-export function renderOption(
-  option: SelectorOption<any>
-): JSX.Element | undefined {
+export function renderOption(option: SelectorOption<any>): JSX.Element | undefined{
   if (!option) {
-    return;
+    return undefined;
   }
 
   if (isExperiment(option.data)) {

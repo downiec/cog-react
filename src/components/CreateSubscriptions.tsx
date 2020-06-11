@@ -1,4 +1,5 @@
-import { Layout, Row, Col, Typography, Button, Divider } from "antd";
+import { Layout, Row, Col, Typography, Button, Divider, Radio } from "antd";
+import { RadioChangeEvent } from "antd/lib/radio";
 import React, { useState } from "react";
 import { ValueType } from "react-select/src/types";
 import { Selector } from "./Selector";
@@ -13,13 +14,13 @@ import {
   getOptionListValues,
   ModelInfo,
   SelectorOption,
-  VariableGroup,
+  VariableInfo
 } from "../data/dataProvider";
 
-import { DATA } from "../constants";
+import { Freq, FIELDS } from "../customTypes";
 
 export interface ISubscribeProps {
-  submitSelections: (state: ISubscribeState) => Promise<void>;
+  submitSubscriptions: (state: ISubscribeState) => Promise<void>;
 }
 
 export interface IOptionState<InfoType, IDType> {
@@ -29,52 +30,44 @@ export interface IOptionState<InfoType, IDType> {
 }
 
 export interface ISubscribeState {
-  [type: string]: IOptionState<any, any>;
+  notificationFreq: Freq;
   activities: IOptionState<string, string>;
   experiments: IOptionState<ExperimentInfo, ExperimentInfo>;
   frequencies: IOptionState<string, string>;
   models: IOptionState<ModelInfo, ModelInfo>;
   realms: IOptionState<string, string>;
-  variables: IOptionState<VariableGroup, string>;
-}
-
-enum FIELDS {
-  activities = "activities",
-  experiments = "experiments",
-  frequencies = "frequencies",
-  models = "models",
-  realms = "realms",
-  variables = "variables",
+  variables: IOptionState<VariableInfo[], string>;
 }
 
 const initialState: ISubscribeState = {
+  notificationFreq: "weekly",
   activities: {
-    filtered: getAll(DATA.ACTIVITIES),
+    filtered: getAll(FIELDS.activities),
     selected: null,
     selectedIds: [],
   },
   experiments: {
-    filtered: getAll(DATA.EXPERIMENTS),
+    filtered: getAll(FIELDS.experiments),
     selected: null,
     selectedIds: [],
   },
   frequencies: {
-    filtered: getAll(DATA.FREQUENCIES),
+    filtered: getAll(FIELDS.frequencies),
     selected: null,
     selectedIds: [],
   },
   models: {
-    filtered: getAll(DATA.MODELS),
+    filtered: getAll(FIELDS.models),
     selected: null,
     selectedIds: [],
   },
   realms: {
-    filtered: getAll(DATA.REALMS),
+    filtered: getAll(FIELDS.realms),
     selected: null,
     selectedIds: [],
   },
   variables: {
-    filtered: getAll(DATA.VARIABLES),
+    filtered: getAll(FIELDS.variables),
     selected: null,
     selectedIds: [],
   },
@@ -85,9 +78,20 @@ export default function CreateSubscriptions(
 ): JSX.Element {
   const [state, setState] = useState<ISubscribeState>(initialState);
 
+  const notifyFreqOpts: { label: Freq; value: Freq }[] = [
+    { label: "daily", value: "daily" },
+    { label: "weekly", value: "weekly" },
+    { label: "biweekly", value: "biweekly" },
+    { label: "monthly", value: "monthly" }
+  ];
+
   const submitClicked = (): void => {
     setState(initialState);
-    props.submitSelections(state);
+    props.submitSubscriptions(state);
+  };
+
+  const notifyFreqHandler = (event: RadioChangeEvent): void => {
+    setState({ ...state, notificationFreq: event.target.value });
   };
 
   const activityHandler = async (
@@ -95,7 +99,7 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
-      getAll(DATA.EXPERIMENTS),
+      getAll(FIELDS.experiments),
       [filterByActivity],
       newSelection
     );
@@ -134,8 +138,8 @@ export default function CreateSubscriptions(
     frequencySelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(frequencySelection);
-    const filteredVariables = applyFilters<VariableGroup>(
-      getAll(DATA.VARIABLES),
+    const filteredVariables = applyFilters<VariableInfo[]>(
+      getAll(FIELDS.variables),
       [filterByFrequency, filterByRealm],
       newSelection
     );
@@ -171,8 +175,8 @@ export default function CreateSubscriptions(
     realmSelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(realmSelection);
-    const filteredVariables = applyFilters<VariableGroup>(
-      getAll(DATA.VARIABLES),
+    const filteredVariables = applyFilters<VariableInfo[]>(
+      getAll(FIELDS.variables),
       [filterByFrequency, filterByRealm],
       newSelection
     );
@@ -209,15 +213,17 @@ export default function CreateSubscriptions(
     field: FIELDS,
     handler: (selection: ValueType<SelectorOption<any>>) => Promise<void>
   ): JSX.Element => (
-    <Row align="stretch">
-      <Col flex="300px">
-        <Divider orientation="right">
-          <Title level={4}>{header}</Title>
-        </Divider>
+    <Row align="middle" style={{ margin: "5px" }}>
+      <Col flex="250px">
+        <h6 style={{ textAlign: "right", margin: 0 }}>{header}</h6>
       </Col>
       <Col
         flex="auto"
-        style={{ paddingLeft: "30px", paddingRight: "30px", minWidth: "300px" }}
+        style={{
+          paddingLeft: "15px",
+          paddingRight: "15px",
+          minWidth: "300px",
+        }}
       >
         <Selector
           options={state[field].filtered}
@@ -228,16 +234,16 @@ export default function CreateSubscriptions(
     </Row>
   );
 
-  const { Title } = Typography;
-
   return (
     <Layout>
       <Divider>
-        <Title level={2}>Select Subscriptions</Title>
+        <Typography.Title level={2}>Select Subscriptions</Typography.Title>
       </Divider>
       <Row>
         <Divider orientation="left">
-          <Title level={3}>Subscribe to experiment(s)</Title>
+          <Typography.Title level={3}>
+            Subscribe to experiment(s)
+          </Typography.Title>
         </Divider>
       </Row>
       {stateSelector("Filter by Activity:", FIELDS.activities, activityHandler)}
@@ -249,7 +255,9 @@ export default function CreateSubscriptions(
         )}
       <Row>
         <Divider orientation="left">
-          <Title level={3}>Subscribe to variables(s)</Title>
+          <Typography.Title level={3}>
+            Subscribe to variables(s)
+          </Typography.Title>
         </Divider>
       </Row>
       {stateSelector(
@@ -261,10 +269,33 @@ export default function CreateSubscriptions(
       {stateSelector("Select Variable(s):", FIELDS.variables, variableHandler)}
       <Row>
         <Divider orientation="left">
-          <Title level={3}>Subscribe to model(s)</Title>
+          <Typography.Title level={3}>Subscribe to model(s)</Typography.Title>
         </Divider>
       </Row>
       {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
+      <Row align="middle">
+        <Col flex="250px">
+          <Divider orientation="left">
+            <Typography.Title level={3}>
+              Notification Frequency:
+            </Typography.Title>
+          </Divider>
+        </Col>
+        <Col
+          flex="auto"
+          style={{
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            minWidth: "300px",
+          }}
+        >
+          <Radio.Group
+            options={notifyFreqOpts}
+            onChange={notifyFreqHandler}
+            value={state.notificationFreq}
+          />
+        </Col>
+      </Row>
       <Row align="middle">
         <Divider orientation="center">
           <Button onClick={submitClicked}>Submit</Button>

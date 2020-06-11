@@ -3,6 +3,8 @@ import reactDom from "react-dom";
 import "./index.css";
 import App, { IAppProps } from "./components/App";
 import * as serviceWorker from "./serviceWorker";
+import { Subscription } from "./customTypes";
+import { defaultSubscriptions } from "./constants";
 
 declare global {
   interface Window {
@@ -11,6 +13,7 @@ declare global {
     props: {
       token: string;
       post_url: string; // eslint-disable-line
+      loadedSubs: {[name: string]: Subscription};
     };
   }
 }
@@ -20,6 +23,7 @@ try {
   let m;
   // eslint-disable-next-line
   if ((m = regex.exec(window.token)) !== null) {
+    // eslint-disable-next-line prefer-destructuring
     window.props.token = m[1];
   }
   const element: any = react.createElement(App, window.props);
@@ -30,7 +34,7 @@ try {
     window.react_mount // a reference to the #react div that we render to
   );
 } catch (error) {
-  const props: IAppProps = { post_url: "" }; // eslint-disable-line
+  const props: IAppProps = { post_url: "", loadedSubs: defaultSubscriptions }; // eslint-disable-line
 
   // Renders the react app in a dev server apart from COG and Django
   reactDom.render(
