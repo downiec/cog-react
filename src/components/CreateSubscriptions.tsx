@@ -7,6 +7,7 @@ import {
   Form,
   Row,
   Col,
+  Modal,
 } from "antd";
 import { RadioChangeEvent } from "antd/lib/radio";
 import React, { useState } from "react";
@@ -104,6 +105,21 @@ export default function CreateSubscriptions(
   ];
 
   const submitClicked = (): void => {
+    if (
+      state.activities.selectedIds.length <= 0 &&
+      state.experiments.selectedIds.length <= 0 &&
+      state.frequencies.selectedIds.length <= 0 &&
+      state.models.selectedIds.length <= 0 &&
+      state.realms.selectedIds.length <= 0 &&
+      state.variables.selectedIds.length <= 0
+    ) {
+      Modal.error({
+        title: "Notice",
+        centered: true,
+        content: "Make a selection of at least one item, to submit your subscription."
+      });
+      return;
+    }
     setState(initialState);
     props.submitSubscriptions(state);
   };
@@ -245,6 +261,7 @@ export default function CreateSubscriptions(
       />
     </Form.Item>
   );
+
   return (
     <ErrorBoundary errorRender={errorRender}>
       <Form
