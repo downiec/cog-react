@@ -1,4 +1,13 @@
-import { Layout, Row, Col, Typography, Button, Divider, Radio } from "antd";
+import {
+  Typography,
+  Button,
+  Divider,
+  Radio,
+  Input,
+  Form,
+  Row,
+  Col,
+} from "antd";
 import { RadioChangeEvent } from "antd/lib/radio";
 import React, { useState } from "react";
 import { ValueType } from "react-select/src/types";
@@ -14,10 +23,11 @@ import {
   getOptionListValues,
   ModelInfo,
   SelectorOption,
-  VariableInfo
+  VariableInfo,
 } from "../data/dataProvider";
 
-import { Freq, FIELDS } from "../customTypes";
+import { Period, FIELDS } from "../customTypes";
+import ErrorBoundary from "./ErrorBoundary";
 
 export interface ISubscribeProps {
   submitSubscriptions: (state: ISubscribeState) => Promise<void>;
@@ -30,7 +40,8 @@ export interface IOptionState<InfoType, IDType> {
 }
 
 export interface ISubscribeState {
-  notificationFreq: Freq;
+  name: string;
+  period: Period;
   activities: IOptionState<string, string>;
   experiments: IOptionState<ExperimentInfo, ExperimentInfo>;
   frequencies: IOptionState<string, string>;
@@ -39,8 +50,15 @@ export interface ISubscribeState {
   variables: IOptionState<VariableInfo[], string>;
 }
 
+const errorRender: JSX.Element = (
+  <p>
+    <h3>An error occured with this form.</h3>
+  </p>
+);
+
 const initialState: ISubscribeState = {
-  notificationFreq: "weekly",
+  name: "",
+  period: "weekly",
   activities: {
     filtered: getAll(FIELDS.activities),
     selected: null,
@@ -78,11 +96,11 @@ export default function CreateSubscriptions(
 ): JSX.Element {
   const [state, setState] = useState<ISubscribeState>(initialState);
 
-  const notifyFreqOpts: { label: Freq; value: Freq }[] = [
+  const notifyFreqOpts: { label: Period; value: Period }[] = [
     { label: "daily", value: "daily" },
     { label: "weekly", value: "weekly" },
     { label: "biweekly", value: "biweekly" },
-    { label: "monthly", value: "monthly" }
+    { label: "monthly", value: "monthly" },
   ];
 
   const submitClicked = (): void => {
@@ -90,8 +108,8 @@ export default function CreateSubscriptions(
     props.submitSubscriptions(state);
   };
 
-  const notifyFreqHandler = (event: RadioChangeEvent): void => {
-    setState({ ...state, notificationFreq: event.target.value });
+  const periodHandler = (event: RadioChangeEvent): void => {
+    setState({ ...state, period: event.target.value });
   };
 
   const activityHandler = async (
@@ -208,99 +226,102 @@ export default function CreateSubscriptions(
     });
   };
 
+  const nameHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    let nameStr: string = event.target.value;
+    nameStr = nameStr.replace(/[^1-9A-z_ ]|\^/gm, "");
+    setState({ ...state, name: nameStr });
+  };
+
   const stateSelector = (
     header: string,
     field: FIELDS,
     handler: (selection: ValueType<SelectorOption<any>>) => Promise<void>
   ): JSX.Element => (
-    <Row align="middle" style={{ margin: "5px" }}>
-      <Col flex="250px">
-        <h6 style={{ textAlign: "right", margin: 0 }}>{header}</h6>
-      </Col>
-      <Col
-        flex="auto"
-        style={{
-          paddingLeft: "15px",
-          paddingRight: "15px",
-          minWidth: "300px",
-        }}
-      >
-        <Selector
-          options={state[field].filtered}
-          selectedOptions={state[field].selected}
-          selectionHandler={handler}
-        />
-      </Col>
-    </Row>
+    <Form.Item label={header} name="field">
+      <Selector
+        options={state[field].filtered}
+        selectedOptions={state[field].selected}
+        selectionHandler={handler}
+      />
+    </Form.Item>
   );
-
   return (
-    <Layout>
-      <Divider>
-        <Typography.Title level={2}>Select Subscriptions</Typography.Title>
-      </Divider>
-      <Row>
-        <Divider orientation="left">
-          <Typography.Title level={3}>
-            Subscribe to experiment(s)
-          </Typography.Title>
+    <ErrorBoundary errorRender={errorRender}>
+      <Form
+        labelCol={{ span: 8 }}
+        wrapperCol={{ span: 16 }}
+        name="CreateSubscriptions"
+      >
+        <Divider orientation="center">
+          <Typography.Title level={3}>Create New Subscription</Typography.Title>
         </Divider>
-      </Row>
-      {stateSelector("Filter by Activity:", FIELDS.activities, activityHandler)}
-      {state.experiments.filtered && // eslint-disable-line
-        stateSelector(
-          "Select Experiments:",
-          FIELDS.experiments,
-          experimentHandler
-        )}
-      <Row>
-        <Divider orientation="left">
-          <Typography.Title level={3}>
-            Subscribe to variables(s)
-          </Typography.Title>
-        </Divider>
-      </Row>
-      {stateSelector(
-        "Filter By Frequency:",
-        FIELDS.frequencies,
-        frequencyHandler
-      )}
-      {stateSelector("Filter By Model Realm:", FIELDS.realms, realmHandler)}
-      {stateSelector("Select Variable(s):", FIELDS.variables, variableHandler)}
-      <Row>
-        <Divider orientation="left">
-          <Typography.Title level={3}>Subscribe to model(s)</Typography.Title>
-        </Divider>
-      </Row>
-      {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
-      <Row align="middle">
-        <Col flex="250px">
-          <Divider orientation="left">
-            <Typography.Title level={3}>
-              Notification Frequency:
-            </Typography.Title>
-          </Divider>
-        </Col>
-        <Col
-          flex="auto"
-          style={{
-            paddingLeft: "15px",
-            paddingRight: "15px",
-            minWidth: "300px",
-          }}
+        <Row align="middle">
+          <Col span={8} style={{ textAlign: "right", paddingRight: ".5em" }}>
+            Name (Optional):
+          </Col>
+          <Col span={16}>
+            <Input
+              allowClear
+              placeholder="Subscription name (OPTIONAL)"
+              onChange={nameHandler}
+              value={state.name}
+            />
+          </Col>
+        </Row>
+
+        <Form.Item
+          label="Notification Interval"
+          name="period"
+          valuePropName={state.period}
         >
           <Radio.Group
             options={notifyFreqOpts}
-            onChange={notifyFreqHandler}
-            value={state.notificationFreq}
+            onChange={periodHandler}
+            value={state.period}
           />
-        </Col>
-      </Row>
-      <Row align="middle">
-        <Divider orientation="center">
-          <Button onClick={submitClicked}>Submit</Button>
+        </Form.Item>
+        <Divider orientation="left">
+          <Typography.Title level={4}>
+            Subscribe to experiment(s)
+          </Typography.Title>
         </Divider>
-      </Row>
-    </Layout>
+        {stateSelector(
+          "Filter by Activity:",
+          FIELDS.activities,
+          activityHandler
+        )}
+        {state.experiments.filtered && // eslint-disable-line
+          stateSelector(
+            "Select Experiments:",
+            FIELDS.experiments,
+            experimentHandler
+          )}
+        <Divider orientation="left">
+          <Typography.Title level={4}>
+            Subscribe to variables(s)
+          </Typography.Title>
+        </Divider>
+        {stateSelector(
+          "Filter By Frequency:",
+          FIELDS.frequencies,
+          frequencyHandler
+        )}
+        {stateSelector("Filter By Model Realm:", FIELDS.realms, realmHandler)}
+        {stateSelector(
+          "Select Variable(s):",
+          FIELDS.variables,
+          variableHandler
+        )}
+        <Divider orientation="left">
+          <Typography.Title level={4}>Subscribe to model(s)</Typography.Title>
+        </Divider>
+        {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
+        <Form.Item wrapperCol={{ offset: 12 }}>
+          <Button type="primary" htmlType="submit" onClick={submitClicked}>
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+    </ErrorBoundary>
   );
 }

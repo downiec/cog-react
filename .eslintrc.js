@@ -8,7 +8,7 @@ module.exports = {
     "airbnb",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
   ],
   globals: {
     Atomics: "readonly",
@@ -33,7 +33,7 @@ module.exports = {
     quotes: ["warn", "double"],
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
     "object-curly-newline": [
-      "warn",
+      "off",
       {
         ObjectExpression: { multiline: true },
         ObjectPattern: { multiline: true },
@@ -57,7 +57,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/interface-name-prefix": "off"
+    "@typescript-eslint/interface-name-prefix": "off",
   },
   settings: {
     "import/resolver": {

@@ -1,12 +1,19 @@
 import { ExperimentInfo, VariableInfo, ModelInfo } from "./data/dataProvider";
 
 export type SubType = "Experiment" | "Variable" | "Model";
-export type Freq = "daily" | "weekly" | "biweekly" | "monthly";
+export type Period = "daily" | "weekly" | "biweekly" | "monthly";
+
 export type Subscription = {
-  name: string;
-  type: FIELDS;
-  frequency: Freq;
-  data: OptionType;
+  id: number;
+  period: Period;
+  timestamp: number;
+  name?: string;
+  activities: string[];
+  experiments: string[];
+  frequencies: string[];
+  models: string[];
+  realms: string[];
+  variables: string[];
 };
 
 export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;

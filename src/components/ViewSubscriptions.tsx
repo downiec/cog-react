@@ -1,91 +1,69 @@
-import {
-  Layout,
-  Row,
-  Col,
-  Typography,
-  Button,
-  Divider,
-  Radio,
-  Menu,
-  Dropdown,
-  Table,
-  Space,
-} from "antd";
+import { Typography, Button, Divider, Table, Space } from "antd";
 import React, { useState } from "react";
-import { Freq, Subscription, FIELDS } from "../customTypes";
+import { Subscription } from "../customTypes";
+import SubscriptionRow from "./SubscriptionRow";
+import ErrorBoundary from "./ErrorBoundary";
+
+const errorRender: JSX.Element = (
+  <p>
+    <h3>An error occured with this form.</h3>
+  </p>
+);
 
 export interface ICurrentSubsProps {
   updateSubscriptions: (state: ICurrentSubsState) => Promise<void>;
-  currentSubs: { [name: string]: Subscription };
+  currentSubs: Subscription[];
 }
 
 export interface ICurrentSubsState {
-  currentSubs: { [name: string]: Subscription };
-  dataSource: {
-    key: number;
-    type: FIELDS;
-    name: string;
-    frequency: Freq;
-  }[];
+  currentSubs: Subscription[];
 }
 
 export default function ViewSubscriptions(
   props: ICurrentSubsProps
 ): JSX.Element {
-  const subsToData = (newSubs: { [name: string]: Subscription }): any => {
-    const newObjs = Object.keys(newSubs).map((subName: string) => {
-      return {
-        key: `${newSubs[subName].type}_${newSubs[subName].name}`,
-        type: newSubs[subName].type,
-        name: newSubs[subName].name,
-        frequency: newSubs[subName].frequency,
-      };
-    });
-    return newObjs;
-  };
-
   const [state, setState] = useState<ICurrentSubsState>({
     currentSubs: props.currentSubs,
-    dataSource: subsToData(props.currentSubs),
   });
 
-  const updateDataSource = (newSubs: {
-    [name: string]: Subscription;
-  }): void => {
-    setState({ currentSubs: newSubs, dataSource: subsToData(newSubs) });
-    // props.updateSubscriptions(state);
+  const updateDataSource = (newSubs: Subscription[]): void => {
+    setState({ currentSubs: newSubs });
+    props.updateSubscriptions({ currentSubs: newSubs });
   };
 
-  const removeSub = (idx: string): void => {
-    const newSubs = state.currentSubs;
-    delete newSubs[idx];
-    console.log(idx)
-    console.log(newSubs)
+  const removeSub = (timestamp: number): void => {
+    const newSubs = state.currentSubs.filter((sub: Subscription) => {
+      return sub.timestamp !== timestamp;
+    });
     updateDataSource(newSubs);
   };
 
   const subTableColumns = [
     {
-      title: "Type",
-      dataIndex: "type",
-      key: "type",
+      title: "Period",
+      dataIndex: "period",
+      key: "period",
       filters: [
         {
-          text: "experiments",
-          value: "experiments",
+          text: "daily",
+          value: "daily",
         },
         {
-          text: "variables",
-          value: "variables",
+          text: "weekly",
+          value: "weekly",
         },
         {
-          text: "models",
-          value: "models",
+          text: "biweekly",
+          value: "biweekly",
+        },
+        {
+          text: "monthly",
+          value: "monthly",
         },
       ],
-      filterMultiple: false,
-      onFilter: (value: any, record: any): boolean =>
-        record.type.indexOf(value) === 0,
+      filterMultiple: true,
+      onFilter: (value: any, record: Subscription): boolean =>
+        record.period.indexOf(value) === 0,
     },
     {
       title: "Name",
@@ -93,37 +71,44 @@ export default function ViewSubscriptions(
       key: "name",
     },
     {
-      title: "Frequency",
-      dataIndex: "frequency",
-      key: "frequency",
+      title: "Selections",
+      dataIndex: "selections",
+      key: "selections",
+      render: (text: string, record: Subscription): JSX.Element => {
+        return <SubscriptionRow record={record} />;
+      },
     },
     {
       title: "Action",
       key: "action",
-      render: (text: string, record: any): JSX.Element => (
-        <Space size="middle">
+      render: (text: string, record: Subscription): JSX.Element => (
+        <Space size="small">
           <Button
             onClick={(): void => {
-              removeSub(`${record.type}_${record.name}`);
+              removeSub(record.timestamp);
             }}
           >
-            {`Remove '${record.name}'`}
+            Remove
           </Button>
         </Space>
       ),
     },
   ];
 
+  const dataSource = state.currentSubs.map((sub: Subscription) => {
+    return { ...sub, key: sub.timestamp };
+  });
+
   return (
-    <Layout>
+    <ErrorBoundary errorRender={errorRender}>
       <Divider>
-        <Typography.Title level={2}>Current Subscriptions</Typography.Title>
+        <Typography.Title level={3}>Current Subscriptions</Typography.Title>
       </Divider>
       <Table
         columns={subTableColumns}
-        dataSource={state.dataSource}
+        dataSource={dataSource}
         pagination={{ hideOnSinglePage: true }}
       />
-    </Layout>
+    </ErrorBoundary>
   );
 }

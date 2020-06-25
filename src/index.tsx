@@ -13,7 +13,7 @@ declare global {
     props: {
       token: string;
       post_url: string; // eslint-disable-line
-      loadedSubs: {[name: string]: Subscription};
+      loadedSubs: Subscription[];
     };
   }
 }

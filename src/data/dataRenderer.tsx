@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
 import { Button, Popover } from "antd";
 import chromaJs from "chroma-js";
-import { convertStrToColor } from "../utilities/mainUtils";
+import { convertStrToHexColor } from "../utilities/mainUtils";
 import {
   areVariables,
   ExperimentInfo,
@@ -13,35 +12,35 @@ import {
 } from "./dataProvider";
 
 export const colorByName = (value: [string, any]): string => {
-  return convertStrToColor(value[0], {
+  return convertStrToHexColor(value[0], {
     minColor: [20, 20, 20],
     maxColor: [220, 220, 220],
   });
 };
 
 export const colorShadesBlue = (value: [string, any]): string => {
-  return convertStrToColor(value[0], {
+  return convertStrToHexColor(value[0], {
     minColor: [50, 100, 200],
     maxColor: [120, 200, 255],
   });
 };
 
 export const colorShadesGreen = (value: [string, any]): string => {
-  return convertStrToColor(value[0], {
+  return convertStrToHexColor(value[0], {
     minColor: [50, 200, 120],
     maxColor: [150, 255, 200],
   });
 };
 
 export const colorByActivity = (value: [string, ExperimentInfo]): string => {
-  return convertStrToColor(value[1].activity_id[0], {
+  return convertStrToHexColor(value[1].activity_id[0], {
     minColor: [20, 20, 20],
     maxColor: [220, 220, 220],
   });
 };
 
 export const colorByRealm = (value: [string, VariableInfo]): string => {
-  return convertStrToColor(value[1].modeling_realm, {
+  return convertStrToHexColor(value[1].modeling_realm, {
     minColor: [50, 200, 120],
     maxColor: [150, 255, 200],
   });
@@ -72,7 +71,48 @@ function showData(
 }
 
 function defaultOption(option: SelectorOption<any>): JSX.Element {
-  return <div>{option.label}</div>;
+  const color: chromaJs.Color = chromaJs(option.color);
+  return (
+    <Popover
+      trigger="click"
+      placement="bottom"
+      overlayStyle={{ minWidth: "250px" }}
+      title={
+        <div
+          style={{
+            color: color.css(),
+            fontSize: "1.5em",
+            width: "270px",
+          }}
+        >
+          Description
+        </div>
+      }
+      content={
+        <div
+          style={{
+            maxWidth: "270px",
+            color: color
+              .desaturate()
+              .darken()
+              .css(),
+          }}
+        >
+          {option.data}
+        </div>
+      }
+    >
+      <Button
+        style={{
+          color: color.css(),
+          backgroundColor: color.alpha(0).css(),
+          borderColor: color.alpha(0).css(),
+        }}
+      >
+        {option.label}
+      </Button>
+    </Popover>
+  );
 }
 
 interface IDataRenderProps {
@@ -88,80 +128,71 @@ function DataPopover(props: IDataRenderProps): JSX.Element {
   const [show, setShow] = useState(false);
 
   const color: chromaJs.Color = chromaJs(props.option.color);
-  const id = `info_${props.option.label}`;
   const toggle = (): void => {
     setShow(!show);
   };
   return (
-    <div>
-      <Popover
-        trigger="click"
-        placement="bottom"
-        overlayStyle={{ minWidth: "250px" }}
-        title={
-          <div
-            style={{
-              color: color.css(),
-              fontSize: "1.5em",
-              width: "270px",
-            }}
-          >
-            {props.headerTxt}
-            <Button
-              className="float-right"
-              style={{
-                color: color.css(),
-                backgroundColor: color.alpha(0.2).css(),
-                borderColor: color.alpha(0.3).css(),
-              }}
-              id={`sub_info_${id}`}
-              onClick={toggle}
-            >
-              {props.buttonTxt}
-            </Button>
-          </div>
-        }
-        content={
-          <div
-            style={{
-              maxWidth: "270px",
-              color: color
-                .desaturate()
-                .darken()
-                .css(),
-            }}
-          >
-            {props.descriptionTxt}
-            <div
-              id={`sub_info_${id}`}
-              style={{ display: show ? "block" : "none", maxWidth: "250px" }}
-            >
-              <hr />
-              {props.dataHeaders.map((header: string, idx: number) => {
-                return showData(idx, header, props.data[idx]);
-              })}
-            </div>
-          </div>
-        }
-      >
-        <Button
+    <Popover
+      trigger="click"
+      placement="bottom"
+      overlayStyle={{ minWidth: "250px" }}
+      title={
+        <div
           style={{
             color: color.css(),
-            backgroundColor: color.alpha(0).css(),
-            borderColor: color.alpha(0).css(),
+            fontSize: "1.5em",
+            width: "270px",
           }}
-          id={id}
         >
-          {props.option.label}
-        </Button>
-      </Popover>
-    </div>
+          {props.headerTxt}
+          <Button
+            className="float-right"
+            style={{
+              color: color.css(),
+              backgroundColor: color.alpha(0.2).css(),
+              borderColor: color.alpha(0.3).css(),
+            }}
+            onClick={toggle}
+          >
+            {props.buttonTxt}
+          </Button>
+        </div>
+      }
+      content={
+        <div
+          style={{
+            maxWidth: "270px",
+            color: color
+              .desaturate()
+              .darken()
+              .css(),
+          }}
+        >
+          {props.descriptionTxt}
+          <div style={{ display: show ? "block" : "none", maxWidth: "250px" }}>
+            {props.dataHeaders.map((header: string, idx: number) => {
+              return showData(idx, header, props.data[idx]);
+            })}
+          </div>
+        </div>
+      }
+    >
+      <Button
+        style={{
+          color: color.css(),
+          backgroundColor: color.alpha(0).css(),
+          borderColor: color.alpha(0).css(),
+        }}
+      >
+        {props.option.label}
+      </Button>
+    </Popover>
   );
 }
 
-export function renderOption(option: SelectorOption<any>): JSX.Element | undefined{
+export function renderOption(option: SelectorOption<any>): JSX.Element {
   if (!option) {
-    return undefined;
+    return <div />;
   }
 
   if (isExperiment(option.data)) {

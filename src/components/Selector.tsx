@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import Autocomplete from "react-windowed-select";
+import Select from "react-windowed-select";
 import animated from "react-select/animated";
 import { ValueType } from "react-select/src/types";
 import { SelectComponents } from "react-select/src/components";
@@ -32,7 +32,7 @@ export interface ISelectorProps {
 export function Selector(props: ISelectorProps): JSX.Element {
   return (
     <ErrorBoundary errorRender={errorRender}>
-      <Autocomplete
+      <Select
         isMulti
         isSearchable
         isClearable

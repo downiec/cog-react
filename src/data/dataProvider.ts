@@ -1,5 +1,6 @@
 import { ValueType } from "react-select/src/types";
-import importData from "./dataImporter";
+import { isNullOrUndefined, isArray } from "util";
+import { importDataItem, importDataList } from "./dataImporter";
 import { memoize } from "../utilities/mainUtils";
 import {
   colorByActivity,
@@ -30,7 +31,7 @@ export function isModel(object: any): object is ModelInfo {
   return object.source_id !== undefined;
 }
 
-export function createOptionList<T>(
+export function createOptions<T>(
   data: { [key: string]: T },
   colorFunc?: (value: [string, T]) => string
 ): ValueType<SelectorOption<T>> {
@@ -55,30 +56,52 @@ export function createOptionList<T>(
   return options;
 }
 
-function getOptionList(dataType: FIELDS, data: { [key: string]: any }): any {
+function getOptions(
+  dataType: FIELDS,
+  data: { [key: string]: any }
+): ValueType<SelectorOption<any>> {
   switch (dataType) {
     case FIELDS.experiments:
-      return createOptionList(data, colorByActivity);
+      return createOptions(data, colorByActivity);
     case FIELDS.frequencies:
-      return createOptionList(data, colorShadesBlue);
+      return createOptions(data, colorShadesBlue);
     case FIELDS.realms:
-      return createOptionList(data, colorShadesGreen);
+      return createOptions(data, colorShadesGreen);
     default:
-      return createOptionList(data, colorByName);
+      return createOptions(data, colorByName);
   }
 }
 
 function getAllOptions(dataType: FIELDS): any {
-  const data = importData(dataType);
-  return getOptionList(dataType, data);
+  const data = importDataList(dataType);
+  return getOptions(dataType, data);
 }
 
-export function getOption(
+export function getOptionItem(
   dataType: FIELDS,
   id: string
-): ValueType<SelectorOption<any>> {
-  const data = importData(dataType);
-  return getOptionList(dataType, data[id]);
+): SelectorOption<any> {
+  const data = importDataItem(dataType, id);
+  const opts = getOptions(dataType, data);
+  if (!isNullOrUndefined(opts) && isArray(opts)) {
+    return opts[0];
+  }
+  return opts as SelectorOption<any>;
+}
+
+export function getOptionList(
+  dataType: FIELDS,
+  ids: string[] | undefined
+): ValueType<SelectorOption<any>>[] {
+  if (!ids) {
+    return [undefined];
+  }
+
+  const data = importDataList(dataType);
+  const options: any[] = ids.map((id: string) => {
+    return getOptions(dataType, data[id]);
+  });
+  return options;
 }
 
 export const getAll: (data: FIELDS) => ValueType<SelectorOption<any>> = memoize(

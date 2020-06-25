@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import chromaJs from "chroma-js";
-import { Subscription, FIELDS } from "./customTypes";
+import { Subscription } from "./customTypes";
 
 // eslint-disable-next-line import/prefer-default-export
 export const customStyles = {
@@ -66,29 +66,16 @@ export const customStyles = {
   }),
 };
 
-export const defaultSubscriptions: { [name: string]: Subscription } = {
-  variables_clt: {
-    name: "clt",
-    type: FIELDS.variables,
-    frequency: "weekly",
-    data: {
-      frequency: "3hr",
-      modeling_realm: "atmos",
-      standard_name: "cloud_area_fraction",
-      units: "%",
-      cell_methods: "area: time: mean",
-      cell_measures: "area: areacella",
-      long_name: "Total Cloud Cover Percentage",
-      comment:
-        "Total cloud area fraction (reported as a percentage) for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud.",
-      dimensions: "longitude latitude time",
-      out_name: "clt",
-      type: "real",
-      positive: "",
-      valid_min: "",
-      valid_max: "",
-      ok_min_mean_abs: "",
-      ok_max_mean_abs: "",
-    },
+export const defaultSubscriptions: Subscription[] = [
+  {
+    id: 1,
+    timestamp: Date.now(),
+    period: "weekly",
+    activities: ["CMIP"],
+    experiments: [],
+    frequencies: [],
+    models: [],
+    realms: ["land"],
+    variables: ["clt"],
   },
-};
+];

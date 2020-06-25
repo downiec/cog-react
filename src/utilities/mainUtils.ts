@@ -19,16 +19,16 @@ function convertStrToNum(str: string, maxVal: number): number {
   return value;
 }
 
-export function convertStrToColor(
+export function convertStrToChromaColor(
   str: string,
   rgbRange?: {
     minColor: color;
     maxColor: color;
   }
-): string {
+): chromaJs.Color {
   let newStr = str;
   if (!newStr) {
-    return "green";
+    return chromaJs("green");
   }
 
   // Make string large enough to cover all colors
@@ -52,7 +52,17 @@ export function convertStrToColor(
     }
   }
 
-  return chromaJs(colors).hex();
+  return chromaJs(colors);
+}
+
+export function convertStrToHexColor(
+  str: string,
+  rgbRange?: {
+    minColor: color;
+    maxColor: color;
+  }
+): string {
+  return convertStrToChromaColor(str, rgbRange).hex();
 }
 
 // The following function are copying from
