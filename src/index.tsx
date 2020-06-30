@@ -4,6 +4,7 @@ import "./index.css";
 import App, { IAppProps } from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { defaultSubscriptions } from "./constants";
+import { Subscription } from "./customTypes";
 
 declare global {
   interface Window {
@@ -12,7 +13,7 @@ declare global {
     props: {
       token: string;
       post_url: string; // eslint-disable-line
-      saved_subs: [];
+      saved_subs: Subscription[];
     };
   }
 }
