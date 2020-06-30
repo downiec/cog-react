@@ -30,4 +30,6 @@ else
     echo "Starting COG server..."
 fi
 
-python ../COG/manage.py runserver 0.0.0.0:3000
+cd ../COG
+python manage.py runserver 0.0.0.0:3000
+cd cog-react
