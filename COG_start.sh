@@ -15,7 +15,8 @@ echo "Removing old css files."
 rm ../COG/cog/static/cog/cog-react/css/*
 echo "Copying new js files."
 mkdir -p ../COG/cog/static/cog/cog-react/js/
-cp build/static/js/*.{js, map} ../COG/cog/static/cog/cog-react/js/
+cp build/static/js/*.js ../COG/cog/static/cog/cog-react/js/
+cp build/static/js/*.map ../COG/cog/static/cog/cog-react/js/
 echo "Copying new css files."
 mkdir -p ../COG/cog/static/cog/cog-react/css/
 cp build/static/css/* ../COG/cog/static/cog/cog-react/css/
