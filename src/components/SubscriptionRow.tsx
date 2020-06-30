@@ -69,7 +69,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
   if (props.record) {
     return (
       <Space size="small" align="center">
-        {props.record.activities.length > 0 && (
+        {props.record.activities && props.record.activities.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.activities}
             color="lightblue"
@@ -77,7 +77,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.activities}
           />
         )}
-        {props.record.experiments.length > 0 && (
+        {props.record.experiments && props.record.experiments.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.experiments}
             color="lightblue"
@@ -85,7 +85,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.experiments}
           />
         )}
-        {props.record.frequencies.length > 0 && (
+        {props.record.frequencies && props.record.frequencies.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.frequencies}
             color="lightblue"
@@ -93,7 +93,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.frequencies}
           />
         )}
-        {props.record.models.length > 0 && (
+        {props.record.models && props.record.models.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.models}
             color="lightblue"
@@ -101,7 +101,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.models}
           />
         )}
-        {props.record.realms.length > 0 && (
+        {props.record.realms && props.record.realms.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.realms}
             color="lightblue"
@@ -109,7 +109,7 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.realms}
           />
         )}
-        {props.record.variables.length > 0 && (
+        {props.record.variables && props.record.variables.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.variables}
             color="lightblue"
