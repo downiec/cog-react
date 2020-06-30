@@ -48,8 +48,16 @@ export default function App(props: IAppProps): JSX.Element {
     }
   };
 
-  const generateRequest = (formData: {}): Request => {
-    console.log(formData);
+  const generateRequest = (
+    formData: { [key: string]: any },
+    action: string
+  ): Request => {
+    // Add action designation to data
+    const reqData: { [key: string]: any } = {};
+    reqData.action = action;
+    reqData.payload = formData;
+
+    console.log(reqData);
     // Get required csrf toekn for posting request.
     const csrftoken = getCookie("csrftoken");
 
@@ -57,7 +65,7 @@ export default function App(props: IAppProps): JSX.Element {
     const { post_url } = props;
     const request: Request = new Request(post_url, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: JSON.stringify(reqData),
       headers: {
         "X-CSRFToken": csrftoken || "",
         "Content-Type": "application/json",
@@ -80,12 +88,12 @@ export default function App(props: IAppProps): JSX.Element {
     setState({ ...state, currentSubs: newSubs });
 
     // Generate data for request
-    const data: [number, number][] = subsToDelete.map((sub: Subscription) => {
-      return [sub.timestamp, sub.id];
+    const data = subsToDelete.map((sub: Subscription) => {
+      return [sub.id, sub.timestamp];
     });
 
     // Generate the request using data object
-    const request: Request = generateRequest(data);
+    const request: Request = generateRequest(data, "unsubscribe");
     // Send request and await for response
     await sendRequest(request);
   };
@@ -142,7 +150,7 @@ export default function App(props: IAppProps): JSX.Element {
     setState({ ...state, currentSubs: data });
 
     // Generate the request using data object
-    const request: Request = generateRequest(newSub);
+    const request: Request = generateRequest(newSub, "subscribe");
     // Send request and await for response
     await sendRequest(request);
 
