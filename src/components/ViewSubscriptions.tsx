@@ -1,5 +1,5 @@
-import { Typography, Button, Divider, Table, Space } from "antd";
-import React, { useState } from "react";
+import { Typography, Button, Divider, Table, Space, Modal } from "antd";
+import React from "react";
 import { Subscription } from "../customTypes";
 import SubscriptionRow from "./SubscriptionRow";
 import ErrorBoundary from "./ErrorBoundary";
@@ -11,7 +11,7 @@ const errorRender: JSX.Element = (
 );
 
 export interface ICurrentSubsProps {
-  updateSubscriptions: (state: ICurrentSubsState) => Promise<void>;
+  deleteSubscriptions: (subs: Subscription[]) => Promise<void>;
   currentSubs: Subscription[];
 }
 
@@ -22,20 +22,25 @@ export interface ICurrentSubsState {
 export default function ViewSubscriptions(
   props: ICurrentSubsProps
 ): JSX.Element {
-  const [state, setState] = useState<ICurrentSubsState>({
-    currentSubs: props.currentSubs,
-  });
-
-  const updateDataSource = (newSubs: Subscription[]): void => {
-    setState({ currentSubs: newSubs });
-    props.updateSubscriptions({ currentSubs: newSubs });
+  const removeSub = (timestamp: number): void => {
+    const deleteSub = props.currentSubs.find((sub: Subscription) => {
+      return sub.timestamp === timestamp;
+    });
+    if (deleteSub !== undefined) {
+      props.deleteSubscriptions([deleteSub]);
+    }
   };
 
-  const removeSub = (timestamp: number): void => {
-    const newSubs = state.currentSubs.filter((sub: Subscription) => {
-      return sub.timestamp !== timestamp;
+  const removeAllSubs = (): void => {
+    Modal.error({
+      title: "Notice",
+      centered: true,
+      okCancel: true,
+      onOk: (): void => {
+        props.deleteSubscriptions(props.currentSubs);
+      },
+      content: "Are you sure you wish to remove ALL of your subscriptions?",
     });
-    updateDataSource(newSubs);
   };
 
   const subTableColumns = [
@@ -88,14 +93,14 @@ export default function ViewSubscriptions(
               removeSub(record.timestamp);
             }}
           >
-            Remove
+            Unsubscribe
           </Button>
         </Space>
       ),
     },
   ];
 
-  const dataSource = state.currentSubs.map((sub: Subscription) => {
+  const dataSource = props.currentSubs.map((sub: Subscription) => {
     return { ...sub, key: sub.timestamp };
   });
 
@@ -104,6 +109,9 @@ export default function ViewSubscriptions(
       <Divider>
         <Typography.Title level={3}>Current Subscriptions</Typography.Title>
       </Divider>
+      <Button onClick={removeAllSubs} type="primary" danger>
+        Unsubscribe All
+      </Button>
       <Table
         columns={subTableColumns}
         dataSource={dataSource}

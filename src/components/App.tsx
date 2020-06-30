@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Layout, Card, Tabs } from "antd";
 import CreateSubscriptions, { ISubscribeState } from "./CreateSubscriptions";
-import ViewSubscriptions, { ICurrentSubsState } from "./ViewSubscriptions";
+import ViewSubscriptions from "./ViewSubscriptions";
 import { ExperimentInfo, ModelInfo } from "../data/dataProvider";
 import { getCookie } from "../utilities/mainUtils";
 import { Subscription } from "../customTypes";
@@ -49,6 +49,7 @@ export default function App(props: IAppProps): JSX.Element {
   };
 
   const generateRequest = (formData: {}): Request => {
+    console.log(formData);
     // Get required csrf toekn for posting request.
     const csrftoken = getCookie("csrftoken");
 
@@ -67,10 +68,26 @@ export default function App(props: IAppProps): JSX.Element {
     return request;
   };
 
-  const updateSubscriptions = async (
-    newSubs: ICurrentSubsState
+  const deleteSubscriptions = async (
+    subsToDelete: Subscription[]
   ): Promise<void> => {
-    setState({ ...state, currentSubs: newSubs.currentSubs });
+    const newSubs: Subscription[] = state.currentSubs.filter(
+      (sub: Subscription) => {
+        return !subsToDelete.includes(sub);
+      }
+    );
+    // Update state
+    setState({ ...state, currentSubs: newSubs });
+
+    // Generate data for request
+    const data: [number, number][] = subsToDelete.map((sub: Subscription) => {
+      return [sub.timestamp, sub.id];
+    });
+
+    // Generate the request using data object
+    const request: Request = generateRequest(data);
+    // Send request and await for response
+    await sendRequest(request);
   };
 
   const setActivePane = (pane: Panes): void => {
@@ -150,7 +167,7 @@ export default function App(props: IAppProps): JSX.Element {
             </Tabs.TabPane>
             <Tabs.TabPane tab="View Subscriptions" key={Panes.ViewSubs}>
               <ViewSubscriptions
-                updateSubscriptions={updateSubscriptions}
+                deleteSubscriptions={deleteSubscriptions}
                 currentSubs={state.currentSubs}
               />
             </Tabs.TabPane>

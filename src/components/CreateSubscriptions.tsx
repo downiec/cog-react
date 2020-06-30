@@ -285,7 +285,6 @@ export default function CreateSubscriptions(
             />
           </Col>
         </Row>
-
         <Form.Item
           label="Notification Interval"
           name="period"
