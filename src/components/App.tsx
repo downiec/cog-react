@@ -13,7 +13,7 @@ enum Panes {
 }
 export interface IAppProps {
   post_url: string; // eslint-disable-line
-  loadedSubs: Subscription[];
+  saved_subs: Subscription[];
 }
 
 export interface IAppState {
@@ -23,7 +23,7 @@ export interface IAppState {
 
 export default function App(props: IAppProps): JSX.Element {
   const initialState: IAppState = {
-    currentSubs: props.loadedSubs,
+    currentSubs: props.saved_subs,
     activeTab: Panes.AddSubs,
   };
 

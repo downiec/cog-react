@@ -8,12 +8,12 @@ export type Subscription = {
   period: Period;
   timestamp: number;
   name?: string;
-  activities: string[];
-  experiments: string[];
-  frequencies: string[];
-  models: string[];
-  realms: string[];
-  variables: string[];
+  activities?: string[];
+  experiments?: string[];
+  frequencies?: string[];
+  models?: string[];
+  realms?: string[];
+  variables?: string[];
 };
 
 export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;

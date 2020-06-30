@@ -5,7 +5,7 @@ import App, { IAppProps } from "./App";
 
 const testProps: IAppProps = {
   post_url: "",
-  loadedSubs: []
+  saved_subs: []
 };
 
 it("renders without crashing", () => {
