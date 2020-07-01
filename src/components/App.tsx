@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Layout, Card, Tabs } from "antd";
@@ -120,22 +121,25 @@ export default function App(props: IAppProps): JSX.Element {
     );
 
     // Create subscription object to pass to backend
+    const time: number = Date.now();
     const newSub: {} = {
+      timestamp: time,
       period: subState.period,
       name: subState.name,
-      activities: subState.activities.selectedIds,
-      experiments: experimentIds,
-      frequencies: subState.frequencies.selectedIds,
-      models: modelIds,
-      realms: subState.realms.selectedIds,
-      variables: subState.variables.selectedIds,
+      activity_id: subState.activities.selectedIds,
+      experiment_id: experimentIds,
+      frequency: subState.frequencies.selectedIds,
+      source_id: modelIds,
+      realm: subState.realms.selectedIds,
+      variable_id: subState.variables.selectedIds,
     };
 
     const data: Subscription[] = state.currentSubs;
 
+    // Save in front-end state
     data.push({
       id: -1,
-      timestamp: Date.now(),
+      timestamp: time,
       period: subState.period,
       name: subState.name,
       activities: subState.activities.selectedIds,
