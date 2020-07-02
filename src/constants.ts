@@ -1,69 +1,81 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import chromaJs from "chroma-js";
+import { Subscription } from "./customTypes";
 
-export enum DATA {
-  ACTIVITIES,
-  EXPERIMENTS,
-  FREQUENCIES,
-  REALMS,
-  VARIABLES,
-  MODELS
-}
-
+// eslint-disable-next-line import/prefer-default-export
 export const customStyles = {
-  control: (styles: any) => ({ ...styles, backgroundColor: "white" }),
-  option: (styles: any, { data, isDisabled, isFocused, isSelected }: any) => {
+  control: (styles: any): {} => ({ ...styles, backgroundColor: "white" }),
+  option: (
+    styles: any,
+    { data, isDisabled, isFocused, isSelected }: any
+  ): {} => {
+    if (!data) {
+      return styles;
+    }
     const color = chromaJs(data.color);
+    let backgroundCol = null;
+    if (!isDisabled) {
+      if (isSelected) {
+        backgroundCol = data.color;
+      } else if (isFocused) {
+        backgroundCol = color.alpha(0.1).css();
+      }
+    }
+    let textCol = "#ccc";
+    if (!isDisabled) {
+      if (isSelected) {
+        if (chromaJs.contrast(color, "white") > 2) {
+          textCol = "white";
+        } else {
+          textCol = "black";
+        }
+      } else {
+        textCol = data.color;
+      }
+    }
     return {
       ...styles,
-      backgroundColor: isDisabled
-        ? null
-        : isSelected
-        ? data.color
-        : isFocused
-        ? color.alpha(0.1).css()
-        : null,
-      color: isDisabled
-        ? "#ccc"
-        : isSelected
-        ? chromaJs.contrast(color, "white") > 2
-          ? "white"
-          : "black"
-        : data.color,
+      backgroundColor: backgroundCol,
+      color: textCol,
       cursor: isDisabled ? "not-allowed" : "default",
-
       ":active": {
         ...styles[":active"],
         backgroundColor:
-          !isDisabled && (isSelected ? data.color : color.alpha(0.3).css())
-      }
+          !isDisabled && (isSelected ? data.color : color.alpha(0.3).css()),
+      },
     };
   },
-  multiValue: (
-    styles: any,
-    { data, isDisabled, isFocused, isSelected }: any
-  ) => {
+  multiValue: (styles: any, { data }: any): {} => {
     const color = chromaJs(data.color);
     return {
       ...styles,
-      backgroundColor: color.alpha(0.1).css()
+      backgroundColor: color.alpha(0.1).css(),
     };
   },
-  multiValueLabel: (
-    styles: any,
-    { data, isDisabled, isFocused, isSelected }: any
-  ) => ({
+  multiValueLabel: (styles: any, { data }: any): {} => ({
     ...styles,
-    color: data.color
+    color: data.color,
   }),
-  multiValueRemove: (
-    styles: any,
-    { data, isDisabled, isFocused, isSelected }: any
-  ) => ({
+  multiValueRemove: (styles: any, { data }: any): {} => ({
     ...styles,
     color: data.color,
     ":hover": {
       backgroundColor: data.color,
-      color: "white"
-    }
-  })
+      color: "white",
+    },
+  }),
 };
+
+export const defaultSubscriptions: Subscription[] = [
+  {
+    id: 1,
+    timestamp: Date.now(),
+    period: "weekly",
+    activities: ["CMIP"],
+    experiments: [],
+    frequencies: [],
+    models: [],
+    realms: ["land"],
+    variables: ["clt"],
+  },
+];

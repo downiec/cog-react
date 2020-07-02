@@ -13,7 +13,8 @@ export default class ErrorBoundary extends React.Component<
   IErrorBoundaryProps,
   IErrorBoundaryState
 > {
-  public static getDerivedStateFromError(error: any) {
+  public static getDerivedStateFromError(error: any): {} {
+    console.error(error);
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
@@ -28,7 +29,7 @@ export default class ErrorBoundary extends React.Component<
     console.error(error, info);
   }
 
-  public render() {
+  public render(): JSX.Element | React.ReactNode | undefined {
     if (this.state.hasError) {
       return this.props.errorRender
         ? this.props.errorRender

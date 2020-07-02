@@ -1,317 +1,37 @@
-import * as React from "react";
-import bindDecorator from "bind-decorator";
-import { Button, Col, Container, Label, Row } from "reactstrap";
-import { ValueType } from "react-select/src/types";
-import { Selector } from "./Selector";
-import {
-  applyFilters,
-  ExperimentInfo,
-  filterByActivity,
-  filterByFrequency,
-  filterByRealm,
-  getAll,
-  getOptionListData,
-  getOptionListValues,
-  ModelInfo,
-  SelectorOption,
-  VariableGroup
-} from "../data/dataProvider";
-
-import { DATA } from "./../constants";
+/* eslint-disable @typescript-eslint/camelcase */
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import { Layout, Card, Tabs } from "antd";
+import CreateSubscriptions, { ISubscribeState } from "./CreateSubscriptions";
+import ViewSubscriptions from "./ViewSubscriptions";
+import { ExperimentInfo, ModelInfo } from "../data/dataProvider";
 import { getCookie } from "../utilities/mainUtils";
+import { Subscription } from "../customTypes";
 
-const labelStyle: React.CSSProperties = {
-  fontWeight: "bold",
-  fontSize: "1.5rem"
-};
-
+enum Panes {
+  "AddSubs" = "1",
+  "ViewSubs" = "2",
+}
 export interface IAppProps {
-  post_url: string;
-  user_info: any;
-  activities: any;
-  experiments: any;
+  post_url: string; // eslint-disable-line
+  saved_subs: Subscription[];
 }
 
 export interface IAppState {
-  filteredActivities: ValueType<SelectorOption<string>>;
-  filteredExperiments: ValueType<SelectorOption<ExperimentInfo>>;
-  filteredFrequencies: ValueType<SelectorOption<string>>;
-  filteredRealms: ValueType<SelectorOption<string>>;
-  filteredVariables: ValueType<SelectorOption<VariableGroup>>;
-  filteredModels: ValueType<SelectorOption<ModelInfo>>;
-  selectedActivities: ValueType<SelectorOption<string>>;
-  selectedExperiments: ValueType<SelectorOption<ExperimentInfo>>;
-  selectedFrequencies: ValueType<SelectorOption<string>>;
-  selectedRealms: ValueType<SelectorOption<string>>;
-  selectedVariables: ValueType<SelectorOption<VariableGroup>>;
-  selectedModels: ValueType<SelectorOption<ModelInfo>>;
-  selectedActivityIds: string[];
-  selectedExperimentInfo: ExperimentInfo[];
-  selectedFrequencyNames: string[];
-  selectedRealmNames: string[];
-  selectedVariableNames: string[];
-  selectedModelInfo: ModelInfo[];
+  currentSubs: Subscription[];
+  activeTab: Panes;
 }
 
-export default class App extends React.Component<IAppProps, IAppState> {
+export default function App(props: IAppProps): JSX.Element {
+  const initialState: IAppState = {
+    currentSubs: props.saved_subs,
+    activeTab: Panes.AddSubs,
+  };
 
-  constructor(props: IAppProps) {
-    super(props);
-    this.state = {
-      filteredActivities: getAll(DATA.ACTIVITIES),
-      filteredExperiments: getAll(DATA.EXPERIMENTS),
-      filteredFrequencies: getAll(DATA.FREQUENCIES),
-      filteredRealms: getAll(DATA.REALMS),
-      filteredVariables: getAll(DATA.VARIABLES),
-      filteredModels: getAll(DATA.MODELS),
-      selectedActivities: null,
-      selectedExperiments: null,
-      selectedFrequencies: null,
-      selectedRealms: null,
-      selectedVariables: null,
-      selectedModels: null,
-      selectedActivityIds: [],
-      selectedExperimentInfo: [],
-      selectedFrequencyNames: [],
-      selectedRealmNames: [],
-      selectedVariableNames: [],
-      selectedModelInfo: []
-    };
-  }
+  const [state, setState] = useState<IAppState>(initialState);
+  const { Content } = Layout;
 
-  @bindDecorator
-  public clearAll(): void {
-    this.setState({
-      filteredActivities: getAll(DATA.ACTIVITIES),
-      filteredExperiments: getAll(DATA.EXPERIMENTS),
-      filteredFrequencies: getAll(DATA.FREQUENCIES),
-      filteredRealms: getAll(DATA.REALMS),
-      filteredVariables: getAll(DATA.VARIABLES),
-      filteredModels: getAll(DATA.MODELS),
-      selectedActivities: null,
-      selectedExperiments: null,
-      selectedFrequencies: null,
-      selectedRealms: null,
-      selectedVariables: null,
-      selectedModels: null,
-      selectedActivityIds: [],
-      selectedExperimentInfo: [],
-      selectedFrequencyNames: [],
-      selectedRealmNames: [],
-      selectedVariableNames: [],
-      selectedModelInfo: []
-    });
-  }
-
-  @bindDecorator
-  public async submitSelections(): Promise<void> {
-    // Generate the request with form data
-    const request: Request = this.generateRequest();
-    // Send request and await for response
-    const success = await this.sendRequest(request);
-    console.log(success);
-    // Clear form
-    if (success) {
-      this.clearAll();
-    }
-  }
-
-  @bindDecorator
-  public async activityHandler(
-    activitySelection: ValueType<SelectorOption<string>>
-  ): Promise<void> {
-    const newSelection: string[] = getOptionListValues(activitySelection);
-    const filteredExperiments = applyFilters<ExperimentInfo>(
-      getAll(DATA.EXPERIMENTS),
-      [filterByActivity],
-      newSelection
-    );
-    this.setState({
-      selectedActivities: activitySelection,
-      selectedActivityIds: newSelection,
-      filteredExperiments
-    });
-  }
-
-  @bindDecorator
-  public async experimentHandler(
-    experimentSelection: ValueType<SelectorOption<any>>
-  ): Promise<void> {
-    const newSelection: ExperimentInfo[] = getOptionListData(
-      experimentSelection
-    );
-    this.setState({
-      selectedExperiments: experimentSelection,
-      selectedExperimentInfo: newSelection
-    });
-  }
-
-  @bindDecorator
-  public async frequencyHandler(
-    frequencySelection: ValueType<SelectorOption<any>>
-  ): Promise<void> {
-    const newSelection: string[] = getOptionListValues(frequencySelection);
-    const filteredVariables = applyFilters<VariableGroup>(
-      getAll(DATA.VARIABLES),
-      [filterByFrequency, filterByRealm],
-      newSelection
-    );
-    this.setState({
-      selectedFrequencies: frequencySelection,
-      selectedFrequencyNames: newSelection,
-      filteredVariables
-    });
-  }
-
-  @bindDecorator
-  public async realmHandler(
-    realmSelection: ValueType<SelectorOption<any>>
-  ): Promise<void> {
-    const newSelection: string[] = getOptionListValues(realmSelection);
-    const filteredVariables = applyFilters<VariableGroup>(
-      getAll(DATA.VARIABLES),
-      [filterByFrequency, filterByRealm],
-      newSelection
-    );
-    this.setState({
-      selectedRealms: realmSelection,
-      selectedRealmNames: newSelection,
-      filteredVariables
-    });
-  }
-
-  @bindDecorator
-  public async variableHandler(
-    variableSelection: ValueType<SelectorOption<any>>
-  ): Promise<void> {
-    const newSelection: string[] = getOptionListValues(variableSelection);
-    this.setState({
-      selectedVariables: variableSelection,
-      selectedVariableNames: newSelection
-    });
-  }
-
-  @bindDecorator
-  public async modelHandler(
-    modelSelection: ValueType<SelectorOption<any>>
-  ): Promise<void> {
-    const newSelection: ModelInfo[] = getOptionListData(modelSelection);
-    this.setState({
-      selectedModels: modelSelection,
-      selectedModelInfo: newSelection
-    });
-  }
-
-  public render(): JSX.Element {
-    return (
-      <Container id="main-app">
-        <h1>Subscription Page</h1>
-        <Row>
-          <h2>Subscribe to experiment(s):</h2>
-        </Row>
-        <br />
-        <Row>
-          <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-            <Label style={labelStyle} className="mr-sm-2">
-              List by Activity:
-            </Label>
-          </Col>
-          <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-            <Selector
-              options={this.state.filteredActivities}
-              selectedOptions={this.state.selectedActivities}
-              selectionHandler={this.activityHandler}
-            />
-          </Col>
-        </Row>
-        {this.state.filteredExperiments && (
-          <Row>
-            <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-              <Label style={labelStyle} className="mr-sm-2">
-                Select Experiment(s):
-              </Label>
-            </Col>
-            <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-              <Selector
-                options={this.state.filteredExperiments}
-                selectedOptions={this.state.selectedExperiments}
-                selectionHandler={this.experimentHandler}
-              />
-            </Col>
-          </Row>
-        )}
-        <Row>
-          <h2>Subscribe to variable(s):</h2>
-        </Row>
-        <br />
-        <Row>
-          <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-            <Label style={labelStyle} className="mr-sm-2">
-              List By Frequency:
-            </Label>
-          </Col>
-          <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-            <Selector
-              options={this.state.filteredFrequencies}
-              selectedOptions={this.state.selectedFrequencies}
-              selectionHandler={this.frequencyHandler}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-            <Label style={labelStyle} className="mr-sm-2">
-              List By Model Realm:
-            </Label>
-          </Col>
-          <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-            <Selector
-              options={this.state.filteredRealms}
-              selectedOptions={this.state.selectedRealms}
-              selectionHandler={this.realmHandler}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-            <Label style={labelStyle} className="mr-sm-2">
-              Select Variable(s):
-            </Label>
-          </Col>
-          <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-            <Selector
-              options={this.state.filteredVariables}
-              selectedOptions={this.state.selectedVariables}
-              selectionHandler={this.variableHandler}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <h2>Subscribe to model(s):</h2>
-        </Row>
-        <br />
-        <Row>
-          <Col style={{ textAlign: "right", padding: 0 }} xs="3">
-            <Label style={labelStyle} className="mr-sm-2">
-              Select Model(s):
-            </Label>
-          </Col>
-          <Col style={{ textAlign: "left", padding: 0 }} xs="9">
-            <Selector
-              options={this.state.filteredModels}
-              selectedOptions={this.state.selectedModels}
-              selectionHandler={this.modelHandler}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Button onClick={this.submitSelections}>Submit</Button>
-        </Row>
-      </Container>
-    );
-  }
-
-  private async sendRequest(request: Request): Promise<any> {
+  const sendRequest = async (request: Request): Promise<any> => {
     // Perform fetch to send data
     try {
       const response: Response = await fetch(request);
@@ -319,46 +39,153 @@ export default class App extends React.Component<IAppProps, IAppState> {
         const jsonResponse = await response.json();
         return jsonResponse;
       }
-      console.log(
-        `Something went wrong with request to API server! \n\
-Status: ${response.status}. Response Text: ${response.statusText}`
-      );
-      window.alert(`Form submission failed.`);
+      console.error(`Something went wrong with request to API server! \n\
+  Status: ${response.status}. Response Text: ${response.statusText}`);
+      // window.alert("Form submission failed.");
       return { Error: response.statusText };
     } catch (error) {
       console.error(error);
+      return undefined;
     }
-  }
+  };
 
-  @bindDecorator
-  private generateRequest(): Request {
-    const data: any = {};
-    data.activity_ids = this.state.selectedActivityIds;
-    data.experiment_ids = this.state.selectedExperimentInfo.map(
-      (experiment: ExperimentInfo) => {
-        return experiment.experiment_id;
-      }
-    );
-    data.frequencies = this.state.selectedFrequencyNames;
-    data.realms = this.state.selectedRealmNames;
-    data.variables = this.state.selectedVariableNames;
-    data.models = this.state.selectedModelInfo.map((model: ModelInfo) => {
-      return model.source_id;
-    });
+  const generateRequest = (
+    formData: { [key: string]: any },
+    action: string
+  ): Request => {
+    // Add action designation to data
+    const reqData: { [key: string]: any } = {};
+    reqData.action = action;
+    reqData.payload = formData;
 
+    console.log(reqData);
     // Get required csrf toekn for posting request.
     const csrftoken = getCookie("csrftoken");
 
-    const request: Request = new Request(this.props.post_url, {
+    // eslint-disable-next-line
+    const { post_url } = props;
+    const request: Request = new Request(post_url, {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify(reqData),
       headers: {
-        "X-CSRFToken": csrftoken ? csrftoken : "",
+        "X-CSRFToken": csrftoken || "",
         "Content-Type": "application/json",
-        Accept: "application/json"
-      }
+        Accept: "application/json",
+      },
     });
 
     return request;
-  }
+  };
+
+  const deleteSubscriptions = async (
+    subsToDelete: Subscription[]
+  ): Promise<void> => {
+    const newSubs: Subscription[] = state.currentSubs.filter(
+      (sub: Subscription) => {
+        return !subsToDelete.includes(sub);
+      }
+    );
+    // Update state
+    setState({ ...state, currentSubs: newSubs });
+
+    // Generate data for request
+    const data = subsToDelete.map((sub: Subscription) => {
+      return [sub.id, sub.timestamp];
+    });
+
+    // Generate the request using data object
+    const request: Request = generateRequest(data, "unsubscribe");
+    // Send request and await for response
+    await sendRequest(request);
+  };
+
+  const setActivePane = (pane: Panes): void => {
+    setState({ ...state, activeTab: pane });
+  };
+
+  const submitSubscriptions = async (
+    subState: ISubscribeState
+  ): Promise<void> => {
+    // Get experiment IDs
+    const experimentIds: string[] = subState.experiments.selectedIds.map(
+      (exp: ExperimentInfo): string => {
+        return exp.experiment_id;
+      }
+    );
+
+    // Get model IDs
+    const modelIds: string[] = subState.models.selectedIds.map(
+      (model: ModelInfo) => {
+        return model.source_id;
+      }
+    );
+
+    // Create subscription object to pass to backend
+    const time: number = Date.now();
+    const newSub: {} = {
+      timestamp: time,
+      period: subState.period,
+      name: subState.name,
+      activity_id: subState.activities.selectedIds,
+      experiment_id: experimentIds,
+      frequency: subState.frequencies.selectedIds,
+      source_id: modelIds,
+      realm: subState.realms.selectedIds,
+      variable_id: subState.variables.selectedIds,
+    };
+
+    const data: Subscription[] = state.currentSubs;
+
+    // Save in front-end state
+    data.push({
+      id: -1,
+      timestamp: time,
+      period: subState.period,
+      name: subState.name,
+      activities: subState.activities.selectedIds,
+      experiments: experimentIds,
+      frequencies: subState.frequencies.selectedIds,
+      models: modelIds,
+      realms: subState.realms.selectedIds,
+      variables: subState.variables.selectedIds,
+    });
+
+    // Update current cubscriptions state
+    setState({ ...state, currentSubs: data });
+
+    // Generate the request using data object
+    const request: Request = generateRequest(newSub, "subscribe");
+    // Send request and await for response
+    await sendRequest(request);
+
+    setActivePane(Panes.ViewSubs);
+  };
+
+  return (
+    <Layout>
+      <Content>
+        <Card>
+          <Tabs
+            activeKey={state.activeTab}
+            defaultActiveKey="addSub"
+            type="card"
+            size="large"
+            onTabClick={(key: string): void => {
+              setState({ ...state, activeTab: key as Panes });
+            }}
+          >
+            <Tabs.TabPane tab="Add Subscription" key={Panes.AddSubs}>
+              <CreateSubscriptions submitSubscriptions={submitSubscriptions} />
+            </Tabs.TabPane>
+            <Tabs.TabPane tab="View Subscriptions" key={Panes.ViewSubs}>
+              <ViewSubscriptions
+                deleteSubscriptions={deleteSubscriptions}
+                currentSubs={state.currentSubs}
+              />
+            </Tabs.TabPane>
+          </Tabs>
+        </Card>
+      </Content>
+    </Layout>
+  );
 }

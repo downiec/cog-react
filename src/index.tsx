@@ -3,17 +3,17 @@ import reactDom from "react-dom";
 import "./index.css";
 import App, { IAppProps } from "./components/App";
 import * as serviceWorker from "./serviceWorker";
+import { defaultSubscriptions } from "./constants";
+import { Subscription } from "./customTypes";
 
 declare global {
   interface Window {
-    react_mount: any;
+    react_mount: any; // eslint-disable-line
     token: string;
     props: {
       token: string;
-      post_url: string;
-      user_info: any;
-      activities: any;
-      experiments: any;
+      post_url: string; // eslint-disable-line
+      saved_subs: Subscription[];
     };
   }
 }
@@ -21,9 +21,12 @@ declare global {
 try {
   const regex = /value='(.+)'/gm;
   let m;
+  // eslint-disable-next-line
   if ((m = regex.exec(window.token)) !== null) {
-    window.props.token = m[1];
+    // eslint-disable-next-line prefer-destructuring
+    window.props.token = m[1]; // Get the token
   }
+
   const element: any = react.createElement(App, window.props);
 
   // Renders react app in the COG Django server
@@ -32,12 +35,7 @@ try {
     window.react_mount // a reference to the #react div that we render to
   );
 } catch (error) {
-  const props: IAppProps = {
-    post_url: "",
-    user_info: {},
-    activities: {},
-    experiments: {}
-  };
+  const props: IAppProps = { post_url: "", saved_subs: defaultSubscriptions }; // eslint-disable-line
 
   // Renders the react app in a dev server apart from COG and Django
   reactDom.render(

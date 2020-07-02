@@ -1,4 +1,7 @@
-//This file contains the variables ordered by modeling realm.
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable @typescript-eslint/camelcase */
+
+// This file contains the variables ordered by modeling realm.
 
 export const variablesByRealm = {
   aerosol: {
@@ -20,7 +23,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ec550aer: {
       frequency: "mon",
@@ -39,7 +42,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bldep: {
       frequency: "subhrPt",
@@ -57,7 +60,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg500: {
       frequency: "day",
@@ -75,7 +78,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cod: {
       frequency: "mon",
@@ -94,7 +97,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     maxpblz: {
       frequency: "day",
@@ -113,7 +116,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     minpblz: {
       frequency: "day",
@@ -132,7 +135,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550aer: {
       frequency: "mon",
@@ -152,7 +155,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfo3max: {
       frequency: "day",
@@ -171,7 +174,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     toz: {
       frequency: "mon",
@@ -190,7 +193,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua10: {
       frequency: "day",
@@ -208,7 +211,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg10: {
       frequency: "day",
@@ -226,7 +229,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg100: {
       frequency: "day",
@@ -244,7 +247,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfno2: {
       frequency: "1hr",
@@ -263,7 +266,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfo3: {
       frequency: "1hr",
@@ -282,7 +285,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfpm25: {
       frequency: "1hr",
@@ -301,7 +304,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     abs550aer: {
       frequency: "mon",
@@ -321,7 +324,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     airmass: {
       frequency: "mon",
@@ -339,7 +342,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aoanh: {
       frequency: "mon",
@@ -358,7 +361,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c2h2: {
       frequency: "mon",
@@ -377,7 +380,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c2h6: {
       frequency: "mon",
@@ -396,7 +399,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c3h6: {
       frequency: "mon",
@@ -415,7 +418,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c3h8: {
       frequency: "mon",
@@ -434,7 +437,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ccn: {
       frequency: "mon",
@@ -454,7 +457,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cdnc: {
       frequency: "mon",
@@ -473,7 +476,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch3coch3: {
       frequency: "mon",
@@ -492,7 +495,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4: {
       frequency: "mon",
@@ -511,7 +514,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cheaqpso4: {
       frequency: "mon",
@@ -531,7 +534,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chegpso4: {
       frequency: "mon",
@@ -551,7 +554,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chepasoa: {
       frequency: "mon",
@@ -571,7 +574,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chepsoa: {
       frequency: "mon",
@@ -591,7 +594,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cltc: {
       frequency: "mon",
@@ -610,7 +613,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co: {
       frequency: "mon",
@@ -629,7 +632,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2: {
       frequency: "mon",
@@ -648,7 +651,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dms: {
       frequency: "mon",
@@ -667,7 +670,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drybc: {
       frequency: "mon",
@@ -687,7 +690,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drydust: {
       frequency: "mon",
@@ -707,7 +710,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drynh3: {
       frequency: "mon",
@@ -727,7 +730,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drynh4: {
       frequency: "mon",
@@ -747,7 +750,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drynoy: {
       frequency: "mon",
@@ -767,7 +770,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dryo3: {
       frequency: "mon",
@@ -787,7 +790,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dryoa: {
       frequency: "mon",
@@ -807,7 +810,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dryso2: {
       frequency: "mon",
@@ -827,7 +830,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dryso4: {
       frequency: "mon",
@@ -847,7 +850,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dryss: {
       frequency: "mon",
@@ -867,7 +870,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiaco: {
       frequency: "mon",
@@ -886,7 +889,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emianox: {
       frequency: "mon",
@@ -906,7 +909,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiaoa: {
       frequency: "mon",
@@ -925,7 +928,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emibc: {
       frequency: "mon",
@@ -944,7 +947,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emibvoc: {
       frequency: "mon",
@@ -964,7 +967,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emico: {
       frequency: "mon",
@@ -983,7 +986,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emidms: {
       frequency: "mon",
@@ -1002,7 +1005,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emidust: {
       frequency: "mon",
@@ -1021,7 +1024,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiisop: {
       frequency: "mon",
@@ -1040,7 +1043,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emilnox: {
       frequency: "mon",
@@ -1060,7 +1063,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     eminh3: {
       frequency: "mon",
@@ -1079,7 +1082,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     eminox: {
       frequency: "mon",
@@ -1099,7 +1102,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emioa: {
       frequency: "mon",
@@ -1120,7 +1123,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiso2: {
       frequency: "mon",
@@ -1139,7 +1142,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiso4: {
       frequency: "mon",
@@ -1159,7 +1162,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emiss: {
       frequency: "mon",
@@ -1178,7 +1181,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     emivoc: {
       frequency: "mon",
@@ -1198,7 +1201,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     h2o: {
       frequency: "mon",
@@ -1216,7 +1219,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hcho: {
       frequency: "mon",
@@ -1235,7 +1238,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hcl: {
       frequency: "mon",
@@ -1254,7 +1257,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hno3: {
       frequency: "mon",
@@ -1273,7 +1276,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     isop: {
       frequency: "mon",
@@ -1291,7 +1294,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     jno2: {
       frequency: "mon",
@@ -1309,7 +1312,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lossch4: {
       frequency: "mon",
@@ -1328,7 +1331,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lossco: {
       frequency: "mon",
@@ -1347,7 +1350,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lossn2o: {
       frequency: "mon",
@@ -1366,7 +1369,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwp: {
       frequency: "mon",
@@ -1384,7 +1387,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmraerh2o: {
       frequency: "mon",
@@ -1404,7 +1407,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrbc: {
       frequency: "mon",
@@ -1423,7 +1426,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrdust: {
       frequency: "mon",
@@ -1441,7 +1444,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrnh4: {
       frequency: "mon",
@@ -1459,7 +1462,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrno3: {
       frequency: "mon",
@@ -1477,7 +1480,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmroa: {
       frequency: "mon",
@@ -1497,7 +1500,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrpm1: {
       frequency: "mon",
@@ -1516,7 +1519,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrpm10: {
       frequency: "mon",
@@ -1535,7 +1538,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrpm2p5: {
       frequency: "mon",
@@ -1554,7 +1557,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrso4: {
       frequency: "mon",
@@ -1573,7 +1576,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrsoa: {
       frequency: "mon",
@@ -1593,7 +1596,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mmrss: {
       frequency: "mon",
@@ -1612,7 +1615,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2o: {
       frequency: "mon",
@@ -1631,7 +1634,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nh50: {
       frequency: "mon",
@@ -1651,7 +1654,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     no: {
       frequency: "mon",
@@ -1670,7 +1673,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     no2: {
       frequency: "mon",
@@ -1689,7 +1692,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3: {
       frequency: "mon",
@@ -1708,7 +1711,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3loss: {
       frequency: "mon",
@@ -1728,7 +1731,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3prod: {
       frequency: "mon",
@@ -1748,7 +1751,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3ste: {
       frequency: "mon",
@@ -1767,7 +1770,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od440aer: {
       frequency: "mon",
@@ -1787,7 +1790,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550aerh2o: {
       frequency: "mon",
@@ -1807,7 +1810,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550bb: {
       frequency: "mon",
@@ -1827,7 +1830,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550bc: {
       frequency: "mon",
@@ -1847,7 +1850,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550csaer: {
       frequency: "mon",
@@ -1867,7 +1870,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550dust: {
       frequency: "mon",
@@ -1887,7 +1890,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550lt1aer: {
       frequency: "mon",
@@ -1907,7 +1910,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550no3: {
       frequency: "mon",
@@ -1927,7 +1930,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550oa: {
       frequency: "mon",
@@ -1947,7 +1950,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550so4: {
       frequency: "mon",
@@ -1967,7 +1970,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550soa: {
       frequency: "mon",
@@ -1987,7 +1990,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550ss: {
       frequency: "mon",
@@ -2007,7 +2010,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od870aer: {
       frequency: "mon",
@@ -2027,7 +2030,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     oh: {
       frequency: "mon",
@@ -2046,7 +2049,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pan: {
       frequency: "mon",
@@ -2065,7 +2068,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pfull: {
       frequency: "mon",
@@ -2083,7 +2086,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phalf: {
       frequency: "mon",
@@ -2101,7 +2104,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     photo1d: {
       frequency: "mon",
@@ -2120,7 +2123,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pod0: {
       frequency: "mon",
@@ -2139,7 +2142,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ptp: {
       frequency: "mon",
@@ -2158,7 +2161,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffclwtop: {
       frequency: "mon",
@@ -2178,7 +2181,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlutaf: {
       frequency: "mon",
@@ -2197,7 +2200,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlutcsaf: {
       frequency: "mon",
@@ -2216,7 +2219,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutaf: {
       frequency: "mon",
@@ -2235,7 +2238,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutcsaf: {
       frequency: "3hrPt",
@@ -2255,7 +2258,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     so2: {
       frequency: "mon",
@@ -2274,7 +2277,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tatp: {
       frequency: "mon",
@@ -2293,7 +2296,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrl: {
       frequency: "subhrPt",
@@ -2312,7 +2315,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrs: {
       frequency: "subhrPt",
@@ -2331,7 +2334,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tropoz: {
       frequency: "mon",
@@ -2350,7 +2353,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ttop: {
       frequency: "mon",
@@ -2369,7 +2372,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua: {
       frequency: "mon",
@@ -2387,7 +2390,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     va: {
       frequency: "mon",
@@ -2405,7 +2408,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wa: {
       frequency: "mon",
@@ -2424,7 +2427,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetbc: {
       frequency: "mon",
@@ -2444,7 +2447,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetdust: {
       frequency: "mon",
@@ -2464,7 +2467,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetnh3: {
       frequency: "mon",
@@ -2483,7 +2486,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetnh4: {
       frequency: "mon",
@@ -2502,7 +2505,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetnoy: {
       frequency: "mon",
@@ -2522,7 +2525,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetoa: {
       frequency: "mon",
@@ -2542,7 +2545,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetso2: {
       frequency: "mon",
@@ -2561,7 +2564,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetso4: {
       frequency: "mon",
@@ -2581,7 +2584,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetss: {
       frequency: "mon",
@@ -2601,7 +2604,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ztp: {
       frequency: "mon",
@@ -2620,7 +2623,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bry: {
       frequency: "mon",
@@ -2639,7 +2642,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cly: {
       frequency: "mon",
@@ -2658,7 +2661,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ho2: {
       frequency: "mon",
@@ -2677,7 +2680,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     meanage: {
       frequency: "mon",
@@ -2696,7 +2699,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     noy: {
       frequency: "mon",
@@ -2715,7 +2718,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta: {
       frequency: "mon",
@@ -2733,7 +2736,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vt100: {
       frequency: "mon",
@@ -2753,7 +2756,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdcsaf: {
       frequency: "3hrPt",
@@ -2773,7 +2776,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdcsafbnd: {
       frequency: "3hrPt",
@@ -2794,7 +2797,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdscsaf: {
       frequency: "3hrPt",
@@ -2814,7 +2817,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdscsafbnd: {
       frequency: "3hrPt",
@@ -2835,7 +2838,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsucsaf: {
       frequency: "3hrPt",
@@ -2855,7 +2858,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsucsafbnd: {
       frequency: "3hrPt",
@@ -2876,7 +2879,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsuscsaf: {
       frequency: "3hrPt",
@@ -2895,7 +2898,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsuscsafbnd: {
       frequency: "3hrPt",
@@ -2916,7 +2919,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     depdust: {
       frequency: "mon",
@@ -2935,7 +2938,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sedustCI: {
       frequency: "mon",
@@ -2954,7 +2957,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrl27: {
       frequency: "mon",
@@ -2973,7 +2976,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrs27: {
       frequency: "mon",
@@ -2992,8 +2995,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   atmos: {
     clt: {
@@ -3013,7 +3016,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfls: {
       frequency: "day",
@@ -3032,7 +3035,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfss: {
       frequency: "day",
@@ -3051,7 +3054,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     huss: {
       frequency: "day",
@@ -3069,7 +3072,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pr: {
       frequency: "day",
@@ -3087,7 +3090,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prc: {
       frequency: "day",
@@ -3106,7 +3109,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn: {
       frequency: "day",
@@ -3125,7 +3128,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ps: {
       frequency: "subhrPt",
@@ -3144,7 +3147,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlds: {
       frequency: "day",
@@ -3163,7 +3166,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rldscs: {
       frequency: "subhrPt",
@@ -3182,7 +3185,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlus: {
       frequency: "day",
@@ -3201,7 +3204,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsds: {
       frequency: "day",
@@ -3219,7 +3222,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdscs: {
       frequency: "subhrPt",
@@ -3238,7 +3241,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdsdiff: {
       frequency: "mon",
@@ -3257,7 +3260,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsus: {
       frequency: "day",
@@ -3276,7 +3279,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsuscs: {
       frequency: "subhrPt",
@@ -3295,7 +3298,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tas: {
       frequency: "day",
@@ -3313,7 +3316,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     uas: {
       frequency: "day",
@@ -3332,7 +3335,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vas: {
       frequency: "day",
@@ -3350,7 +3353,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hus: {
       frequency: "day",
@@ -3369,7 +3372,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pfull: {
       frequency: "subhrPt",
@@ -3387,7 +3390,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta: {
       frequency: "day",
@@ -3405,7 +3408,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua: {
       frequency: "day",
@@ -3423,7 +3426,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     va: {
       frequency: "day",
@@ -3441,7 +3444,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hurs: {
       frequency: "day",
@@ -3460,7 +3463,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hus4: {
       frequency: "6hr",
@@ -3479,7 +3482,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prhmax: {
       frequency: "mon",
@@ -3499,7 +3502,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     psl: {
       frequency: "day",
@@ -3517,7 +3520,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rv850: {
       frequency: "6hrPt",
@@ -3536,7 +3539,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfcWind: {
       frequency: "day",
@@ -3554,7 +3557,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua100m: {
       frequency: "6hr",
@@ -3572,7 +3575,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     va100m: {
       frequency: "6hr",
@@ -3590,7 +3593,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap4: {
       frequency: "6hr",
@@ -3609,7 +3612,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wsgmax100m: {
       frequency: "6hr",
@@ -3627,7 +3630,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wsgmax10m: {
       frequency: "6hr",
@@ -3645,7 +3648,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg1000: {
       frequency: "day",
@@ -3663,7 +3666,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cldicemxrat27: {
       frequency: "mon",
@@ -3681,7 +3684,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cldwatmxrat27: {
       frequency: "mon",
@@ -3699,7 +3702,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dtauc: {
       frequency: "3hrPt",
@@ -3718,7 +3721,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dtaus: {
       frequency: "3hrPt",
@@ -3737,7 +3740,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     grplmxrat27: {
       frequency: "mon",
@@ -3755,7 +3758,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hus27: {
       frequency: "mon",
@@ -3774,7 +3777,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hus7h: {
       frequency: "3hrPt",
@@ -3793,7 +3796,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwsffluxaero: {
       frequency: "6hrPt",
@@ -3813,7 +3816,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwtoafluxaerocs: {
       frequency: "6hrPt",
@@ -3834,7 +3837,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rainmxrat27: {
       frequency: "mon",
@@ -3852,7 +3855,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snowmxrat27: {
       frequency: "mon",
@@ -3870,7 +3873,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swsffluxaero: {
       frequency: "6hrPt",
@@ -3890,7 +3893,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swtoafluxaerocs: {
       frequency: "6hrPt",
@@ -3911,7 +3914,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta27: {
       frequency: "mon",
@@ -3929,7 +3932,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta7h: {
       frequency: "3hrPt",
@@ -3947,7 +3950,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ts: {
       frequency: "day",
@@ -3965,7 +3968,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua7h: {
       frequency: "3hrPt",
@@ -3983,7 +3986,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     va7h: {
       frequency: "3hrPt",
@@ -4001,7 +4004,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vortmean: {
       frequency: "6hrPt",
@@ -4019,7 +4022,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wbptemp7h: {
       frequency: "6hrPt",
@@ -4037,7 +4040,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg27: {
       frequency: "mon",
@@ -4056,7 +4059,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg7h: {
       frequency: "6hrPt",
@@ -4075,7 +4078,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zg: {
       frequency: "day",
@@ -4094,7 +4097,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ccb: {
       frequency: "subhrPt",
@@ -4113,7 +4116,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cct: {
       frequency: "subhrPt",
@@ -4132,7 +4135,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc113global: {
       frequency: "mon",
@@ -4151,7 +4154,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc11global: {
       frequency: "mon",
@@ -4170,7 +4173,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc12global: {
       frequency: "mon",
@@ -4189,7 +4192,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4: {
       frequency: "3hrPt",
@@ -4208,7 +4211,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4Clim: {
       frequency: "monC",
@@ -4227,7 +4230,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4global: {
       frequency: "mon",
@@ -4245,7 +4248,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4globalClim: {
       frequency: "monC",
@@ -4263,7 +4266,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ci: {
       frequency: "subhrPt",
@@ -4281,7 +4284,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cl: {
       frequency: "subhrPt",
@@ -4300,7 +4303,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cli: {
       frequency: "subhrPt",
@@ -4319,7 +4322,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clivi: {
       frequency: "3hr",
@@ -4338,7 +4341,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clw: {
       frequency: "subhrPt",
@@ -4357,7 +4360,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clwvi: {
       frequency: "3hr",
@@ -4376,7 +4379,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2: {
       frequency: "3hrPt",
@@ -4395,7 +4398,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2Clim: {
       frequency: "monC",
@@ -4414,7 +4417,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2mass: {
       frequency: "mon",
@@ -4432,7 +4435,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2massClim: {
       frequency: "monC",
@@ -4450,7 +4453,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evspsbl: {
       frequency: "subhrPt",
@@ -4469,7 +4472,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fco2antt: {
       frequency: "subhrPt",
@@ -4490,7 +4493,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fco2fos: {
       frequency: "subhrPt",
@@ -4511,7 +4514,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fco2nat: {
       frequency: "subhrPt",
@@ -4532,7 +4535,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hcfc22global: {
       frequency: "mon",
@@ -4551,7 +4554,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hur: {
       frequency: "day",
@@ -4570,7 +4573,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mc: {
       frequency: "subhrPt",
@@ -4589,7 +4592,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2o: {
       frequency: "3hrPt",
@@ -4608,7 +4611,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oClim: {
       frequency: "monC",
@@ -4627,7 +4630,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oglobal: {
       frequency: "mon",
@@ -4645,7 +4648,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oglobalClim: {
       frequency: "monC",
@@ -4663,7 +4666,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3: {
       frequency: "3hrPt",
@@ -4682,7 +4685,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3Clim: {
       frequency: "monC",
@@ -4701,7 +4704,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phalf: {
       frequency: "subhrPt",
@@ -4719,7 +4722,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prw: {
       frequency: "subhrPt",
@@ -4737,7 +4740,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlut: {
       frequency: "day",
@@ -4756,7 +4759,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlutcs: {
       frequency: "3hr",
@@ -4774,7 +4777,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdt: {
       frequency: "subhrPt",
@@ -4792,7 +4795,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsut: {
       frequency: "subhrPt",
@@ -4810,7 +4813,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutcs: {
       frequency: "3hr",
@@ -4828,7 +4831,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rtmt: {
       frequency: "subhrPt",
@@ -4847,7 +4850,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sci: {
       frequency: "subhrPt",
@@ -4866,7 +4869,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasmax: {
       frequency: "day",
@@ -4885,7 +4888,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasmin: {
       frequency: "day",
@@ -4904,7 +4907,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauu: {
       frequency: "day",
@@ -4922,7 +4925,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauv: {
       frequency: "day",
@@ -4940,7 +4943,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap: {
       frequency: "day",
@@ -4959,7 +4962,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clc: {
       frequency: "mon",
@@ -4977,7 +4980,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clic: {
       frequency: "mon",
@@ -4996,7 +4999,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clis: {
       frequency: "mon",
@@ -5015,7 +5018,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cls: {
       frequency: "mon",
@@ -5034,7 +5037,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cltc: {
       frequency: "3hrPt",
@@ -5053,7 +5056,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clwc: {
       frequency: "mon",
@@ -5072,7 +5075,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clws: {
       frequency: "mon",
@@ -5091,7 +5094,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     demc: {
       frequency: "3hrPt",
@@ -5110,7 +5113,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dems: {
       frequency: "3hrPt",
@@ -5129,7 +5132,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     grpllsprof: {
       frequency: "3hrPt",
@@ -5148,7 +5151,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     h2o: {
       frequency: "3hrPt",
@@ -5166,7 +5169,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prcprof: {
       frequency: "3hrPt",
@@ -5185,7 +5188,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prlsns: {
       frequency: "3hrPt",
@@ -5204,7 +5207,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prlsprof: {
       frequency: "3hrPt",
@@ -5223,7 +5226,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsnc: {
       frequency: "day",
@@ -5242,7 +5245,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffclic: {
       frequency: "subhrPt",
@@ -5261,7 +5264,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffclis: {
       frequency: "subhrPt",
@@ -5280,7 +5283,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffclwc: {
       frequency: "subhrPt",
@@ -5300,7 +5303,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffclws: {
       frequency: "subhrPt",
@@ -5320,7 +5323,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffgrpls: {
       frequency: "3hrPt",
@@ -5339,7 +5342,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffrainc: {
       frequency: "3hrPt",
@@ -5358,7 +5361,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffrains: {
       frequency: "3hrPt",
@@ -5377,7 +5380,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffsnowc: {
       frequency: "3hrPt",
@@ -5396,7 +5399,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffsnows: {
       frequency: "3hrPt",
@@ -5415,7 +5418,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zfull: {
       frequency: "fx",
@@ -5434,7 +5437,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zhalf: {
       frequency: "3hrPt",
@@ -5453,7 +5456,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     albisccp: {
       frequency: "mon",
@@ -5472,7 +5475,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clcalipso: {
       frequency: "3hrPt",
@@ -5490,7 +5493,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clhcalipso: {
       frequency: "3hrPt",
@@ -5508,7 +5511,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clisccp: {
       frequency: "3hrPt",
@@ -5526,7 +5529,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cllcalipso: {
       frequency: "3hrPt",
@@ -5544,7 +5547,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clmcalipso: {
       frequency: "3hrPt",
@@ -5562,7 +5565,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cltcalipso: {
       frequency: "3hrPt",
@@ -5581,7 +5584,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cltisccp: {
       frequency: "mon",
@@ -5600,7 +5603,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pctisccp: {
       frequency: "mon",
@@ -5619,7 +5622,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta700: {
       frequency: "day",
@@ -5637,7 +5640,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap500: {
       frequency: "day",
@@ -5656,7 +5659,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dmc: {
       frequency: "mon",
@@ -5675,7 +5678,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     edt: {
       frequency: "subhrPt",
@@ -5694,7 +5697,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evu: {
       frequency: "subhrPt",
@@ -5713,7 +5716,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mcd: {
       frequency: "mon",
@@ -5732,7 +5735,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mcu: {
       frequency: "mon",
@@ -5751,7 +5754,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rld: {
       frequency: "fx",
@@ -5770,7 +5773,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rld4co2: {
       frequency: "mon",
@@ -5789,7 +5792,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rldcs: {
       frequency: "subhrPt",
@@ -5808,7 +5811,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rldcs4co2: {
       frequency: "mon",
@@ -5827,7 +5830,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlu: {
       frequency: "fx",
@@ -5846,7 +5849,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlu4co2: {
       frequency: "mon",
@@ -5865,7 +5868,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlucs: {
       frequency: "subhrPt",
@@ -5884,7 +5887,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlucs4co2: {
       frequency: "mon",
@@ -5903,7 +5906,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlut4co2: {
       frequency: "mon",
@@ -5922,7 +5925,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlutcs4co2: {
       frequency: "mon",
@@ -5941,7 +5944,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsd: {
       frequency: "fx",
@@ -5960,7 +5963,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsd4co2: {
       frequency: "mon",
@@ -5979,7 +5982,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdcs: {
       frequency: "3hrPt",
@@ -5998,7 +6001,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdcs4co2: {
       frequency: "mon",
@@ -6017,7 +6020,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsu: {
       frequency: "fx",
@@ -6036,7 +6039,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsu4co2: {
       frequency: "mon",
@@ -6055,7 +6058,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsucs: {
       frequency: "3hrPt",
@@ -6074,7 +6077,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsucs4co2: {
       frequency: "mon",
@@ -6093,7 +6096,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsut4co2: {
       frequency: "mon",
@@ -6112,7 +6115,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutcs4co2: {
       frequency: "mon",
@@ -6131,7 +6134,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     smc: {
       frequency: "mon",
@@ -6150,7 +6153,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhus: {
       frequency: "subhrPt",
@@ -6168,7 +6171,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusa: {
       frequency: "subhrPt",
@@ -6186,7 +6189,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusc: {
       frequency: "subhrPt",
@@ -6204,7 +6207,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusd: {
       frequency: "subhrPt",
@@ -6223,7 +6226,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusmp: {
       frequency: "subhrPt",
@@ -6242,7 +6245,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusscpbl: {
       frequency: "subhrPt",
@@ -6263,7 +6266,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnt: {
       frequency: "subhrPt",
@@ -6281,7 +6284,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnta: {
       frequency: "subhrPt",
@@ -6299,7 +6302,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntc: {
       frequency: "mon",
@@ -6317,7 +6320,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntmp: {
       frequency: "mon",
@@ -6336,7 +6339,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntr: {
       frequency: "subhrPt",
@@ -6354,7 +6357,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntscpbl: {
       frequency: "subhrPt",
@@ -6375,7 +6378,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     latitude: {
       frequency: "fx",
@@ -6394,7 +6397,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     longitude: {
       frequency: "fx",
@@ -6413,7 +6416,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntr27: {
       frequency: "1hrPt",
@@ -6431,7 +6434,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ua27: {
       frequency: "mon",
@@ -6449,7 +6452,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendnogw27: {
       frequency: "1hrPt",
@@ -6470,7 +6473,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     va27: {
       frequency: "mon",
@@ -6488,7 +6491,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vtendnogw27: {
       frequency: "1hrPt",
@@ -6509,7 +6512,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap27: {
       frequency: "1hrPt",
@@ -6528,7 +6531,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prcsh: {
       frequency: "3hr",
@@ -6546,7 +6549,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prra: {
       frequency: "mon",
@@ -6565,7 +6568,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prrc: {
       frequency: "day",
@@ -6584,7 +6587,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aerasymbnd: {
       frequency: "3hrPt",
@@ -6603,7 +6606,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aeroptbnd: {
       frequency: "3hrPt",
@@ -6622,7 +6625,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aerssabnd: {
       frequency: "3hrPt",
@@ -6642,7 +6645,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     albdiffbnd: {
       frequency: "3hrPt",
@@ -6661,7 +6664,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     albdirbnd: {
       frequency: "3hrPt",
@@ -6680,7 +6683,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfadDbze94: {
       frequency: "mon",
@@ -6700,7 +6703,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfadLidarsr532: {
       frequency: "mon",
@@ -6720,7 +6723,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clcalipso2: {
       frequency: "3hrPt",
@@ -6740,7 +6743,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clmisr: {
       frequency: "mon",
@@ -6760,7 +6763,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     jpdftaureicemodis: {
       frequency: "mon",
@@ -6780,7 +6783,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     jpdftaureliqmodis: {
       frequency: "mon",
@@ -6800,7 +6803,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     parasolRefl: {
       frequency: "mon",
@@ -6819,7 +6822,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdcsbnd: {
       frequency: "3hrPt",
@@ -6839,7 +6842,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdscsbnd: {
       frequency: "3hrPt",
@@ -6860,7 +6863,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsucsbnd: {
       frequency: "3hrPt",
@@ -6880,7 +6883,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsuscsbnd: {
       frequency: "3hrPt",
@@ -6901,7 +6904,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutcsafbnd: {
       frequency: "3hrPt",
@@ -6922,7 +6925,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsutcsbnd: {
       frequency: "3hrPt",
@@ -6941,7 +6944,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     solbnd: {
       frequency: "3hrPt",
@@ -6959,7 +6962,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sza: {
       frequency: "3hrPt",
@@ -6978,7 +6981,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap7h: {
       frequency: "3hrPt",
@@ -6997,7 +7000,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmlwaero: {
       frequency: "6hrPt",
@@ -7017,7 +7020,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmswaero: {
       frequency: "6hrPt",
@@ -7037,7 +7040,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aod550volso4: {
       frequency: "day",
@@ -7058,7 +7061,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ccldncl: {
       frequency: "day",
@@ -7078,7 +7081,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cldnci: {
       frequency: "mon",
@@ -7098,7 +7101,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cldnvi: {
       frequency: "mon",
@@ -7117,7 +7120,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clivic: {
       frequency: "day",
@@ -7136,7 +7139,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clwvic: {
       frequency: "mon",
@@ -7156,7 +7159,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfdsl: {
       frequency: "day",
@@ -7175,7 +7178,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfdsnb: {
       frequency: "day",
@@ -7193,7 +7196,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfmlt: {
       frequency: "day",
@@ -7211,7 +7214,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfrs: {
       frequency: "day",
@@ -7230,7 +7233,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsbl: {
       frequency: "day",
@@ -7248,7 +7251,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hursminCrop: {
       frequency: "mon",
@@ -7268,7 +7271,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hus850: {
       frequency: "day",
@@ -7287,7 +7290,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadbc: {
       frequency: "day",
@@ -7307,7 +7310,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loaddust: {
       frequency: "mon",
@@ -7325,7 +7328,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadnh4: {
       frequency: "day",
@@ -7345,7 +7348,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadno3: {
       frequency: "day",
@@ -7363,7 +7366,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadoa: {
       frequency: "day",
@@ -7383,7 +7386,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadpoa: {
       frequency: "day",
@@ -7403,7 +7406,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadso4: {
       frequency: "mon",
@@ -7421,7 +7424,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadsoa: {
       frequency: "day",
@@ -7441,7 +7444,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     loadss: {
       frequency: "mon",
@@ -7461,7 +7464,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prCrop: {
       frequency: "mon",
@@ -7479,7 +7482,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prrsn: {
       frequency: "day",
@@ -7498,7 +7501,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsnsn: {
       frequency: "day",
@@ -7517,7 +7520,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffcclwtop: {
       frequency: "day",
@@ -7537,7 +7540,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     reffsclwtop: {
       frequency: "day",
@@ -7557,7 +7560,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rls: {
       frequency: "day",
@@ -7575,7 +7578,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdscsdiff: {
       frequency: "mon",
@@ -7595,7 +7598,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rss: {
       frequency: "day",
@@ -7613,7 +7616,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sblnosn: {
       frequency: "day",
@@ -7633,7 +7636,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     scldncl: {
       frequency: "day",
@@ -7653,7 +7656,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snmsl: {
       frequency: "day",
@@ -7672,7 +7675,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snrefr: {
       frequency: "day",
@@ -7691,7 +7694,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snwc: {
       frequency: "day",
@@ -7710,7 +7713,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta500: {
       frequency: "day",
@@ -7728,7 +7731,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ta850: {
       frequency: "day",
@@ -7746,7 +7749,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasmaxCrop: {
       frequency: "mon",
@@ -7766,7 +7769,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasminCrop: {
       frequency: "mon",
@@ -7786,7 +7789,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tau: {
       frequency: "day",
@@ -7804,7 +7807,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauupbl: {
       frequency: "day",
@@ -7824,7 +7827,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauvpbl: {
       frequency: "day",
@@ -7845,7 +7848,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tdps: {
       frequency: "mon",
@@ -7864,7 +7867,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tr: {
       frequency: "day",
@@ -7883,7 +7886,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsland: {
       frequency: "day",
@@ -7901,7 +7904,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsns: {
       frequency: "day",
@@ -7920,7 +7923,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmla: {
       frequency: "day",
@@ -7939,7 +7942,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epfy: {
       frequency: "mon",
@@ -7958,7 +7961,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epfz: {
       frequency: "mon",
@@ -7977,7 +7980,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     psitem: {
       frequency: "day",
@@ -7997,7 +8000,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendepfd: {
       frequency: "mon",
@@ -8018,7 +8021,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendnogw: {
       frequency: "mon",
@@ -8039,7 +8042,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendogw: {
       frequency: "mon",
@@ -8059,7 +8062,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendvtem: {
       frequency: "day",
@@ -8080,7 +8083,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     utendwtem: {
       frequency: "day",
@@ -8100,7 +8103,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vtem: {
       frequency: "mon",
@@ -8119,7 +8122,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wtem: {
       frequency: "mon",
@@ -8138,7 +8141,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siltfrac: {
       frequency: "fx",
@@ -8156,7 +8159,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clcalipsoice: {
       frequency: "mon",
@@ -8174,7 +8177,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clcalipsoliq: {
       frequency: "mon",
@@ -8193,7 +8196,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cldncl: {
       frequency: "mon",
@@ -8213,7 +8216,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     climodis: {
       frequency: "mon",
@@ -8232,7 +8235,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cltmodis: {
       frequency: "mon",
@@ -8251,7 +8254,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clwmodis: {
       frequency: "mon",
@@ -8270,7 +8273,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co23D: {
       frequency: "mon",
@@ -8289,7 +8292,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co2s: {
       frequency: "mon",
@@ -8307,7 +8310,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     columnmassflux: {
       frequency: "mon",
@@ -8325,7 +8328,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     conccmcn: {
       frequency: "mon",
@@ -8344,7 +8347,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     conccn: {
       frequency: "mon",
@@ -8363,7 +8366,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     concdust: {
       frequency: "mon",
@@ -8382,7 +8385,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     concnmcn: {
       frequency: "mon",
@@ -8401,7 +8404,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diabdrag: {
       frequency: "mon",
@@ -8420,7 +8423,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intuadse: {
       frequency: "mon",
@@ -8440,7 +8443,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intuaw: {
       frequency: "mon",
@@ -8459,7 +8462,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intvadse: {
       frequency: "mon",
@@ -8479,7 +8482,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intvaw: {
       frequency: "mon",
@@ -8499,7 +8502,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwsrfasdust: {
       frequency: "mon",
@@ -8519,7 +8522,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwsrfcsdust: {
       frequency: "mon",
@@ -8539,7 +8542,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwtoaasdust: {
       frequency: "mon",
@@ -8558,7 +8561,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwtoacsaer: {
       frequency: "mon",
@@ -8577,7 +8580,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwtoacsdust: {
       frequency: "mon",
@@ -8597,7 +8600,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     md: {
       frequency: "mon",
@@ -8617,7 +8620,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od443dust: {
       frequency: "mon",
@@ -8637,7 +8640,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550aerso: {
       frequency: "mon",
@@ -8657,7 +8660,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od550so4so: {
       frequency: "mon",
@@ -8678,7 +8681,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     od865dust: {
       frequency: "mon",
@@ -8698,7 +8701,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pr17O: {
       frequency: "mon",
@@ -8717,7 +8720,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pr18O: {
       frequency: "mon",
@@ -8736,7 +8739,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pr2h: {
       frequency: "mon",
@@ -8755,7 +8758,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn17O: {
       frequency: "mon",
@@ -8775,7 +8778,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn18O: {
       frequency: "mon",
@@ -8795,7 +8798,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn2h: {
       frequency: "mon",
@@ -8815,7 +8818,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prw17O: {
       frequency: "mon",
@@ -8835,7 +8838,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prw2H: {
       frequency: "mon",
@@ -8855,7 +8858,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sconcdust: {
       frequency: "mon",
@@ -8874,7 +8877,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sconcso4: {
       frequency: "mon",
@@ -8894,7 +8897,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sconcss: {
       frequency: "mon",
@@ -8914,7 +8917,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfcWindmax: {
       frequency: "day",
@@ -8932,7 +8935,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swsrfasdust: {
       frequency: "mon",
@@ -8952,7 +8955,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swsrfcsdust: {
       frequency: "mon",
@@ -8972,7 +8975,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swtoaasdust: {
       frequency: "mon",
@@ -8991,7 +8994,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     swtoacsdust: {
       frequency: "mon",
@@ -9010,7 +9013,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     t2: {
       frequency: "mon",
@@ -9028,7 +9031,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhuspbl: {
       frequency: "subhrPt",
@@ -9047,7 +9050,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnhusscp: {
       frequency: "subhrPt",
@@ -9068,7 +9071,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntd: {
       frequency: "subhrPt",
@@ -9087,7 +9090,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntmp27: {
       frequency: "mon",
@@ -9106,7 +9109,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntpbl: {
       frequency: "subhrPt",
@@ -9124,7 +9127,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrlcs: {
       frequency: "subhrPt",
@@ -9145,7 +9148,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntrscs: {
       frequency: "subhrPt",
@@ -9166,7 +9169,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntscp: {
       frequency: "subhrPt",
@@ -9187,7 +9190,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     twap: {
       frequency: "mon",
@@ -9205,7 +9208,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     u2: {
       frequency: "mon",
@@ -9223,7 +9226,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     uqint: {
       frequency: "mon",
@@ -9242,7 +9245,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ut: {
       frequency: "mon",
@@ -9260,7 +9263,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     uv: {
       frequency: "mon",
@@ -9278,7 +9281,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     uwap: {
       frequency: "mon",
@@ -9296,7 +9299,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     v2: {
       frequency: "mon",
@@ -9314,7 +9317,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vqint: {
       frequency: "mon",
@@ -9333,7 +9336,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vt: {
       frequency: "mon",
@@ -9351,7 +9354,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vtendnogw: {
       frequency: "mon",
@@ -9372,7 +9375,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vtendogw: {
       frequency: "mon",
@@ -9392,7 +9395,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vwap: {
       frequency: "mon",
@@ -9410,7 +9413,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wap2: {
       frequency: "mon",
@@ -9428,7 +9431,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     xgwdparam: {
       frequency: "mon",
@@ -9446,7 +9449,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ygwdparam: {
       frequency: "mon",
@@ -9464,7 +9467,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     jo2: {
       frequency: "mon",
@@ -9483,7 +9486,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     jo3: {
       frequency: "mon",
@@ -9501,7 +9504,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntnogw: {
       frequency: "mon",
@@ -9522,7 +9525,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tntogw: {
       frequency: "mon",
@@ -9543,7 +9546,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmtnt: {
       frequency: "mon",
@@ -9562,7 +9565,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hursmax: {
       frequency: "day",
@@ -9581,7 +9584,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hursmin: {
       frequency: "day",
@@ -9600,7 +9603,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     areacella: {
       frequency: "fx",
@@ -9619,7 +9622,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sftlf: {
       frequency: "fx",
@@ -9638,8 +9641,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   atmosChem: {
     cfc113global: {
@@ -9659,7 +9662,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc11global: {
       frequency: "mon",
@@ -9678,7 +9681,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc12global: {
       frequency: "mon",
@@ -9697,7 +9700,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4: {
       frequency: "mon",
@@ -9716,7 +9719,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4Clim: {
       frequency: "monC",
@@ -9735,7 +9738,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4global: {
       frequency: "mon",
@@ -9753,7 +9756,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ch4globalClim: {
       frequency: "monC",
@@ -9771,7 +9774,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hcfc22global: {
       frequency: "mon",
@@ -9790,7 +9793,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2o: {
       frequency: "mon",
@@ -9809,7 +9812,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oClim: {
       frequency: "monC",
@@ -9828,7 +9831,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oglobal: {
       frequency: "mon",
@@ -9846,7 +9849,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     n2oglobalClim: {
       frequency: "monC",
@@ -9864,7 +9867,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3: {
       frequency: "mon",
@@ -9883,7 +9886,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o3Clim: {
       frequency: "monC",
@@ -9902,7 +9905,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     flashrate: {
       frequency: "mon",
@@ -9921,7 +9924,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     oxloss: {
       frequency: "mon",
@@ -9940,7 +9943,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     oxprod: {
       frequency: "mon",
@@ -9960,7 +9963,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vmrox: {
       frequency: "mon",
@@ -9978,8 +9981,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   land: {
     mrro: {
@@ -9999,7 +10002,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsos: {
       frequency: "day",
@@ -10018,7 +10021,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tslsi: {
       frequency: "day",
@@ -10036,7 +10039,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsol: {
       frequency: "mon",
@@ -10055,7 +10058,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snw: {
       frequency: "day",
@@ -10074,7 +10077,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsl: {
       frequency: "mon",
@@ -10093,7 +10096,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gpp: {
       frequency: "mon",
@@ -10114,7 +10117,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ra: {
       frequency: "mon",
@@ -10135,7 +10138,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rh: {
       frequency: "mon",
@@ -10156,7 +10159,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     agesno: {
       frequency: "mon",
@@ -10176,7 +10179,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     albc: {
       frequency: "day",
@@ -10195,7 +10198,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     albsn: {
       frequency: "day",
@@ -10214,7 +10217,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ares: {
       frequency: "day",
@@ -10233,7 +10236,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cnc: {
       frequency: "day",
@@ -10251,7 +10254,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cw: {
       frequency: "day",
@@ -10270,7 +10273,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dcw: {
       frequency: "day",
@@ -10289,7 +10292,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dgw: {
       frequency: "day",
@@ -10308,7 +10311,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dmlt: {
       frequency: "day",
@@ -10327,7 +10330,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     drivw: {
       frequency: "day",
@@ -10346,7 +10349,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dslw: {
       frequency: "day",
@@ -10365,7 +10368,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dsn: {
       frequency: "day",
@@ -10384,7 +10387,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dsw: {
       frequency: "day",
@@ -10403,7 +10406,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dtes: {
       frequency: "day",
@@ -10423,7 +10426,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dtesn: {
       frequency: "day",
@@ -10443,7 +10446,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ec: {
       frequency: "day",
@@ -10462,7 +10465,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     eow: {
       frequency: "day",
@@ -10481,7 +10484,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     es: {
       frequency: "day",
@@ -10500,7 +10503,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     esn: {
       frequency: "day",
@@ -10519,7 +10522,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evspsbl: {
       frequency: "day",
@@ -10538,7 +10541,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evspsblpot: {
       frequency: "mon",
@@ -10557,7 +10560,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfdsn: {
       frequency: "mon",
@@ -10576,7 +10579,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lai: {
       frequency: "mon",
@@ -10595,7 +10598,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwsnl: {
       frequency: "mon",
@@ -10614,7 +10617,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrfsofr: {
       frequency: "day",
@@ -10633,7 +10636,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrlqso: {
       frequency: "day",
@@ -10652,7 +10655,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrrob: {
       frequency: "day",
@@ -10671,7 +10674,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrros: {
       frequency: "mon",
@@ -10690,7 +10693,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsfl: {
       frequency: "mon",
@@ -10709,7 +10712,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsll: {
       frequency: "mon",
@@ -10728,7 +10731,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsow: {
       frequency: "day",
@@ -10748,7 +10751,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrtws: {
       frequency: "mon",
@@ -10767,7 +10770,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nudgincsm: {
       frequency: "day",
@@ -10786,7 +10789,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nudgincswe: {
       frequency: "day",
@@ -10805,7 +10808,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pflw: {
       frequency: "mon",
@@ -10824,7 +10827,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prveg: {
       frequency: "mon",
@@ -10843,7 +10846,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     qgwr: {
       frequency: "day",
@@ -10861,7 +10864,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rivi: {
       frequency: "day",
@@ -10879,7 +10882,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rivo: {
       frequency: "day",
@@ -10897,7 +10900,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rzwc: {
       frequency: "day",
@@ -10917,7 +10920,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snd: {
       frequency: "mon",
@@ -10936,7 +10939,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snm: {
       frequency: "mon",
@@ -10955,7 +10958,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sootsn: {
       frequency: "mon",
@@ -10974,7 +10977,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sw: {
       frequency: "day",
@@ -10993,7 +10996,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tcs: {
       frequency: "day",
@@ -11011,7 +11014,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tgs: {
       frequency: "day",
@@ -11029,7 +11032,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tpf: {
       frequency: "mon",
@@ -11048,7 +11051,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tran: {
       frequency: "mon",
@@ -11066,7 +11069,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsn: {
       frequency: "mon",
@@ -11086,7 +11089,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wtd: {
       frequency: "mon",
@@ -11105,7 +11108,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     clayfrac: {
       frequency: "fx",
@@ -11124,7 +11127,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fldcapacity: {
       frequency: "fx",
@@ -11144,7 +11147,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ksat: {
       frequency: "fx",
@@ -11163,7 +11166,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rootdsl: {
       frequency: "fx",
@@ -11181,7 +11184,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sandfrac: {
       frequency: "fx",
@@ -11200,7 +11203,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     slthick: {
       frequency: "fx",
@@ -11219,7 +11222,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeight: {
       frequency: "mon",
@@ -11238,7 +11241,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wilt: {
       frequency: "fx",
@@ -11258,7 +11261,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c13Land: {
       frequency: "mon",
@@ -11278,7 +11281,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c13Litter: {
       frequency: "mon",
@@ -11297,7 +11300,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c13Soil: {
       frequency: "mon",
@@ -11315,7 +11318,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c13Veg: {
       frequency: "mon",
@@ -11334,7 +11337,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c14Land: {
       frequency: "mon",
@@ -11354,7 +11357,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c14Litter: {
       frequency: "mon",
@@ -11373,7 +11376,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c14Soil: {
       frequency: "mon",
@@ -11391,7 +11394,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c14Veg: {
       frequency: "mon",
@@ -11410,7 +11413,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLand: {
       frequency: "mon",
@@ -11430,7 +11433,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterCwd: {
       frequency: "mon",
@@ -11449,7 +11452,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterGrass: {
       frequency: "mon",
@@ -11469,7 +11472,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterShrub: {
       frequency: "mon",
@@ -11488,7 +11491,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterSubSurf: {
       frequency: "mon",
@@ -11506,7 +11509,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterSurf: {
       frequency: "mon",
@@ -11525,7 +11528,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterTree: {
       frequency: "mon",
@@ -11544,7 +11547,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cMisc: {
       frequency: "mon",
@@ -11562,7 +11565,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cOther: {
       frequency: "mon",
@@ -11581,7 +11584,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoil: {
       frequency: "yrPt",
@@ -11599,7 +11602,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilAbove1m: {
       frequency: "mon",
@@ -11618,7 +11621,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilGrass: {
       frequency: "mon",
@@ -11638,7 +11641,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilLevels: {
       frequency: "mon",
@@ -11658,7 +11661,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilPools: {
       frequency: "mon",
@@ -11678,7 +11681,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilShrub: {
       frequency: "mon",
@@ -11697,7 +11700,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilTree: {
       frequency: "mon",
@@ -11716,7 +11719,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cStem: {
       frequency: "mon",
@@ -11734,7 +11737,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cTotFireLut: {
       frequency: "mon",
@@ -11755,7 +11758,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cVegGrass: {
       frequency: "mon",
@@ -11775,7 +11778,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cVegShrub: {
       frequency: "mon",
@@ -11794,7 +11797,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cVegTree: {
       frequency: "mon",
@@ -11813,7 +11816,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cWood: {
       frequency: "mon",
@@ -11832,7 +11835,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cropFracC3: {
       frequency: "mon",
@@ -11850,7 +11853,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cropFracC4: {
       frequency: "mon",
@@ -11868,7 +11871,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fAnthDisturb: {
       frequency: "mon",
@@ -11889,7 +11892,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fBNF: {
       frequency: "mon",
@@ -11909,7 +11912,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fCLandToOcean: {
       frequency: "mon",
@@ -11929,7 +11932,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fDeforestToAtmos: {
       frequency: "mon",
@@ -11950,7 +11953,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fDeforestToProduct: {
       frequency: "mon",
@@ -11971,7 +11974,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fFireAll: {
       frequency: "mon",
@@ -11992,7 +11995,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fFireNat: {
       frequency: "mon",
@@ -12012,7 +12015,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fHarvestToAtmos: {
       frequency: "mon",
@@ -12033,7 +12036,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fHarvestToProduct: {
       frequency: "mon",
@@ -12053,7 +12056,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLitterFire: {
       frequency: "mon",
@@ -12074,7 +12077,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLuc: {
       frequency: "mon",
@@ -12095,7 +12098,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLulccAtmLut: {
       frequency: "mon",
@@ -12116,7 +12119,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLulccProductLut: {
       frequency: "mon",
@@ -12137,7 +12140,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLulccResidueLut: {
       frequency: "mon",
@@ -12158,7 +12161,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fN2O: {
       frequency: "mon",
@@ -12178,7 +12181,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNAnthDisturb: {
       frequency: "mon",
@@ -12198,7 +12201,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNLandToOcean: {
       frequency: "mon",
@@ -12219,7 +12222,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNLitterSoil: {
       frequency: "mon",
@@ -12238,7 +12241,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNOx: {
       frequency: "mon",
@@ -12258,7 +12261,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNProduct: {
       frequency: "mon",
@@ -12279,7 +12282,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNVegLitter: {
       frequency: "mon",
@@ -12298,7 +12301,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNVegSoil: {
       frequency: "mon",
@@ -12318,7 +12321,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNdep: {
       frequency: "mon",
@@ -12337,7 +12340,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNfert: {
       frequency: "mon",
@@ -12358,7 +12361,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNgas: {
       frequency: "mon",
@@ -12378,7 +12381,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNgasFire: {
       frequency: "mon",
@@ -12398,7 +12401,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNgasNonFire: {
       frequency: "mon",
@@ -12419,7 +12422,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNleach: {
       frequency: "mon",
@@ -12440,7 +12443,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNloss: {
       frequency: "mon",
@@ -12460,7 +12463,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNnetmin: {
       frequency: "mon",
@@ -12481,7 +12484,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fNup: {
       frequency: "mon",
@@ -12502,7 +12505,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fProductDecomp: {
       frequency: "mon",
@@ -12523,7 +12526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fProductDecompLut: {
       frequency: "mon",
@@ -12544,7 +12547,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegFire: {
       frequency: "mon",
@@ -12565,7 +12568,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegLitterMortality: {
       frequency: "mon",
@@ -12586,7 +12589,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegLitterSenescence: {
       frequency: "mon",
@@ -12607,7 +12610,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegSoilMortality: {
       frequency: "mon",
@@ -12628,7 +12631,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegSoilSenescence: {
       frequency: "mon",
@@ -12649,7 +12652,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fahLut: {
       frequency: "mon",
@@ -12670,7 +12673,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fracLut: {
       frequency: "yrPt",
@@ -12689,7 +12692,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppGrass: {
       frequency: "mon",
@@ -12710,7 +12713,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppLut: {
       frequency: "mon",
@@ -12731,7 +12734,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppShrub: {
       frequency: "mon",
@@ -12751,7 +12754,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppTree: {
       frequency: "mon",
@@ -12771,7 +12774,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppc13: {
       frequency: "mon",
@@ -12791,7 +12794,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     gppc14: {
       frequency: "mon",
@@ -12811,7 +12814,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     grassFracC3: {
       frequency: "mon",
@@ -12829,7 +12832,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     grassFracC4: {
       frequency: "mon",
@@ -12847,7 +12850,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hflsLut: {
       frequency: "mon",
@@ -12866,7 +12869,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfssLut: {
       frequency: "mon",
@@ -12885,7 +12888,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hussLut: {
       frequency: "mon",
@@ -12904,7 +12907,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     irrLut: {
       frequency: "mon",
@@ -12923,7 +12926,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     laiLut: {
       frequency: "mon",
@@ -12942,7 +12945,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrlso: {
       frequency: "mon",
@@ -12960,7 +12963,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrroLut: {
       frequency: "mon",
@@ -12979,7 +12982,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsoLut: {
       frequency: "mon",
@@ -12998,7 +13001,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsosLut: {
       frequency: "mon",
@@ -13017,7 +13020,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLand: {
       frequency: "mon",
@@ -13037,7 +13040,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLeaf: {
       frequency: "mon",
@@ -13055,7 +13058,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLitter: {
       frequency: "mon",
@@ -13074,7 +13077,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLitterCwd: {
       frequency: "mon",
@@ -13093,7 +13096,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLitterSubSurf: {
       frequency: "mon",
@@ -13112,7 +13115,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nLitterSurf: {
       frequency: "mon",
@@ -13131,7 +13134,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nMineral: {
       frequency: "mon",
@@ -13150,7 +13153,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nMineralNH4: {
       frequency: "mon",
@@ -13169,7 +13172,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nMineralNO3: {
       frequency: "mon",
@@ -13188,7 +13191,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nOther: {
       frequency: "mon",
@@ -13207,7 +13210,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nProduct: {
       frequency: "mon",
@@ -13227,7 +13230,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nRoot: {
       frequency: "mon",
@@ -13245,7 +13248,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nSoil: {
       frequency: "mon",
@@ -13264,7 +13267,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nStem: {
       frequency: "mon",
@@ -13282,7 +13285,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nVeg: {
       frequency: "mon",
@@ -13301,7 +13304,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     necbLut: {
       frequency: "mon",
@@ -13321,7 +13324,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nep: {
       frequency: "mon",
@@ -13342,7 +13345,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     netAtmosLandC13Flux: {
       frequency: "mon",
@@ -13363,7 +13366,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     netAtmosLandC14Flux: {
       frequency: "mon",
@@ -13384,7 +13387,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     netAtmosLandCO2Flux: {
       frequency: "mon",
@@ -13405,7 +13408,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppGrass: {
       frequency: "mon",
@@ -13425,7 +13428,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppLut: {
       frequency: "mon",
@@ -13445,7 +13448,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppOther: {
       frequency: "mon",
@@ -13465,7 +13468,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppShrub: {
       frequency: "mon",
@@ -13484,7 +13487,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppStem: {
       frequency: "mon",
@@ -13504,7 +13507,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppTree: {
       frequency: "mon",
@@ -13523,7 +13526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nwdFracLut: {
       frequency: "mon",
@@ -13542,7 +13545,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     orog: {
       frequency: "fx",
@@ -13561,7 +13564,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pastureFracC3: {
       frequency: "mon",
@@ -13579,7 +13582,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pastureFracC4: {
       frequency: "mon",
@@ -13597,7 +13600,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raGrass: {
       frequency: "mon",
@@ -13618,7 +13621,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raLeaf: {
       frequency: "mon",
@@ -13638,7 +13641,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raLut: {
       frequency: "mon",
@@ -13659,7 +13662,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raOther: {
       frequency: "mon",
@@ -13679,7 +13682,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raRoot: {
       frequency: "mon",
@@ -13700,7 +13703,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raShrub: {
       frequency: "mon",
@@ -13720,7 +13723,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raStem: {
       frequency: "mon",
@@ -13740,7 +13743,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     raTree: {
       frequency: "mon",
@@ -13760,7 +13763,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rac13: {
       frequency: "mon",
@@ -13781,7 +13784,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rac14: {
       frequency: "mon",
@@ -13802,7 +13805,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhGrass: {
       frequency: "mon",
@@ -13823,7 +13826,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhLitter: {
       frequency: "mon",
@@ -13844,7 +13847,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhLut: {
       frequency: "mon",
@@ -13865,7 +13868,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhShrub: {
       frequency: "mon",
@@ -13885,7 +13888,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhSoil: {
       frequency: "mon",
@@ -13905,7 +13908,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhTree: {
       frequency: "mon",
@@ -13925,7 +13928,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhc13: {
       frequency: "mon",
@@ -13946,7 +13949,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rhc14: {
       frequency: "mon",
@@ -13967,7 +13970,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlusLut: {
       frequency: "mon",
@@ -13986,7 +13989,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsusLut: {
       frequency: "mon",
@@ -14005,7 +14008,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sweLut: {
       frequency: "mon",
@@ -14024,7 +14027,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tSoilPools: {
       frequency: "mon",
@@ -14043,7 +14046,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasLut: {
       frequency: "mon",
@@ -14062,7 +14065,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracBdlDcd: {
       frequency: "mon",
@@ -14081,7 +14084,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracBdlEvg: {
       frequency: "mon",
@@ -14100,7 +14103,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracNdlDcd: {
       frequency: "mon",
@@ -14119,7 +14122,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracNdlEvg: {
       frequency: "mon",
@@ -14138,7 +14141,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tslsiLut: {
       frequency: "mon",
@@ -14157,7 +14160,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegFrac: {
       frequency: "yr",
@@ -14176,7 +14179,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeightCrop: {
       frequency: "mon",
@@ -14195,7 +14198,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeightGrass: {
       frequency: "mon",
@@ -14215,7 +14218,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeightPasture: {
       frequency: "mon",
@@ -14235,7 +14238,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeightShrub: {
       frequency: "mon",
@@ -14254,7 +14257,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vegHeightTree: {
       frequency: "mon",
@@ -14273,7 +14276,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetlandCH4: {
       frequency: "mon",
@@ -14293,7 +14296,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetlandCH4cons: {
       frequency: "mon",
@@ -14314,7 +14317,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetlandCH4prod: {
       frequency: "mon",
@@ -14335,7 +14338,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wetlandFrac: {
       frequency: "mon",
@@ -14354,7 +14357,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     baresoilFrac: {
       frequency: "mon",
@@ -14372,7 +14375,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitter: {
       frequency: "mon",
@@ -14391,7 +14394,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterLut: {
       frequency: "yrPt",
@@ -14410,7 +14413,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cProduct: {
       frequency: "mon",
@@ -14430,7 +14433,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cProductLut: {
       frequency: "yrPt",
@@ -14451,7 +14454,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilLut: {
       frequency: "yrPt",
@@ -14469,7 +14472,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cVeg: {
       frequency: "mon",
@@ -14487,7 +14490,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cVegLut: {
       frequency: "yrPt",
@@ -14505,7 +14508,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cropFrac: {
       frequency: "mon",
@@ -14523,7 +14526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fracInLut: {
       frequency: "yr",
@@ -14543,7 +14546,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fracOutLut: {
       frequency: "yr",
@@ -14563,7 +14566,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     grassFrac: {
       frequency: "mon",
@@ -14582,7 +14585,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     residualFrac: {
       frequency: "mon",
@@ -14602,7 +14605,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     shrubFrac: {
       frequency: "mon",
@@ -14620,7 +14623,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFrac: {
       frequency: "mon",
@@ -14638,7 +14641,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     areacellg: {
       frequency: "fx",
@@ -14657,7 +14660,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfls: {
       frequency: "mon",
@@ -14676,7 +14679,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfss: {
       frequency: "mon",
@@ -14695,7 +14698,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrroLi: {
       frequency: "mon",
@@ -14714,7 +14717,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prra: {
       frequency: "mon",
@@ -14733,7 +14736,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn: {
       frequency: "mon",
@@ -14752,7 +14755,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlds: {
       frequency: "mon",
@@ -14771,7 +14774,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlus: {
       frequency: "mon",
@@ -14790,7 +14793,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsds: {
       frequency: "mon",
@@ -14808,7 +14811,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsus: {
       frequency: "mon",
@@ -14827,7 +14830,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snc: {
       frequency: "day",
@@ -14846,7 +14849,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tas: {
       frequency: "mon",
@@ -14864,7 +14867,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ts: {
       frequency: "mon",
@@ -14882,7 +14885,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sftgif: {
       frequency: "fx",
@@ -14901,7 +14904,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     burntFractionAll: {
       frequency: "mon",
@@ -14921,7 +14924,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c3PftFrac: {
       frequency: "mon",
@@ -14940,7 +14943,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     c4PftFrac: {
       frequency: "mon",
@@ -14959,7 +14962,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cCwd: {
       frequency: "mon",
@@ -14978,7 +14981,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLeaf: {
       frequency: "mon",
@@ -14996,7 +14999,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterAbove: {
       frequency: "mon",
@@ -15015,7 +15018,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cLitterBelow: {
       frequency: "mon",
@@ -15034,7 +15037,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cRoot: {
       frequency: "mon",
@@ -15053,7 +15056,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilFast: {
       frequency: "mon",
@@ -15072,7 +15075,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilMedium: {
       frequency: "mon",
@@ -15091,7 +15094,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cSoilSlow: {
       frequency: "mon",
@@ -15110,7 +15113,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evspsblsoi: {
       frequency: "mon",
@@ -15128,7 +15131,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evspsblveg: {
       frequency: "mon",
@@ -15147,7 +15150,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fFire: {
       frequency: "mon",
@@ -15168,7 +15171,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fGrazing: {
       frequency: "mon",
@@ -15188,7 +15191,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fHarvest: {
       frequency: "mon",
@@ -15208,7 +15211,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fLitterSoil: {
       frequency: "mon",
@@ -15227,7 +15230,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegLitter: {
       frequency: "mon",
@@ -15246,7 +15249,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fVegSoil: {
       frequency: "mon",
@@ -15266,7 +15269,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     landCoverFrac: {
       frequency: "mon",
@@ -15285,7 +15288,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrfso: {
       frequency: "mon",
@@ -15304,7 +15307,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrso: {
       frequency: "day",
@@ -15323,7 +15326,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nbp: {
       frequency: "mon",
@@ -15344,7 +15347,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     npp: {
       frequency: "mon",
@@ -15364,7 +15367,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppLeaf: {
       frequency: "mon",
@@ -15384,7 +15387,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppRoot: {
       frequency: "mon",
@@ -15404,7 +15407,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nppWood: {
       frequency: "mon",
@@ -15424,7 +15427,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pastureFrac: {
       frequency: "mon",
@@ -15443,7 +15446,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rGrowth: {
       frequency: "mon",
@@ -15464,7 +15467,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rMaint: {
       frequency: "mon",
@@ -15485,7 +15488,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracPrimDec: {
       frequency: "mon",
@@ -15504,7 +15507,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracPrimEver: {
       frequency: "mon",
@@ -15523,7 +15526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracSecDec: {
       frequency: "mon",
@@ -15542,7 +15545,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     treeFracSecEver: {
       frequency: "mon",
@@ -15561,7 +15564,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     areacella: {
       frequency: "fx",
@@ -15580,7 +15583,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     areacellr: {
       frequency: "fx",
@@ -15599,7 +15602,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrsofc: {
       frequency: "fx",
@@ -15618,7 +15621,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rootd: {
       frequency: "fx",
@@ -15637,8 +15640,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   landIce: {
     snw: {
@@ -15658,7 +15661,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sbl: {
       frequency: "mon",
@@ -15678,7 +15681,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     agesno: {
       frequency: "mon",
@@ -15698,7 +15701,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfdsn: {
       frequency: "mon",
@@ -15717,7 +15720,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lwsnl: {
       frequency: "mon",
@@ -15736,7 +15739,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pflw: {
       frequency: "mon",
@@ -15755,7 +15758,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snd: {
       frequency: "mon",
@@ -15774,7 +15777,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snm: {
       frequency: "mon",
@@ -15793,7 +15796,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sootsn: {
       frequency: "mon",
@@ -15812,7 +15815,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tpf: {
       frequency: "mon",
@@ -15831,7 +15834,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsn: {
       frequency: "mon",
@@ -15851,7 +15854,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sftflf: {
       frequency: "mon",
@@ -15870,7 +15873,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sftgrf: {
       frequency: "mon",
@@ -15888,7 +15891,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfgeoubed: {
       frequency: "yr",
@@ -15907,7 +15910,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lithk: {
       frequency: "yr",
@@ -15925,7 +15928,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     topg: {
       frequency: "yr",
@@ -15943,7 +15946,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     acabf: {
       frequency: "yr",
@@ -15962,7 +15965,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfls: {
       frequency: "mon",
@@ -15981,7 +15984,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfss: {
       frequency: "mon",
@@ -16000,7 +16003,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     icem: {
       frequency: "mon",
@@ -16019,7 +16022,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     libmassbffl: {
       frequency: "yr",
@@ -16039,7 +16042,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     libmassbfgr: {
       frequency: "yr",
@@ -16059,7 +16062,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     licalvf: {
       frequency: "yr",
@@ -16078,7 +16081,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lifmassbf: {
       frequency: "yr",
@@ -16098,7 +16101,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     litempbotfl: {
       frequency: "yr",
@@ -16118,7 +16121,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     litempbotgr: {
       frequency: "yr",
@@ -16138,7 +16141,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     litemptop: {
       frequency: "yr",
@@ -16157,7 +16160,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrroLi: {
       frequency: "mon",
@@ -16176,7 +16179,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prra: {
       frequency: "mon",
@@ -16195,7 +16198,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsn: {
       frequency: "mon",
@@ -16214,7 +16217,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlds: {
       frequency: "mon",
@@ -16233,7 +16236,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlus: {
       frequency: "mon",
@@ -16252,7 +16255,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsds: {
       frequency: "mon",
@@ -16270,7 +16273,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsus: {
       frequency: "mon",
@@ -16289,7 +16292,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snc: {
       frequency: "day",
@@ -16308,7 +16311,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snicefreez: {
       frequency: "mon",
@@ -16327,7 +16330,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snicem: {
       frequency: "mon",
@@ -16346,7 +16349,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tas: {
       frequency: "mon",
@@ -16364,7 +16367,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ts: {
       frequency: "mon",
@@ -16382,7 +16385,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     iareafl: {
       frequency: "yr",
@@ -16402,7 +16405,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     iareagr: {
       frequency: "yr",
@@ -16422,7 +16425,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     lim: {
       frequency: "yr",
@@ -16440,7 +16443,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limnsw: {
       frequency: "yr",
@@ -16460,7 +16463,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     modelCellAreai: {
       frequency: "yr",
@@ -16478,7 +16481,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     strbasemag: {
       frequency: "yr",
@@ -16496,7 +16499,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tendacabf: {
       frequency: "yr",
@@ -16515,7 +16518,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tendlibmassbf: {
       frequency: "yr",
@@ -16534,7 +16537,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tendlicalvf: {
       frequency: "yr",
@@ -16553,7 +16556,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     xvelbase: {
       frequency: "yr",
@@ -16572,7 +16575,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     xvelmean: {
       frequency: "yr",
@@ -16591,7 +16594,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     xvelsurf: {
       frequency: "yr",
@@ -16610,7 +16613,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     yvelbase: {
       frequency: "yr",
@@ -16629,7 +16632,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     yvelmean: {
       frequency: "yr",
@@ -16648,7 +16651,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     yvelsurf: {
       frequency: "yr",
@@ -16667,7 +16670,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zvelbase: {
       frequency: "yr",
@@ -16686,7 +16689,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zvelsurf: {
       frequency: "yr",
@@ -16705,7 +16708,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     acabfIs: {
       frequency: "mon",
@@ -16724,7 +16727,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hflsIs: {
       frequency: "mon",
@@ -16742,7 +16745,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfssIs: {
       frequency: "mon",
@@ -16761,7 +16764,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     icemIs: {
       frequency: "mon",
@@ -16780,7 +16783,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     litemptopIs: {
       frequency: "mon",
@@ -16799,7 +16802,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrroIs: {
       frequency: "mon",
@@ -16818,7 +16821,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     orogIs: {
       frequency: "mon",
@@ -16837,7 +16840,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prraIs: {
       frequency: "mon",
@@ -16855,7 +16858,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prsnIs: {
       frequency: "mon",
@@ -16874,7 +16877,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rldsIs: {
       frequency: "mon",
@@ -16893,7 +16896,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlusIs: {
       frequency: "mon",
@@ -16912,7 +16915,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdsIs: {
       frequency: "mon",
@@ -16930,7 +16933,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsusIs: {
       frequency: "mon",
@@ -16949,7 +16952,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sblIs: {
       frequency: "mon",
@@ -16969,7 +16972,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sncIs: {
       frequency: "mon",
@@ -16988,7 +16991,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snicefreezIs: {
       frequency: "mon",
@@ -17007,7 +17010,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snicemIs: {
       frequency: "mon",
@@ -17026,7 +17029,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snmIs: {
       frequency: "mon",
@@ -17045,7 +17048,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tasIs: {
       frequency: "mon",
@@ -17063,7 +17066,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsIs: {
       frequency: "mon",
@@ -17081,7 +17084,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tsnIs: {
       frequency: "mon",
@@ -17100,7 +17103,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mrfso: {
       frequency: "mon",
@@ -17119,8 +17122,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   ocean: {
     tos: {
@@ -17140,7 +17143,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mlotst: {
       frequency: "mon",
@@ -17158,7 +17161,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     t20d: {
       frequency: "mon",
@@ -17177,7 +17180,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     flandice: {
       frequency: "mon",
@@ -17196,7 +17199,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontempdiff: {
       frequency: "yr",
@@ -17217,7 +17220,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontempmint: {
       frequency: "yr",
@@ -17238,7 +17241,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontemppadvect: {
       frequency: "yr",
@@ -17259,7 +17262,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontemppmdiff: {
       frequency: "yr",
@@ -17280,7 +17283,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontemppsmadvect: {
       frequency: "yr",
@@ -17301,7 +17304,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontemprmadvect: {
       frequency: "yr",
@@ -17322,7 +17325,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocontemptend: {
       frequency: "yr",
@@ -17343,7 +17346,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottempdiff: {
       frequency: "yr",
@@ -17364,7 +17367,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottempmint: {
       frequency: "yr",
@@ -17385,7 +17388,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottemppadvect: {
       frequency: "yr",
@@ -17406,7 +17409,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottemppmdiff: {
       frequency: "yr",
@@ -17427,7 +17430,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottemppsmadvect: {
       frequency: "yr",
@@ -17448,7 +17451,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottemprmadvect: {
       frequency: "yr",
@@ -17469,7 +17472,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     opottemptend: {
       frequency: "yr",
@@ -17490,7 +17493,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osaltdiff: {
       frequency: "yr",
@@ -17511,7 +17514,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osaltpadvect: {
       frequency: "yr",
@@ -17532,7 +17535,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osaltpmdiff: {
       frequency: "yr",
@@ -17553,7 +17556,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osaltpsmadvect: {
       frequency: "yr",
@@ -17574,7 +17577,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osaltrmadvect: {
       frequency: "yr",
@@ -17595,7 +17598,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     osalttend: {
       frequency: "yr",
@@ -17613,7 +17616,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pabigthetao: {
       frequency: "mon",
@@ -17632,7 +17635,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pathetao: {
       frequency: "mon",
@@ -17651,7 +17654,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prbigthetao: {
       frequency: "mon",
@@ -17670,7 +17673,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prthetao: {
       frequency: "mon",
@@ -17689,7 +17692,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     prw18O: {
       frequency: "mon",
@@ -17709,7 +17712,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdoabsorb: {
       frequency: "yr",
@@ -17729,7 +17732,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     somint: {
       frequency: "yr",
@@ -17750,7 +17753,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sw17O: {
       frequency: "mon",
@@ -17770,7 +17773,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sw18O: {
       frequency: "mon",
@@ -17790,7 +17793,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sw2H: {
       frequency: "mon",
@@ -17810,7 +17813,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetaot: {
       frequency: "mon",
@@ -17829,7 +17832,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetaot2000: {
       frequency: "mon",
@@ -17847,7 +17850,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetaot300: {
       frequency: "mon",
@@ -17865,7 +17868,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetaot700: {
       frequency: "mon",
@@ -17883,7 +17886,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sltbasin: {
       frequency: "mon",
@@ -17902,7 +17905,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zfullo: {
       frequency: "mon",
@@ -17920,7 +17923,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difmxybo: {
       frequency: "yr",
@@ -17939,7 +17942,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difmxybo2d: {
       frequency: "monC",
@@ -17958,7 +17961,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difmxylo: {
       frequency: "yr",
@@ -17976,7 +17979,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difmxylo2d: {
       frequency: "monC",
@@ -17994,7 +17997,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrbbo: {
       frequency: "monC",
@@ -18014,7 +18017,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrbbo2d: {
       frequency: "monC",
@@ -18034,7 +18037,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrblo: {
       frequency: "yr",
@@ -18055,7 +18058,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrblo2d: {
       frequency: "monC",
@@ -18076,7 +18079,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrebo: {
       frequency: "monC",
@@ -18095,7 +18098,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrebo2d: {
       frequency: "monC",
@@ -18114,7 +18117,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrelo: {
       frequency: "yr",
@@ -18133,7 +18136,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrelo2d: {
       frequency: "monC",
@@ -18152,7 +18155,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrxybo: {
       frequency: "monC",
@@ -18171,7 +18174,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrxybo2d: {
       frequency: "monC",
@@ -18190,7 +18193,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrxylo: {
       frequency: "monC",
@@ -18209,7 +18212,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     diftrxylo2d: {
       frequency: "monC",
@@ -18228,7 +18231,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvho: {
       frequency: "yr",
@@ -18247,7 +18250,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvmbo: {
       frequency: "monC",
@@ -18266,7 +18269,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvmfdo: {
       frequency: "monC",
@@ -18285,7 +18288,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvmo: {
       frequency: "monC",
@@ -18303,7 +18306,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvmto: {
       frequency: "monC",
@@ -18322,7 +18325,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvso: {
       frequency: "yr",
@@ -18341,7 +18344,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvtrbo: {
       frequency: "monC",
@@ -18360,7 +18363,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     difvtrto: {
       frequency: "monC",
@@ -18379,7 +18382,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dispkevfo: {
       frequency: "monC",
@@ -18400,7 +18403,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dispkexyfo: {
       frequency: "yr",
@@ -18421,7 +18424,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dispkexyfo2d: {
       frequency: "monC",
@@ -18442,7 +18445,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnkebto: {
       frequency: "yr",
@@ -18463,7 +18466,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnkebto2d: {
       frequency: "monC",
@@ -18484,7 +18487,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnpeo: {
       frequency: "yr",
@@ -18503,7 +18506,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnpeot: {
       frequency: "monC",
@@ -18522,7 +18525,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tnpeotb: {
       frequency: "monC",
@@ -18542,7 +18545,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zhalfo: {
       frequency: "mon",
@@ -18560,7 +18563,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     omldamax: {
       frequency: "day",
@@ -18580,7 +18583,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sos: {
       frequency: "mon",
@@ -18599,7 +18602,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sossq: {
       frequency: "mon",
@@ -18618,7 +18621,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tossq: {
       frequency: "mon",
@@ -18636,7 +18639,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     agessc: {
       frequency: "mon",
@@ -18655,7 +18658,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bigthetao: {
       frequency: "mon",
@@ -18674,7 +18677,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bigthetaoga: {
       frequency: "mon",
@@ -18693,7 +18696,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfbasin: {
       frequency: "mon",
@@ -18713,7 +18716,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfds: {
       frequency: "mon",
@@ -18732,7 +18735,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     masscello: {
       frequency: "mon",
@@ -18751,7 +18754,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     masso: {
       frequency: "mon",
@@ -18770,7 +18773,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftmrho: {
       frequency: "mon",
@@ -18790,7 +18793,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftmz: {
       frequency: "mon",
@@ -18810,7 +18813,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftyrho: {
       frequency: "mon",
@@ -18829,7 +18832,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftyz: {
       frequency: "mon",
@@ -18848,7 +18851,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfdsi: {
       frequency: "mon",
@@ -18867,7 +18870,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sfriver: {
       frequency: "mon",
@@ -18886,7 +18889,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     so: {
       frequency: "mon",
@@ -18905,7 +18908,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     soga: {
       frequency: "mon",
@@ -18924,7 +18927,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sosga: {
       frequency: "mon",
@@ -18943,7 +18946,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauuo: {
       frequency: "mon",
@@ -18962,7 +18965,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauvo: {
       frequency: "mon",
@@ -18981,7 +18984,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetao: {
       frequency: "mon",
@@ -19000,7 +19003,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thetaoga: {
       frequency: "mon",
@@ -19019,7 +19022,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     thkcello: {
       frequency: "mon",
@@ -19038,7 +19041,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tosga: {
       frequency: "mon",
@@ -19057,7 +19060,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     uo: {
       frequency: "mon",
@@ -19075,7 +19078,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vo: {
       frequency: "mon",
@@ -19093,7 +19096,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     volcello: {
       frequency: "yr",
@@ -19111,7 +19114,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     volo: {
       frequency: "mon",
@@ -19129,7 +19132,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wfo: {
       frequency: "mon",
@@ -19148,7 +19151,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wo: {
       frequency: "mon",
@@ -19167,7 +19170,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     areacello: {
       frequency: "fx",
@@ -19185,7 +19188,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     basin: {
       frequency: "fx",
@@ -19207,7 +19210,7 @@ export const variablesByRealm = {
       flag_meanings:
         "global_land southern_ocean atlantic_ocean pacific_ocean arctic_ocean indian_ocean mediterranean_sea black_sea hudson_bay baltic_sea red_sea",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     deptho: {
       frequency: "fx",
@@ -19226,7 +19229,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfgeou: {
       frequency: "mon",
@@ -19244,7 +19247,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sftof: {
       frequency: "fx",
@@ -19262,7 +19265,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ugrido: {
       frequency: "fx",
@@ -19281,7 +19284,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc11: {
       frequency: "yr",
@@ -19300,7 +19303,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     cfc12: {
       frequency: "yr",
@@ -19319,7 +19322,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     evs: {
       frequency: "mon",
@@ -19338,7 +19341,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgcfc11: {
       frequency: "mon",
@@ -19356,7 +19359,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgcfc12: {
       frequency: "mon",
@@ -19374,7 +19377,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgsf6: {
       frequency: "mon",
@@ -19392,7 +19395,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ficeberg: {
       frequency: "mon",
@@ -19411,7 +19414,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ficeberg2d: {
       frequency: "mon",
@@ -19430,7 +19433,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     friver: {
       frequency: "mon",
@@ -19449,7 +19452,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fsitherm: {
       frequency: "mon",
@@ -19468,7 +19471,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfbasinpadv: {
       frequency: "mon",
@@ -19490,7 +19493,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfbasinpmadv: {
       frequency: "mon",
@@ -19512,7 +19515,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfbasinpmdiff: {
       frequency: "mon",
@@ -19534,7 +19537,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfbasinpsmadv: {
       frequency: "mon",
@@ -19556,7 +19559,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfcorr: {
       frequency: "mon",
@@ -19575,7 +19578,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfevapds: {
       frequency: "mon",
@@ -19595,7 +19598,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfibthermds: {
       frequency: "mon",
@@ -19614,7 +19617,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfibthermds2d: {
       frequency: "mon",
@@ -19633,7 +19636,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hflso: {
       frequency: "mon",
@@ -19652,7 +19655,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfrainds: {
       frequency: "mon",
@@ -19673,7 +19676,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfrunoffds: {
       frequency: "mon",
@@ -19694,7 +19697,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfrunoffds2d: {
       frequency: "mon",
@@ -19715,7 +19718,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsifrazil: {
       frequency: "mon",
@@ -19734,7 +19737,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsifrazil2d: {
       frequency: "mon",
@@ -19753,7 +19756,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsnthermds: {
       frequency: "mon",
@@ -19772,7 +19775,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsnthermds2d: {
       frequency: "mon",
@@ -19791,7 +19794,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsso: {
       frequency: "mon",
@@ -19810,7 +19813,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfx: {
       frequency: "mon",
@@ -19829,7 +19832,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfy: {
       frequency: "mon",
@@ -19848,7 +19851,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     htovgyre: {
       frequency: "mon",
@@ -19868,7 +19871,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     htovovrt: {
       frequency: "mon",
@@ -19888,7 +19891,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mfo: {
       frequency: "mon",
@@ -19907,7 +19910,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mlotstmax: {
       frequency: "mon",
@@ -19925,7 +19928,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mlotstmin: {
       frequency: "mon",
@@ -19943,7 +19946,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     mlotstsq: {
       frequency: "mon",
@@ -19962,7 +19965,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftbarot: {
       frequency: "mon",
@@ -19981,7 +19984,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftmrhompa: {
       frequency: "mon",
@@ -20003,7 +20006,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftmzmpa: {
       frequency: "mon",
@@ -20025,7 +20028,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftmzsmpa: {
       frequency: "mon",
@@ -20046,7 +20049,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftyrhompa: {
       frequency: "mon",
@@ -20067,7 +20070,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftyzmpa: {
       frequency: "mon",
@@ -20088,7 +20091,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     msftyzsmpa: {
       frequency: "mon",
@@ -20109,7 +20112,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     obvfsq: {
       frequency: "mon",
@@ -20128,7 +20131,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pbo: {
       frequency: "mon",
@@ -20147,7 +20150,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pso: {
       frequency: "mon",
@@ -20166,7 +20169,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rlntds: {
       frequency: "mon",
@@ -20184,7 +20187,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsdo: {
       frequency: "mon",
@@ -20203,7 +20206,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     rsntds: {
       frequency: "mon",
@@ -20222,7 +20225,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sf6: {
       frequency: "yr",
@@ -20241,7 +20244,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sltovgyre: {
       frequency: "mon",
@@ -20261,7 +20264,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sltovovrt: {
       frequency: "mon",
@@ -20281,7 +20284,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sob: {
       frequency: "mon",
@@ -20299,7 +20302,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauucorr: {
       frequency: "mon",
@@ -20318,7 +20321,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tauvcorr: {
       frequency: "mon",
@@ -20337,7 +20340,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     tob: {
       frequency: "mon",
@@ -20355,7 +20358,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     umo: {
       frequency: "mon",
@@ -20374,7 +20377,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vmo: {
       frequency: "mon",
@@ -20393,7 +20396,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsf: {
       frequency: "mon",
@@ -20411,7 +20414,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfcorr: {
       frequency: "mon",
@@ -20429,7 +20432,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfevap: {
       frequency: "mon",
@@ -20447,7 +20450,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfpr: {
       frequency: "mon",
@@ -20465,7 +20468,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfriver: {
       frequency: "mon",
@@ -20483,7 +20486,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfsit: {
       frequency: "mon",
@@ -20504,7 +20507,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wfcorr: {
       frequency: "mon",
@@ -20523,7 +20526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wfonocorr: {
       frequency: "mon",
@@ -20542,7 +20545,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     wmo: {
       frequency: "mon",
@@ -20561,7 +20564,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zos: {
       frequency: "mon",
@@ -20580,7 +20583,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zossq: {
       frequency: "mon",
@@ -20598,7 +20601,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zostoga: {
       frequency: "mon",
@@ -20616,7 +20619,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sithick: {
       frequency: "mon",
@@ -20635,8 +20638,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   ocnBgchem: {
     dissi14c: {
@@ -20656,7 +20659,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     exparag: {
       frequency: "yr",
@@ -20675,7 +20678,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expcalc: {
       frequency: "yr",
@@ -20694,7 +20697,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expfe: {
       frequency: "yr",
@@ -20713,7 +20716,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expn: {
       frequency: "yr",
@@ -20733,7 +20736,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expp: {
       frequency: "yr",
@@ -20753,7 +20756,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expsi: {
       frequency: "yr",
@@ -20772,7 +20775,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fg14co2: {
       frequency: "mon",
@@ -20792,7 +20795,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ppcalc: {
       frequency: "yr",
@@ -20813,7 +20816,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ppdiat: {
       frequency: "yr",
@@ -20833,7 +20836,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ppdiaz: {
       frequency: "yr",
@@ -20853,7 +20856,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ppmisc: {
       frequency: "yr",
@@ -20873,7 +20876,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pppico: {
       frequency: "yr",
@@ -20893,7 +20896,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlos: {
       frequency: "mon",
@@ -20914,7 +20917,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phycos: {
       frequency: "mon",
@@ -20934,7 +20937,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     arag: {
       frequency: "yr",
@@ -20954,7 +20957,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     aragos: {
       frequency: "mon",
@@ -20974,7 +20977,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bacc: {
       frequency: "yr",
@@ -20993,7 +20996,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     baccos: {
       frequency: "mon",
@@ -21012,7 +21015,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bfe: {
       frequency: "yr",
@@ -21032,7 +21035,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bfeos: {
       frequency: "mon",
@@ -21052,7 +21055,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bsi: {
       frequency: "yr",
@@ -21072,7 +21075,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bsios: {
       frequency: "mon",
@@ -21092,7 +21095,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     calc: {
       frequency: "yr",
@@ -21112,7 +21115,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     calcos: {
       frequency: "mon",
@@ -21132,7 +21135,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chl: {
       frequency: "yr",
@@ -21153,7 +21156,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlcalc: {
       frequency: "yr",
@@ -21174,7 +21177,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlcalcos: {
       frequency: "mon",
@@ -21195,7 +21198,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chldiat: {
       frequency: "yr",
@@ -21216,7 +21219,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chldiatos: {
       frequency: "mon",
@@ -21237,7 +21240,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chldiaz: {
       frequency: "yr",
@@ -21258,7 +21261,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chldiazos: {
       frequency: "mon",
@@ -21279,7 +21282,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlmisc: {
       frequency: "yr",
@@ -21300,7 +21303,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlmiscos: {
       frequency: "mon",
@@ -21321,7 +21324,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlpico: {
       frequency: "yr",
@@ -21342,7 +21345,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     chlpicoos: {
       frequency: "mon",
@@ -21363,7 +21366,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3: {
       frequency: "yr",
@@ -21383,7 +21386,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3abio: {
       frequency: "yr",
@@ -21403,7 +21406,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3abioos: {
       frequency: "mon",
@@ -21423,7 +21426,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3nat: {
       frequency: "yr",
@@ -21443,7 +21446,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3natos: {
       frequency: "mon",
@@ -21463,7 +21466,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3os: {
       frequency: "mon",
@@ -21483,7 +21486,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3satarag: {
       frequency: "yr",
@@ -21504,7 +21507,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3sataragos: {
       frequency: "mon",
@@ -21525,7 +21528,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3satcalc: {
       frequency: "yr",
@@ -21546,7 +21549,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     co3satcalcos: {
       frequency: "mon",
@@ -21567,7 +21570,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     detoc: {
       frequency: "yr",
@@ -21586,7 +21589,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     detocos: {
       frequency: "mon",
@@ -21605,7 +21608,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dfe: {
       frequency: "yr",
@@ -21624,7 +21627,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dfeos: {
       frequency: "mon",
@@ -21643,7 +21646,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissi13c: {
       frequency: "yr",
@@ -21662,7 +21665,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissi13cos: {
       frequency: "mon",
@@ -21682,7 +21685,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissi14cabio: {
       frequency: "yr",
@@ -21702,7 +21705,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissi14cabioos: {
       frequency: "mon",
@@ -21722,7 +21725,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissic: {
       frequency: "yr",
@@ -21741,7 +21744,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissicabio: {
       frequency: "yr",
@@ -21761,7 +21764,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissicabioos: {
       frequency: "mon",
@@ -21781,7 +21784,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissicnat: {
       frequency: "yr",
@@ -21801,7 +21804,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissicnatos: {
       frequency: "mon",
@@ -21821,7 +21824,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissicos: {
       frequency: "mon",
@@ -21840,7 +21843,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissoc: {
       frequency: "yr",
@@ -21860,7 +21863,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dissocos: {
       frequency: "mon",
@@ -21880,7 +21883,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dmso: {
       frequency: "yr",
@@ -21898,7 +21901,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dmsos: {
       frequency: "mon",
@@ -21917,7 +21920,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dpco2: {
       frequency: "mon",
@@ -21937,7 +21940,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dpco2abio: {
       frequency: "mon",
@@ -21957,7 +21960,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dpco2nat: {
       frequency: "mon",
@@ -21977,7 +21980,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dpo2: {
       frequency: "mon",
@@ -21997,7 +22000,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     eparag100: {
       frequency: "mon",
@@ -22017,7 +22020,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epc100: {
       frequency: "mon",
@@ -22037,7 +22040,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epcalc100: {
       frequency: "mon",
@@ -22057,7 +22060,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epfe100: {
       frequency: "mon",
@@ -22076,7 +22079,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epn100: {
       frequency: "mon",
@@ -22096,7 +22099,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epp100: {
       frequency: "mon",
@@ -22116,7 +22119,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     epsi100: {
       frequency: "mon",
@@ -22135,7 +22138,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     expc: {
       frequency: "yr",
@@ -22154,7 +22157,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtalk: {
       frequency: "mon",
@@ -22176,7 +22179,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtdic: {
       frequency: "mon",
@@ -22198,7 +22201,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtdife: {
       frequency: "mon",
@@ -22220,7 +22223,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtdin: {
       frequency: "mon",
@@ -22242,7 +22245,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtdip: {
       frequency: "mon",
@@ -22264,7 +22267,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fbddtdisi: {
       frequency: "mon",
@@ -22286,7 +22289,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtalk: {
       frequency: "mon",
@@ -22306,7 +22309,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtdic: {
       frequency: "mon",
@@ -22327,7 +22330,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtdife: {
       frequency: "mon",
@@ -22348,7 +22351,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtdin: {
       frequency: "mon",
@@ -22368,7 +22371,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtdip: {
       frequency: "mon",
@@ -22388,7 +22391,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fddtdisi: {
       frequency: "mon",
@@ -22409,7 +22412,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fg13co2: {
       frequency: "yr",
@@ -22429,7 +22432,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fg14co2abio: {
       frequency: "yr",
@@ -22449,7 +22452,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgco2: {
       frequency: "yr",
@@ -22468,7 +22471,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgco2abio: {
       frequency: "yr",
@@ -22488,7 +22491,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgco2nat: {
       frequency: "yr",
@@ -22508,7 +22511,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgdms: {
       frequency: "mon",
@@ -22526,7 +22529,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fgo2: {
       frequency: "mon",
@@ -22544,7 +22547,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     frfe: {
       frequency: "mon",
@@ -22564,7 +22567,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fric: {
       frequency: "mon",
@@ -22583,7 +22586,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     frn: {
       frequency: "mon",
@@ -22603,7 +22606,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     froc: {
       frequency: "mon",
@@ -22622,7 +22625,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fsfe: {
       frequency: "mon",
@@ -22642,7 +22645,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fsn: {
       frequency: "mon",
@@ -22662,7 +22665,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     graz: {
       frequency: "yr",
@@ -22682,7 +22685,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     icfriver: {
       frequency: "mon",
@@ -22702,7 +22705,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intdic: {
       frequency: "mon",
@@ -22720,7 +22723,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intdoc: {
       frequency: "mon",
@@ -22738,7 +22741,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intparag: {
       frequency: "mon",
@@ -22757,7 +22760,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpbfe: {
       frequency: "mon",
@@ -22776,7 +22779,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpbn: {
       frequency: "mon",
@@ -22795,7 +22798,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpbp: {
       frequency: "mon",
@@ -22814,7 +22817,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpbsi: {
       frequency: "mon",
@@ -22833,7 +22836,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpcalcite: {
       frequency: "mon",
@@ -22852,7 +22855,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpn2: {
       frequency: "mon",
@@ -22871,7 +22874,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpoc: {
       frequency: "mon",
@@ -22890,7 +22893,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpp: {
       frequency: "mon",
@@ -22911,7 +22914,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intppcalc: {
       frequency: "mon",
@@ -22932,7 +22935,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intppdiat: {
       frequency: "mon",
@@ -22952,7 +22955,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intppdiaz: {
       frequency: "mon",
@@ -22972,7 +22975,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intppmisc: {
       frequency: "mon",
@@ -22992,7 +22995,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intppnitrate: {
       frequency: "mon",
@@ -23013,7 +23016,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     intpppico: {
       frequency: "mon",
@@ -23033,7 +23036,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limfecalc: {
       frequency: "mon",
@@ -23052,7 +23055,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limfediat: {
       frequency: "mon",
@@ -23071,7 +23074,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limfediaz: {
       frequency: "mon",
@@ -23090,7 +23093,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limfemisc: {
       frequency: "mon",
@@ -23109,7 +23112,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limfepico: {
       frequency: "mon",
@@ -23128,7 +23131,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limirrcalc: {
       frequency: "mon",
@@ -23148,7 +23151,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limirrdiat: {
       frequency: "mon",
@@ -23167,7 +23170,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limirrdiaz: {
       frequency: "mon",
@@ -23186,7 +23189,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limirrmisc: {
       frequency: "mon",
@@ -23206,7 +23209,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limirrpico: {
       frequency: "mon",
@@ -23226,7 +23229,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limncalc: {
       frequency: "mon",
@@ -23245,7 +23248,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limndiat: {
       frequency: "mon",
@@ -23264,7 +23267,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limndiaz: {
       frequency: "mon",
@@ -23283,7 +23286,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limnmisc: {
       frequency: "mon",
@@ -23303,7 +23306,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     limnpico: {
       frequency: "mon",
@@ -23322,7 +23325,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nh4: {
       frequency: "yr",
@@ -23341,7 +23344,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     nh4os: {
       frequency: "mon",
@@ -23360,7 +23363,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     no3: {
       frequency: "yr",
@@ -23379,7 +23382,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     no3os: {
       frequency: "mon",
@@ -23398,7 +23401,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o2: {
       frequency: "yr",
@@ -23418,7 +23421,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o2min: {
       frequency: "mon",
@@ -23438,7 +23441,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o2os: {
       frequency: "mon",
@@ -23458,7 +23461,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o2sat: {
       frequency: "yr",
@@ -23478,7 +23481,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     o2satos: {
       frequency: "mon",
@@ -23498,7 +23501,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ocfriver: {
       frequency: "mon",
@@ -23518,7 +23521,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ph: {
       frequency: "yr",
@@ -23537,7 +23540,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phabio: {
       frequency: "yr",
@@ -23556,7 +23559,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phabioos: {
       frequency: "mon",
@@ -23575,7 +23578,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phnat: {
       frequency: "yr",
@@ -23594,7 +23597,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phnatos: {
       frequency: "mon",
@@ -23613,7 +23616,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phos: {
       frequency: "mon",
@@ -23632,7 +23635,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phyc: {
       frequency: "yr",
@@ -23652,7 +23655,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phycalc: {
       frequency: "yr",
@@ -23673,7 +23676,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phycalcos: {
       frequency: "mon",
@@ -23694,7 +23697,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phydiat: {
       frequency: "yr",
@@ -23715,7 +23718,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phydiatos: {
       frequency: "mon",
@@ -23736,7 +23739,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phydiaz: {
       frequency: "yr",
@@ -23757,7 +23760,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phydiazos: {
       frequency: "mon",
@@ -23778,7 +23781,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phyfe: {
       frequency: "yr",
@@ -23798,7 +23801,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phyfeos: {
       frequency: "mon",
@@ -23818,7 +23821,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phymisc: {
       frequency: "yr",
@@ -23839,7 +23842,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phymiscos: {
       frequency: "mon",
@@ -23860,7 +23863,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phyn: {
       frequency: "yr",
@@ -23880,7 +23883,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phynos: {
       frequency: "mon",
@@ -23900,7 +23903,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phyp: {
       frequency: "yr",
@@ -23920,7 +23923,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phypico: {
       frequency: "yr",
@@ -23941,7 +23944,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phypicoos: {
       frequency: "mon",
@@ -23962,7 +23965,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     phypos: {
       frequency: "mon",
@@ -23982,7 +23985,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     physi: {
       frequency: "yr",
@@ -24002,7 +24005,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     physios: {
       frequency: "mon",
@@ -24022,7 +24025,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     po4: {
       frequency: "yr",
@@ -24042,7 +24045,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     po4os: {
       frequency: "mon",
@@ -24062,7 +24065,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pon: {
       frequency: "yr",
@@ -24082,7 +24085,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ponos: {
       frequency: "mon",
@@ -24102,7 +24105,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pop: {
       frequency: "yr",
@@ -24122,7 +24125,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     popos: {
       frequency: "mon",
@@ -24142,7 +24145,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pp: {
       frequency: "yr",
@@ -24161,7 +24164,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     ppos: {
       frequency: "mon",
@@ -24180,7 +24183,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     si: {
       frequency: "yr",
@@ -24200,7 +24203,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sios: {
       frequency: "mon",
@@ -24220,7 +24223,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     spco2: {
       frequency: "mon",
@@ -24239,7 +24242,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     spco2abio: {
       frequency: "mon",
@@ -24259,7 +24262,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     spco2nat: {
       frequency: "mon",
@@ -24279,7 +24282,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     talk: {
       frequency: "yr",
@@ -24298,7 +24301,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     talknat: {
       frequency: "yr",
@@ -24318,7 +24321,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     talknatos: {
       frequency: "mon",
@@ -24338,7 +24341,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     talkos: {
       frequency: "mon",
@@ -24357,7 +24360,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmeso: {
       frequency: "yr",
@@ -24378,7 +24381,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmesoos: {
       frequency: "mon",
@@ -24399,7 +24402,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmicro: {
       frequency: "yr",
@@ -24420,7 +24423,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmicroos: {
       frequency: "mon",
@@ -24441,7 +24444,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmisc: {
       frequency: "yr",
@@ -24462,7 +24465,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zmiscos: {
       frequency: "mon",
@@ -24483,7 +24486,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zo2min: {
       frequency: "mon",
@@ -24503,7 +24506,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zooc: {
       frequency: "yr",
@@ -24522,7 +24525,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zoocos: {
       frequency: "mon",
@@ -24541,7 +24544,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zsatarag: {
       frequency: "mon",
@@ -24560,7 +24563,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     zsatcalc: {
       frequency: "mon",
@@ -24579,7 +24582,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtalk: {
       frequency: "yr",
@@ -24599,7 +24602,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtdic: {
       frequency: "yr",
@@ -24620,7 +24623,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtdife: {
       frequency: "yr",
@@ -24641,7 +24644,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtdin: {
       frequency: "yr",
@@ -24662,7 +24665,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtdip: {
       frequency: "yr",
@@ -24683,7 +24686,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     bddtdisi: {
       frequency: "yr",
@@ -24704,7 +24707,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     darag: {
       frequency: "yr",
@@ -24724,7 +24727,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     dcalc: {
       frequency: "yr",
@@ -24744,7 +24747,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fediss: {
       frequency: "yr",
@@ -24764,7 +24767,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fescav: {
       frequency: "yr",
@@ -24784,7 +24787,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     parag: {
       frequency: "yr",
@@ -24804,7 +24807,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pbfe: {
       frequency: "yr",
@@ -24824,7 +24827,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pbsi: {
       frequency: "yr",
@@ -24844,7 +24847,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pcalc: {
       frequency: "yr",
@@ -24864,7 +24867,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     pnitrate: {
       frequency: "yr",
@@ -24885,7 +24888,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     remoc: {
       frequency: "yr",
@@ -24905,8 +24908,8 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
+      ok_max_mean_abs: "",
+    },
   },
   seaIce: {
     sfdsi: {
@@ -24926,7 +24929,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     fsitherm: {
       frequency: "mon",
@@ -24945,7 +24948,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsifrazil: {
       frequency: "mon",
@@ -24964,7 +24967,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     hfsifrazil2d: {
       frequency: "mon",
@@ -24983,7 +24986,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     vsfsit: {
       frequency: "mon",
@@ -25004,7 +25007,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siconc: {
       frequency: "mon",
@@ -25022,7 +25025,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siconca: {
       frequency: "mon",
@@ -25040,7 +25043,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisnthick: {
       frequency: "mon",
@@ -25060,7 +25063,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sispeed: {
       frequency: "mon",
@@ -25079,7 +25082,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sitemptop: {
       frequency: "mon",
@@ -25098,7 +25101,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sithick: {
       frequency: "mon",
@@ -25117,7 +25120,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sitimefrac: {
       frequency: "mon",
@@ -25137,7 +25140,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siu: {
       frequency: "mon",
@@ -25155,7 +25158,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siv: {
       frequency: "mon",
@@ -25173,7 +25176,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siage: {
       frequency: "mon",
@@ -25191,7 +25194,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siareaacrossline: {
       frequency: "mon",
@@ -25210,7 +25213,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siarean: {
       frequency: "mon",
@@ -25228,7 +25231,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siareas: {
       frequency: "mon",
@@ -25246,7 +25249,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sicompstren: {
       frequency: "mon",
@@ -25265,7 +25268,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidconcdyn: {
       frequency: "mon",
@@ -25284,7 +25287,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidconcth: {
       frequency: "mon",
@@ -25303,7 +25306,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidivvel: {
       frequency: "monPt",
@@ -25323,7 +25326,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassdyn: {
       frequency: "mon",
@@ -25342,7 +25345,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassevapsubl: {
       frequency: "mon",
@@ -25361,7 +25364,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassgrowthbot: {
       frequency: "mon",
@@ -25381,7 +25384,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassgrowthwat: {
       frequency: "mon",
@@ -25402,7 +25405,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmasslat: {
       frequency: "mon",
@@ -25421,7 +25424,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassmeltbot: {
       frequency: "mon",
@@ -25440,7 +25443,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassmelttop: {
       frequency: "mon",
@@ -25459,7 +25462,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmasssi: {
       frequency: "mon",
@@ -25479,7 +25482,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmassth: {
       frequency: "mon",
@@ -25498,7 +25501,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmasstranx: {
       frequency: "mon",
@@ -25516,7 +25519,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidmasstrany: {
       frequency: "mon",
@@ -25534,7 +25537,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidragbot: {
       frequency: "mon",
@@ -25553,7 +25556,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sidragtop: {
       frequency: "mon",
@@ -25572,7 +25575,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siextentn: {
       frequency: "mon",
@@ -25591,7 +25594,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siextents: {
       frequency: "mon",
@@ -25610,7 +25613,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sifb: {
       frequency: "mon",
@@ -25629,7 +25632,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflcondbot: {
       frequency: "mon",
@@ -25647,7 +25650,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflcondtop: {
       frequency: "mon",
@@ -25665,7 +25668,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflfwbot: {
       frequency: "mon",
@@ -25684,7 +25687,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflfwdrain: {
       frequency: "mon",
@@ -25703,7 +25706,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sifllatstop: {
       frequency: "mon",
@@ -25721,7 +25724,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sifllwdtop: {
       frequency: "mon",
@@ -25739,7 +25742,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sifllwutop: {
       frequency: "mon",
@@ -25757,7 +25760,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflsenstop: {
       frequency: "mon",
@@ -25775,7 +25778,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflsensupbot: {
       frequency: "mon",
@@ -25793,7 +25796,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflswdbot: {
       frequency: "mon",
@@ -25812,7 +25815,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflswdtop: {
       frequency: "mon",
@@ -25831,7 +25834,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siflswutop: {
       frequency: "mon",
@@ -25849,7 +25852,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforcecoriolx: {
       frequency: "mon",
@@ -25867,7 +25870,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforcecorioly: {
       frequency: "mon",
@@ -25885,7 +25888,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforceintstrx: {
       frequency: "mon",
@@ -25904,7 +25907,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforceintstry: {
       frequency: "mon",
@@ -25923,7 +25926,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforcetiltx: {
       frequency: "mon",
@@ -25941,7 +25944,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siforcetilty: {
       frequency: "mon",
@@ -25959,7 +25962,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sihc: {
       frequency: "mon",
@@ -25978,7 +25981,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siitdconc: {
       frequency: "mon",
@@ -25997,7 +26000,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siitdsnconc: {
       frequency: "mon",
@@ -26016,7 +26019,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siitdsnthick: {
       frequency: "mon",
@@ -26035,7 +26038,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     siitdthick: {
       frequency: "mon",
@@ -26054,7 +26057,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     simass: {
       frequency: "mon",
@@ -26072,7 +26075,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     simassacrossline: {
       frequency: "mon",
@@ -26091,7 +26094,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     simpconc: {
       frequency: "mon",
@@ -26110,7 +26113,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     simpmass: {
       frequency: "mon",
@@ -26129,7 +26132,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     simprefrozen: {
       frequency: "mon",
@@ -26149,7 +26152,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sipr: {
       frequency: "mon",
@@ -26168,7 +26171,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sirdgconc: {
       frequency: "mon",
@@ -26187,7 +26190,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sirdgthick: {
       frequency: "mon",
@@ -26207,7 +26210,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisali: {
       frequency: "mon",
@@ -26225,7 +26228,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisaltmass: {
       frequency: "mon",
@@ -26243,7 +26246,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sishevel: {
       frequency: "monPt",
@@ -26264,7 +26267,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisnconc: {
       frequency: "mon",
@@ -26283,7 +26286,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisnhc: {
       frequency: "mon",
@@ -26302,7 +26305,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sisnmass: {
       frequency: "mon",
@@ -26320,7 +26323,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistremax: {
       frequency: "monPt",
@@ -26340,7 +26343,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistresave: {
       frequency: "monPt",
@@ -26359,7 +26362,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistrxdtop: {
       frequency: "mon",
@@ -26377,7 +26380,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistrxubot: {
       frequency: "mon",
@@ -26395,7 +26398,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistrydtop: {
       frequency: "mon",
@@ -26413,7 +26416,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sistryubot: {
       frequency: "mon",
@@ -26431,7 +26434,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sitempbot: {
       frequency: "mon",
@@ -26450,7 +26453,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sitempsnic: {
       frequency: "mon",
@@ -26468,7 +26471,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sivol: {
       frequency: "mon",
@@ -26487,7 +26490,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sivoln: {
       frequency: "mon",
@@ -26505,7 +26508,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sivols: {
       frequency: "mon",
@@ -26523,7 +26526,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmassdyn: {
       frequency: "mon",
@@ -26543,7 +26546,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmassmelt: {
       frequency: "mon",
@@ -26562,7 +26565,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmasssi: {
       frequency: "mon",
@@ -26582,7 +26585,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmasssnf: {
       frequency: "mon",
@@ -26601,7 +26604,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmasssubl: {
       frequency: "mon",
@@ -26621,7 +26624,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     sndmasswindrif: {
       frequency: "mon",
@@ -26640,7 +26643,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
+      ok_max_mean_abs: "",
     },
     snmassacrossline: {
       frequency: "mon",
@@ -26659,7 +26662,7 @@ export const variablesByRealm = {
       valid_min: "",
       valid_max: "",
       ok_min_mean_abs: "",
-      ok_max_mean_abs: ""
-    }
-  }
+      ok_max_mean_abs: "",
+    },
+  },
 };

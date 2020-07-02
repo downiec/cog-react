@@ -3,50 +3,56 @@ import {
   experimentData,
   frequencyData,
   modelData,
-  realmData
-} from "../data/output/appdata";
+  realmData,
+} from "./output/appdata";
 import { variableData } from "./output/variableData";
-import { DATA } from "./../constants";
+import { FIELDS } from "../customTypes";
 
-export function importData(data: DATA): any {
+export function importDataList(data: FIELDS): any {
+  // Note that currently this returns hardcoded data found in the 'appdata.ts' file
+  // This function will be updated to use an API call when API is ready.
   switch (data) {
-    case DATA.ACTIVITIES:
-      return importActivities();
-    case DATA.EXPERIMENTS:
-      return importExperiments();
-    case DATA.FREQUENCIES:
-      return importFrequencies();
-    case DATA.REALMS:
-      return importRealms();
-    case DATA.VARIABLES:
-      return importVariables();
-    case DATA.MODELS:
-      return importModels();
+    case FIELDS.activities:
+      return activityData;
+    case FIELDS.experiments:
+      return experimentData;
+    case FIELDS.frequencies:
+      return frequencyData;
+    case FIELDS.realms:
+      return realmData;
+    case FIELDS.variables:
+      return variableData;
+    case FIELDS.models:
+      return modelData;
     default:
-      return {}
+      return {};
   }
 }
 
-function importActivities(): any {
-  return activityData;
-}
+export function importDataItem(type: FIELDS, id: string): any {
+  const data: { [key: string]: any } = {};
 
-function importExperiments(): any {
-  return experimentData;
-}
-
-function importFrequencies(): any {
-  return frequencyData;
-}
-
-function importRealms(): any {
-  return realmData;
-}
-
-function importVariables(): any {
-  return variableData;
-}
-
-function importModels(): any {
-  return modelData;
+  switch (type) {
+    case FIELDS.activities:
+      data[id] = activityData[id];
+      break;
+    case FIELDS.experiments:
+      data[id] = experimentData[id];
+      break;
+    case FIELDS.frequencies:
+      data[id] = frequencyData[id];
+      break;
+    case FIELDS.realms:
+      data[id] = realmData[id];
+      break;
+    case FIELDS.variables:
+      data[id] = variableData[id];
+      break;
+    case FIELDS.models:
+      data[id] = modelData[id];
+      break;
+    default:
+      return {};
+  }
+  return data;
 }
