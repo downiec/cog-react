@@ -1,6 +1,6 @@
 {
   "name": "cog-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "@types/chroma-js": "^1.4.3",
@@ -28,6 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "COG_build": ". ./COG_start.sh --build",
     "COG": ". ./COG_start.sh",
     "build-json": "node src/utilities/jsonGenerator.js",
     "lint-fix": "npx prettier-tslint fix '**/*.ts'",

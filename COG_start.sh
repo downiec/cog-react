@@ -5,7 +5,9 @@
 #A fork of the COG repo is required to run this script. Forked COG repo: https://github.com/downiec/COG
 
 #Build the React Application
-npm run build
+if [ "$1" = "--build" ]; then
+    npm run build
+fi
 
 #Export config directory
 export COG_CONFIG_DIR=../COG/
