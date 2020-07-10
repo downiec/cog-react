@@ -23,6 +23,9 @@ export interface IAppState {
 }
 
 export default function App(props: IAppProps): JSX.Element {
+
+  console.log(props.saved_subs)
+
   const initialState: IAppState = {
     currentSubs: props.saved_subs,
     activeTab: Panes.AddSubs,
