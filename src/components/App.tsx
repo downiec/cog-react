@@ -23,16 +23,16 @@ export interface IAppState {
 }
 
 export default function App(props: IAppProps): JSX.Element {
-
-  console.log(props.saved_subs)
-
   const initialState: IAppState = {
-    currentSubs: props.saved_subs,
+    currentSubs: props.saved_subs || [],
     activeTab: Panes.AddSubs,
   };
 
   const [state, setState] = useState<IAppState>(initialState);
   const { Content } = Layout;
+
+  console.log(props.saved_subs);
+  console.log(state.currentSubs);
 
   const sendRequest = async (request: Request): Promise<any> => {
     // Perform fetch to send data
@@ -83,6 +83,10 @@ export default function App(props: IAppProps): JSX.Element {
   const deleteSubscriptions = async (
     subsToDelete: Subscription[]
   ): Promise<void> => {
+    if (!state.currentSubs) {
+      return; // No subscriptions to delete
+    }
+
     const newSubs: Subscription[] = state.currentSubs.filter(
       (sub: Subscription) => {
         return !subsToDelete.includes(sub);
