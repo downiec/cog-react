@@ -61,11 +61,11 @@ function getOptions(
   data: { [key: string]: any }
 ): ValueType<SelectorOption<any>> {
   switch (dataType) {
-    case FIELDS.experiments:
+    case FIELDS.experiment_id:
       return createOptions(data, colorByActivity);
-    case FIELDS.frequencies:
+    case FIELDS.frequency:
       return createOptions(data, colorShadesBlue);
-    case FIELDS.realms:
+    case FIELDS.realm:
       return createOptions(data, colorShadesGreen);
     default:
       return createOptions(data, colorByName);

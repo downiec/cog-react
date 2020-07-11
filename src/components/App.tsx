@@ -23,8 +23,9 @@ export interface IAppState {
 }
 
 export default function App(props: IAppProps): JSX.Element {
+
   const initialState: IAppState = {
-    currentSubs: props.saved_subs,
+    currentSubs: props.saved_subs || [],
     activeTab: Panes.AddSubs,
   };
 
@@ -80,6 +81,10 @@ export default function App(props: IAppProps): JSX.Element {
   const deleteSubscriptions = async (
     subsToDelete: Subscription[]
   ): Promise<void> => {
+    if (!state.currentSubs) {
+      return; // No subscriptions to delete
+    }
+
     const newSubs: Subscription[] = state.currentSubs.filter(
       (sub: Subscription) => {
         return !subsToDelete.includes(sub);
@@ -107,14 +112,14 @@ export default function App(props: IAppProps): JSX.Element {
     subState: ISubscribeState
   ): Promise<void> => {
     // Get experiment IDs
-    const experimentIds: string[] = subState.experiments.selectedIds.map(
+    const experimentIds: string[] = subState.experiment_id.selectedIds.map(
       (exp: ExperimentInfo): string => {
         return exp.experiment_id;
       }
     );
 
     // Get model IDs
-    const modelIds: string[] = subState.models.selectedIds.map(
+    const modelIds: string[] = subState.source_id.selectedIds.map(
       (model: ModelInfo) => {
         return model.source_id;
       }
@@ -126,12 +131,12 @@ export default function App(props: IAppProps): JSX.Element {
       timestamp: time,
       period: subState.period,
       name: subState.name,
-      activity_id: subState.activities.selectedIds,
+      activity_id: subState.activity_id.selectedIds,
       experiment_id: experimentIds,
-      frequency: subState.frequencies.selectedIds,
+      frequency: subState.frequency.selectedIds,
       source_id: modelIds,
-      realm: subState.realms.selectedIds,
-      variable_id: subState.variables.selectedIds,
+      realm: subState.realm.selectedIds,
+      variable_id: subState.variable_id.selectedIds,
     };
 
     const data: Subscription[] = state.currentSubs;
@@ -142,12 +147,12 @@ export default function App(props: IAppProps): JSX.Element {
       timestamp: time,
       period: subState.period,
       name: subState.name,
-      activities: subState.activities.selectedIds,
-      experiments: experimentIds,
-      frequencies: subState.frequencies.selectedIds,
-      models: modelIds,
-      realms: subState.realms.selectedIds,
-      variables: subState.variables.selectedIds,
+      activity_id: subState.activity_id.selectedIds,
+      experiment_id: experimentIds,
+      frequency: subState.frequency.selectedIds,
+      source_id: modelIds,
+      realm: subState.realm.selectedIds,
+      variable_id: subState.variable_id.selectedIds,
     });
 
     // Update current cubscriptions state

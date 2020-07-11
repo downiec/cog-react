@@ -12,17 +12,17 @@ export function importDataList(data: FIELDS): any {
   // Note that currently this returns hardcoded data found in the 'appdata.ts' file
   // This function will be updated to use an API call when API is ready.
   switch (data) {
-    case FIELDS.activities:
+    case FIELDS.activity_id:
       return activityData;
-    case FIELDS.experiments:
+    case FIELDS.experiment_id:
       return experimentData;
-    case FIELDS.frequencies:
+    case FIELDS.frequency:
       return frequencyData;
-    case FIELDS.realms:
+    case FIELDS.realm:
       return realmData;
-    case FIELDS.variables:
+    case FIELDS.variable_id:
       return variableData;
-    case FIELDS.models:
+    case FIELDS.source_id:
       return modelData;
     default:
       return {};
@@ -33,22 +33,22 @@ export function importDataItem(type: FIELDS, id: string): any {
   const data: { [key: string]: any } = {};
 
   switch (type) {
-    case FIELDS.activities:
+    case FIELDS.activity_id:
       data[id] = activityData[id];
       break;
-    case FIELDS.experiments:
+    case FIELDS.experiment_id:
       data[id] = experimentData[id];
       break;
-    case FIELDS.frequencies:
+    case FIELDS.frequency:
       data[id] = frequencyData[id];
       break;
-    case FIELDS.realms:
+    case FIELDS.realm:
       data[id] = realmData[id];
       break;
-    case FIELDS.variables:
+    case FIELDS.variable_id:
       data[id] = variableData[id];
       break;
-    case FIELDS.models:
+    case FIELDS.source_id:
       data[id] = modelData[id];
       break;
     default:
