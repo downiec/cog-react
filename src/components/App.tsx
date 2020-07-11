@@ -24,17 +24,6 @@ export interface IAppState {
 
 export default function App(props: IAppProps): JSX.Element {
 
-  /* if(props.saved_subs){
-    const initSubs: Subscription[] = props.saved_subs.map((sub: any)=>{
-      if(sub.id >= 0){
-        sub["timestamp"] = sub.id;
-      }
-      return sub as Subscription;
-    });
-
-    console.log(initSubs);
-  } */
-
   const initialState: IAppState = {
     currentSubs: props.saved_subs || [],
     activeTab: Panes.AddSubs,
@@ -42,11 +31,6 @@ export default function App(props: IAppProps): JSX.Element {
 
   const [state, setState] = useState<IAppState>(initialState);
   const { Content } = Layout;
-
-  console.log("Subs from DB:");
-  console.log(props.saved_subs);
-  console.log("Current Subs:");
-  console.log(state.currentSubs);
 
   const sendRequest = async (request: Request): Promise<any> => {
     // Perform fetch to send data
