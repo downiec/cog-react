@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import {
   Typography,
   Button,
@@ -43,12 +44,12 @@ export interface IOptionState<InfoType, IDType> {
 export interface ISubscribeState {
   name: string;
   period: Period;
-  activities: IOptionState<string, string>;
-  experiments: IOptionState<ExperimentInfo, ExperimentInfo>;
-  frequencies: IOptionState<string, string>;
-  models: IOptionState<ModelInfo, ModelInfo>;
-  realms: IOptionState<string, string>;
-  variables: IOptionState<VariableInfo[], string>;
+  activity_id: IOptionState<string, string>;
+  experiment_id: IOptionState<ExperimentInfo, ExperimentInfo>;
+  frequency: IOptionState<string, string>;
+  source_id: IOptionState<ModelInfo, ModelInfo>;
+  realm: IOptionState<string, string>;
+  variable_id: IOptionState<VariableInfo[], string>;
 }
 
 const errorRender: JSX.Element = (
@@ -60,33 +61,33 @@ const errorRender: JSX.Element = (
 const initialState: ISubscribeState = {
   name: "",
   period: "weekly",
-  activities: {
-    filtered: getAll(FIELDS.activities),
+  activity_id: {
+    filtered: getAll(FIELDS.activity_id),
     selected: null,
     selectedIds: [],
   },
-  experiments: {
-    filtered: getAll(FIELDS.experiments),
+  experiment_id: {
+    filtered: getAll(FIELDS.experiment_id),
     selected: null,
     selectedIds: [],
   },
-  frequencies: {
-    filtered: getAll(FIELDS.frequencies),
+  frequency: {
+    filtered: getAll(FIELDS.frequency),
     selected: null,
     selectedIds: [],
   },
-  models: {
-    filtered: getAll(FIELDS.models),
+  source_id: {
+    filtered: getAll(FIELDS.source_id),
     selected: null,
     selectedIds: [],
   },
-  realms: {
-    filtered: getAll(FIELDS.realms),
+  realm: {
+    filtered: getAll(FIELDS.realm),
     selected: null,
     selectedIds: [],
   },
-  variables: {
-    filtered: getAll(FIELDS.variables),
+  variable_id: {
+    filtered: getAll(FIELDS.variable_id),
     selected: null,
     selectedIds: [],
   },
@@ -106,12 +107,12 @@ export default function CreateSubscriptions(
 
   const submitClicked = (): void => {
     if (
-      state.activities.selectedIds.length <= 0 &&
-      state.experiments.selectedIds.length <= 0 &&
-      state.frequencies.selectedIds.length <= 0 &&
-      state.models.selectedIds.length <= 0 &&
-      state.realms.selectedIds.length <= 0 &&
-      state.variables.selectedIds.length <= 0
+      state.activity_id.selectedIds.length <= 0 &&
+      state.experiment_id.selectedIds.length <= 0 &&
+      state.frequency.selectedIds.length <= 0 &&
+      state.source_id.selectedIds.length <= 0 &&
+      state.realm.selectedIds.length <= 0 &&
+      state.variable_id.selectedIds.length <= 0
     ) {
       Modal.error({
         title: "Notice",
@@ -133,20 +134,20 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
-      getAll(FIELDS.experiments),
+      getAll(FIELDS.experiment_id),
       [filterByActivity],
       newSelection
     );
 
     setState({
       ...state,
-      activities: {
-        ...state.activities,
+      activity_id: {
+        ...state.activity_id,
         selected: activitySelection,
         selectedIds: newSelection,
       },
-      experiments: {
-        ...state.experiments,
+      experiment_id: {
+        ...state.experiment_id,
         filtered: filteredExperiments,
       },
     });
@@ -160,8 +161,8 @@ export default function CreateSubscriptions(
     );
     setState({
       ...state,
-      experiments: {
-        ...state.experiments,
+      experiment_id: {
+        ...state.experiment_id,
         selected: experimentSelection,
         selectedIds: newSelection,
       },
@@ -173,19 +174,19 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(frequencySelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variables),
+      getAll(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
     setState({
       ...state,
-      frequencies: {
-        ...state.frequencies,
+      frequency: {
+        ...state.frequency,
         selected: frequencySelection,
         selectedIds: newSelection,
       },
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         filtered: filteredVariables,
       },
     });
@@ -197,8 +198,8 @@ export default function CreateSubscriptions(
     const newSelection: ModelInfo[] = getOptionListData(modelSelection);
     setState({
       ...state,
-      models: {
-        ...state.models,
+      source_id: {
+        ...state.source_id,
         selected: modelSelection,
         selectedIds: newSelection,
       },
@@ -210,19 +211,19 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(realmSelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variables),
+      getAll(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
     setState({
       ...state,
-      realms: {
-        ...state.realms,
+      realm: {
+        ...state.realm,
         selected: realmSelection,
         selectedIds: newSelection,
       },
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         filtered: filteredVariables,
       },
     });
@@ -234,8 +235,8 @@ export default function CreateSubscriptions(
     const newSelection: string[] = getOptionListValues(variableSelection);
     setState({
       ...state,
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         selected: variableSelection,
         selectedIds: newSelection,
       },
@@ -303,13 +304,13 @@ export default function CreateSubscriptions(
         </Divider>
         {stateSelector(
           "Filter by Activity:",
-          FIELDS.activities,
+          FIELDS.activity_id,
           activityHandler
         )}
-        {state.experiments.filtered && // eslint-disable-line
+        {state.experiment_id.filtered && // eslint-disable-line
           stateSelector(
             "Select Experiments:",
-            FIELDS.experiments,
+            FIELDS.experiment_id,
             experimentHandler
           )}
         <Divider orientation="left">
@@ -319,19 +320,19 @@ export default function CreateSubscriptions(
         </Divider>
         {stateSelector(
           "Filter By Frequency:",
-          FIELDS.frequencies,
+          FIELDS.frequency,
           frequencyHandler
         )}
-        {stateSelector("Filter By Model Realm:", FIELDS.realms, realmHandler)}
+        {stateSelector("Filter By Model Realm:", FIELDS.realm, realmHandler)}
         {stateSelector(
           "Select Variable(s):",
-          FIELDS.variables,
+          FIELDS.variable_id,
           variableHandler
         )}
         <Divider orientation="left">
           <Typography.Title level={4}>Subscribe to model(s)</Typography.Title>
         </Divider>
-        {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
+        {stateSelector("Select Model(s):", FIELDS.source_id, modelHandler)}
         <Form.Item wrapperCol={{ offset: 12 }}>
           <Button type="primary" htmlType="submit" onClick={submitClicked}>
             Submit

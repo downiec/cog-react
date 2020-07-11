@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import { ExperimentInfo, VariableInfo, ModelInfo } from "./data/dataProvider";
 
 export type SubType = "Experiment" | "Variable" | "Model";
@@ -8,21 +9,21 @@ export type Subscription = {
   period: Period;
   timestamp: number;
   name?: string;
-  activities?: string[];
-  experiments?: string[];
-  frequencies?: string[];
-  models?: string[];
-  realms?: string[];
-  variables?: string[];
+  activity_id?: string[];
+  experiment_id?: string[];
+  frequency?: string[];
+  source_id?: string[];
+  realm?: string[];
+  variable_id?: string[];
 };
 
 export type OptionType = string | ExperimentInfo | VariableInfo | ModelInfo;
 
 export enum FIELDS {
-  activities = "activities",
-  experiments = "experiments",
-  frequencies = "frequencies",
-  models = "models",
-  realms = "realms",
-  variables = "variables",
+  activity_id = "activity_id",
+  experiment_id = "experiment_id",
+  frequency = "frequency",
+  source_id = "source_id",
+  realm = "realm",
+  variable_id = "variable_id",
 }
