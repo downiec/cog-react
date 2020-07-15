@@ -68,7 +68,7 @@ export const customStyles = {
 
 export const defaultSubscriptions: Subscription[] = [
   {
-    id: 1,
+    id: 1234567,
     timestamp: Date.now(),
     period: "weekly",
     activity_id: ["CMIP"],

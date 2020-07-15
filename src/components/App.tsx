@@ -60,7 +60,7 @@ export default function App(props: IAppProps): JSX.Element {
     reqData.payload = formData;
 
     console.log(reqData);
-    // Get required csrf toekn for posting request.
+    // Get required csrf token for posting request.
     const csrftoken = getCookie("csrftoken");
 
     // eslint-disable-next-line

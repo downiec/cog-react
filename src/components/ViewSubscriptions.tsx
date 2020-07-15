@@ -22,10 +22,17 @@ export interface ICurrentSubsState {
 export default function ViewSubscriptions(
   props: ICurrentSubsProps
 ): JSX.Element {
-  const removeSub = (timestamp: number): void => {
-    const deleteSub = props.currentSubs.find((sub: Subscription) => {
-      return sub.timestamp === timestamp;
-    });
+  let deleteSub: Subscription | undefined;
+  const removeSub = (id: number, timestamp: number): void => {
+    if (id >= 0) {
+      deleteSub = props.currentSubs.find((sub: Subscription) => {
+        return sub.id === id;
+      });
+    } else {
+      deleteSub = props.currentSubs.find((sub: Subscription) => {
+        return sub.timestamp === timestamp;
+      });
+    }
     if (deleteSub !== undefined) {
       props.deleteSubscriptions([deleteSub]);
     }
@@ -44,6 +51,7 @@ export default function ViewSubscriptions(
   };
 
   const subTableColumns = [
+    { title: "id", dataIndex: "id", key: "id" },
     {
       title: "Period",
       dataIndex: "period",
@@ -90,7 +98,7 @@ export default function ViewSubscriptions(
         <Space size="small">
           <Button
             onClick={(): void => {
-              removeSub(record.timestamp);
+              removeSub(record.id, record.timestamp);
             }}
           >
             Unsubscribe
