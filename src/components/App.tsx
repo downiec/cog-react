@@ -95,7 +95,7 @@ export default function App(props: IAppProps): JSX.Element {
 
     // Generate data for request
     const data = subsToDelete.map((sub: Subscription) => {
-      return [sub.id, sub.timestamp];
+      return sub.id;
     });
 
     // Generate the request using data object
@@ -139,11 +139,18 @@ export default function App(props: IAppProps): JSX.Element {
       variable_id: subState.variable_id.selectedIds,
     };
 
+    // Generate the request using data object
+    const request: Request = generateRequest(newSub, "subscribe");
+
+    // Send request and await for response
+    const response = await sendRequest(request);
+
+    // Update current subscription state, using response id
     const data: Subscription[] = state.currentSubs;
 
     // Save in front-end state
     data.push({
-      id: -1,
+      id: response["id"],
       timestamp: time,
       period: subState.period,
       name: subState.name,
@@ -157,12 +164,6 @@ export default function App(props: IAppProps): JSX.Element {
 
     // Update current cubscriptions state
     setState({ ...state, currentSubs: data });
-
-    // Generate the request using data object
-    const request: Request = generateRequest(newSub, "subscribe");
-    // Send request and await for response
-    await sendRequest(request);
-
     setActivePane(Panes.ViewSubs);
   };
 
