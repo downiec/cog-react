@@ -23,7 +23,6 @@ export interface IAppState {
 }
 
 export default function App(props: IAppProps): JSX.Element {
-
   const initialState: IAppState = {
     currentSubs: props.saved_subs || [],
     activeTab: Panes.AddSubs,
@@ -59,7 +58,6 @@ export default function App(props: IAppProps): JSX.Element {
     reqData.action = action;
     reqData.payload = formData;
 
-    console.log(reqData);
     // Get required csrf token for posting request.
     const csrftoken = getCookie("csrftoken");
 
@@ -150,7 +148,7 @@ export default function App(props: IAppProps): JSX.Element {
 
     // Save in front-end state
     data.push({
-      id: response["id"],
+      id: response.id,
       timestamp: time,
       period: subState.period,
       name: subState.name,

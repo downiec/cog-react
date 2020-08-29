@@ -1,4 +1,13 @@
-import { Typography, Button, Divider, Table, Space, Modal } from "antd";
+import {
+  Typography,
+  Button,
+  Divider,
+  Table,
+  Space,
+  Modal,
+  Tooltip,
+} from "antd";
+import { QuestionCircleTwoTone } from "@ant-design/icons";
 import React from "react";
 import { Subscription } from "../customTypes";
 import SubscriptionRow from "./SubscriptionRow";
@@ -38,6 +47,28 @@ export default function ViewSubscriptions(
     }
   };
 
+  function renderTitle(title: string, tooltip: string): () => JSX.Element {
+    return (): JSX.Element => {
+      return (
+        <h6 style={{ margin: 0, padding: 0 }}>
+          {title}
+          {tooltip !== "" ? (
+            <Tooltip placement="top" title={tooltip}>
+              <QuestionCircleTwoTone
+                translate=""
+                style={{
+                  fontSize: "0.7em",
+                  verticalAlign: "top",
+                  margin: "5px",
+                }}
+              />
+            </Tooltip>
+          ) : null}
+        </h6>
+      );
+    };
+  }
+
   const removeAllSubs = (): void => {
     Modal.error({
       title: "Notice",
@@ -51,9 +82,16 @@ export default function ViewSubscriptions(
   };
 
   const subTableColumns = [
-    { title: "id", dataIndex: "id", key: "id" },
     {
-      title: "Period",
+      title: renderTitle("ID", ""),
+      dataIndex: "id",
+      key: "id",
+    },
+    {
+      title: renderTitle(
+        "Period",
+        "The frequency for subscription notifications. Click the filter icon to filter subscriptions by period."
+      ),
       dataIndex: "period",
       key: "period",
       filters: [
@@ -79,12 +117,18 @@ export default function ViewSubscriptions(
         record.period.indexOf(value) === 0,
     },
     {
-      title: "Name",
+      title: renderTitle(
+        "Name",
+        "(Optional) The name used to identify the subscription."
+      ),
       dataIndex: "name",
       key: "name",
     },
     {
-      title: "Selections",
+      title: renderTitle(
+        "Selections",
+        "You can click an item below to view more information for that subscription item."
+      ),
       dataIndex: "selections",
       key: "selections",
       render: (text: string, record: Subscription): JSX.Element => {
@@ -92,7 +136,7 @@ export default function ViewSubscriptions(
       },
     },
     {
-      title: "Action",
+      title: renderTitle("Actions", ""),
       key: "action",
       render: (text: string, record: Subscription): JSX.Element => (
         <Space size="small">
@@ -121,6 +165,7 @@ export default function ViewSubscriptions(
         Unsubscribe All
       </Button>
       <Table
+        scroll={{ x: true, scrollToFirstRowOnChange: true }}
         columns={subTableColumns}
         dataSource={dataSource}
         pagination={{ hideOnSinglePage: true }}

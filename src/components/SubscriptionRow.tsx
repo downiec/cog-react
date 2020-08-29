@@ -1,4 +1,4 @@
-import { Tag, Button, Space, Popover } from "antd";
+import { Tag, Button, Space, Popover, Tooltip } from "antd";
 import React from "react";
 import chromaJs from "chroma-js";
 import { SelectorOption, getOptionItem } from "../data/dataProvider";
@@ -16,11 +16,54 @@ interface ISubPanelProps {
   dataType: FIELDS;
 }
 
+interface ISubPanelItem {
+  id: string;
+  tooltip: string;
+  dataType: FIELDS;
+}
+
+function SubscriptionItem(props: ISubPanelItem): JSX.Element {
+  const opt: SelectorOption<any> = getOptionItem(props.dataType, props.id);
+  const col: chromaJs.Color = chromaJs(opt.color);
+  const key = `${props.dataType}_${props.id}`;
+
+  return (
+    <Tooltip placement="top" title={`${props.tooltip}`}>
+      <Tag
+        // eslint-disable-next-line react/no-array-index-key
+        key={key}
+        style={{
+          color: col.darken().css(),
+          backgroundColor: col.alpha(0.1).css(),
+          borderColor: col.css(),
+          padding: ".2em",
+          margin: ".2em",
+        }}
+      >
+        {renderOption(opt)}
+      </Tag>
+    </Tooltip>
+  );
+}
+
 function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
   if (props.ids.length === 0) {
     return <div />;
   }
   const color: chromaJs.Color = chromaJs(props.color);
+
+  // Render just the one item
+  if (props.ids.length === 1) {
+    return (
+      <SubscriptionItem
+        dataType={props.dataType}
+        id={props.ids[0]}
+        tooltip={`Category: ${props.title}`}
+      />
+    );
+  }
+
+  // Render a panel with multiple itesm under same category
   return (
     <Popover
       trigger="click"
@@ -29,38 +72,31 @@ function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
       content={
         <div style={{ maxWidth: "270px" }}>
           {props.ids.map((id: string) => {
-            const opt: SelectorOption<any> = getOptionItem(props.dataType, id);
-            const col: chromaJs.Color = chromaJs(opt.color);
-            const key = `${props.dataType}_${id}`;
-
             return (
-              <Tag
-                // eslint-disable-next-line react/no-array-index-key
-                key={key}
-                style={{
-                  color: col.darken().css(),
-                  backgroundColor: col.alpha(0.1).css(),
-                  borderColor: col.css(),
-                  padding: ".2em",
-                  margin: ".2em",
-                }}
-              >
-                {renderOption(opt)}
-              </Tag>
+              <SubscriptionItem
+                id={id}
+                dataType={props.dataType}
+                tooltip="Click for more details."
+              />
             );
           })}
         </div>
       }
     >
-      <Button
-        style={{
-          color: color.darken().css(),
-          backgroundColor: color.alpha(0.2).css(),
-          borderColor: color.css(),
-        }}
+      <Tooltip
+        placement="top"
+        title={`Click to view list of subscribed ${props.title}`}
       >
-        {props.title}
-      </Button>
+        <Button
+          style={{
+            color: color.darken().css(),
+            backgroundColor: color.alpha(0.2).css(),
+            borderColor: color.css(),
+          }}
+        >
+          {props.title}
+        </Button>
+      </Tooltip>
     </Popover>
   );
 }
@@ -77,14 +113,15 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
             ids={props.record.activity_id}
           />
         )}
-        {props.record.experiment_id && props.record.experiment_id.length > 0 && (
-          <SubscriptionPanel
-            dataType={FIELDS.experiment_id}
-            color="lightblue"
-            title="Experiments"
-            ids={props.record.experiment_id}
-          />
-        )}
+        {props.record.experiment_id &&
+          props.record.experiment_id.length > 0 && (
+            <SubscriptionPanel
+              dataType={FIELDS.experiment_id}
+              color="lightblue"
+              title="Experiments"
+              ids={props.record.experiment_id}
+            />
+          )}
         {props.record.frequency && props.record.frequency.length > 0 && (
           <SubscriptionPanel
             dataType={FIELDS.frequency}

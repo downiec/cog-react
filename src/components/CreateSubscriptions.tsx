@@ -275,7 +275,7 @@ export default function CreateSubscriptions(
         </Divider>
         <Row align="middle">
           <Col span={8} style={{ textAlign: "right", paddingRight: ".5em" }}>
-            Name (Optional):
+            Subscription Name (Optional):
           </Col>
           <Col span={16}>
             <Input
