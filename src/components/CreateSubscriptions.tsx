@@ -296,6 +296,7 @@ export default function CreateSubscriptions(
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         name="CreateSubscriptions"
+        style={{minHeight: "1024px"}}
       >
         <Divider orientation="center">
           <Typography.Title level={3}>Create New Subscription</Typography.Title>
