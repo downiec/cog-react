@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-str */
 /* eslint-disable @typescript-eslint/camelcase */
 import {
   Typography,
@@ -9,7 +10,9 @@ import {
   Row,
   Col,
   Modal,
+  Tooltip,
 } from "antd";
+import { QuestionCircleTwoTone } from "@ant-design/icons";
 import { RadioChangeEvent } from "antd/lib/radio";
 import React, { useState } from "react";
 import { ValueType } from "react-select/src/types";
@@ -117,7 +120,8 @@ export default function CreateSubscriptions(
       Modal.error({
         title: "Notice",
         centered: true,
-        content: "Make a selection of at least one item, to submit your subscription."
+        content:
+          "Make a selection of at least one item, to submit your subscription.",
       });
       return;
     }
@@ -249,12 +253,35 @@ export default function CreateSubscriptions(
     setState({ ...state, name: nameStr });
   };
 
+  const selectorTitle = (title: string, tooltip: string): JSX.Element => {
+    if (tooltip === "") {
+      return <div>{title}</div>;
+    }
+
+    return (
+      <div>
+        <Tooltip placement="top" title={tooltip}>
+          <QuestionCircleTwoTone
+            translate=""
+            style={{
+              fontSize: "0.7em",
+              margin: "5px",
+              verticalAlign: "top",
+            }}
+          />
+        </Tooltip>
+        {title}
+      </div>
+    );
+  };
+
   const stateSelector = (
     header: string,
+    tooltip: string,
     field: FIELDS,
     handler: (selection: ValueType<SelectorOption<any>>) => Promise<void>
   ): JSX.Element => (
-    <Form.Item label={header} name="field">
+    <Form.Item label={selectorTitle(header, tooltip)} name="field">
       <Selector
         options={state[field].filtered}
         selectedOptions={state[field].selected}
@@ -269,13 +296,14 @@ export default function CreateSubscriptions(
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         name="CreateSubscriptions"
+        style={{minHeight: "1024px"}}
       >
         <Divider orientation="center">
           <Typography.Title level={3}>Create New Subscription</Typography.Title>
         </Divider>
         <Row align="middle">
           <Col span={8} style={{ textAlign: "right", paddingRight: ".5em" }}>
-            Name (Optional):
+            Subscription Name (Optional):
           </Col>
           <Col span={16}>
             <Input
@@ -303,13 +331,17 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter by Activity:",
+          "Filter by Activities",
+          "You can narrow activity drop-down results by entering the name within the input field. \
+          The activities selected will be used to filter the experiments drop-down below.",
           FIELDS.activity_id,
           activityHandler
         )}
         {state.experiment_id.filtered && // eslint-disable-line
           stateSelector(
-            "Select Experiments:",
+            "Select Experiments",
+            "You can narrow experiment drop-down results by typing in the input field. \
+            Note: Experiments listed will be filtered by the activities selected above.",
             FIELDS.experiment_id,
             experimentHandler
           )}
@@ -319,20 +351,33 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter By Frequency:",
+          "Filter By Frequency",
+          "Use this field to narrow down the variable drop-down results by frequency.",
           FIELDS.frequency,
           frequencyHandler
         )}
-        {stateSelector("Filter By Model Realm:", FIELDS.realm, realmHandler)}
         {stateSelector(
-          "Select Variable(s):",
+          "Filter By Model Realm",
+          "Use this field to narrow down the variable drop-down results by model realm.",
+          FIELDS.realm,
+          realmHandler
+        )}
+        {stateSelector(
+          "Select Variable(s)",
+          "Select which variables you want to subscribe to. You can narrow results by using\
+          the filters above, or by typing the specific variable name within this field.",
           FIELDS.variable_id,
           variableHandler
         )}
         <Divider orientation="left">
           <Typography.Title level={4}>Subscribe to model(s)</Typography.Title>
         </Divider>
-        {stateSelector("Select Model(s):", FIELDS.source_id, modelHandler)}
+        {stateSelector(
+          "Select Model(s)",
+          "You can narrow down model results by typing the name within the input field.",
+          FIELDS.source_id,
+          modelHandler
+        )}
         <Form.Item wrapperCol={{ offset: 12 }}>
           <Button type="primary" htmlType="submit" onClick={submitClicked}>
             Submit
