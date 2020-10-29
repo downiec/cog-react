@@ -1,3 +1,5 @@
+/* eslint-disable no-multi-str */
+/* eslint-disable @typescript-eslint/camelcase */
 import {
   Typography,
   Button,
@@ -8,7 +10,9 @@ import {
   Row,
   Col,
   Modal,
+  Tooltip,
 } from "antd";
+import { QuestionCircleTwoTone } from "@ant-design/icons";
 import { RadioChangeEvent } from "antd/lib/radio";
 import React, { useState } from "react";
 import { ValueType } from "react-select/src/types";
@@ -43,12 +47,12 @@ export interface IOptionState<InfoType, IDType> {
 export interface ISubscribeState {
   name: string;
   period: Period;
-  activities: IOptionState<string, string>;
-  experiments: IOptionState<ExperimentInfo, ExperimentInfo>;
-  frequencies: IOptionState<string, string>;
-  models: IOptionState<ModelInfo, ModelInfo>;
-  realms: IOptionState<string, string>;
-  variables: IOptionState<VariableInfo[], string>;
+  activity_id: IOptionState<string, string>;
+  experiment_id: IOptionState<ExperimentInfo, ExperimentInfo>;
+  frequency: IOptionState<string, string>;
+  source_id: IOptionState<ModelInfo, ModelInfo>;
+  realm: IOptionState<string, string>;
+  variable_id: IOptionState<VariableInfo[], string>;
 }
 
 const errorRender: JSX.Element = (
@@ -60,33 +64,33 @@ const errorRender: JSX.Element = (
 const initialState: ISubscribeState = {
   name: "",
   period: "weekly",
-  activities: {
-    filtered: getAll(FIELDS.activities),
+  activity_id: {
+    filtered: getAll(FIELDS.activity_id),
     selected: null,
     selectedIds: [],
   },
-  experiments: {
-    filtered: getAll(FIELDS.experiments),
+  experiment_id: {
+    filtered: getAll(FIELDS.experiment_id),
     selected: null,
     selectedIds: [],
   },
-  frequencies: {
-    filtered: getAll(FIELDS.frequencies),
+  frequency: {
+    filtered: getAll(FIELDS.frequency),
     selected: null,
     selectedIds: [],
   },
-  models: {
-    filtered: getAll(FIELDS.models),
+  source_id: {
+    filtered: getAll(FIELDS.source_id),
     selected: null,
     selectedIds: [],
   },
-  realms: {
-    filtered: getAll(FIELDS.realms),
+  realm: {
+    filtered: getAll(FIELDS.realm),
     selected: null,
     selectedIds: [],
   },
-  variables: {
-    filtered: getAll(FIELDS.variables),
+  variable_id: {
+    filtered: getAll(FIELDS.variable_id),
     selected: null,
     selectedIds: [],
   },
@@ -106,17 +110,18 @@ export default function CreateSubscriptions(
 
   const submitClicked = (): void => {
     if (
-      state.activities.selectedIds.length <= 0 &&
-      state.experiments.selectedIds.length <= 0 &&
-      state.frequencies.selectedIds.length <= 0 &&
-      state.models.selectedIds.length <= 0 &&
-      state.realms.selectedIds.length <= 0 &&
-      state.variables.selectedIds.length <= 0
+      state.activity_id.selectedIds.length <= 0 &&
+      state.experiment_id.selectedIds.length <= 0 &&
+      state.frequency.selectedIds.length <= 0 &&
+      state.source_id.selectedIds.length <= 0 &&
+      state.realm.selectedIds.length <= 0 &&
+      state.variable_id.selectedIds.length <= 0
     ) {
       Modal.error({
         title: "Notice",
         centered: true,
-        content: "Make a selection of at least one item, to submit your subscription."
+        content:
+          "Make a selection of at least one item, to submit your subscription.",
       });
       return;
     }
@@ -133,20 +138,20 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
-      getAll(FIELDS.experiments),
+      getAll(FIELDS.experiment_id),
       [filterByActivity],
       newSelection
     );
 
     setState({
       ...state,
-      activities: {
-        ...state.activities,
+      activity_id: {
+        ...state.activity_id,
         selected: activitySelection,
         selectedIds: newSelection,
       },
-      experiments: {
-        ...state.experiments,
+      experiment_id: {
+        ...state.experiment_id,
         filtered: filteredExperiments,
       },
     });
@@ -160,8 +165,8 @@ export default function CreateSubscriptions(
     );
     setState({
       ...state,
-      experiments: {
-        ...state.experiments,
+      experiment_id: {
+        ...state.experiment_id,
         selected: experimentSelection,
         selectedIds: newSelection,
       },
@@ -173,19 +178,19 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(frequencySelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variables),
+      getAll(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
     setState({
       ...state,
-      frequencies: {
-        ...state.frequencies,
+      frequency: {
+        ...state.frequency,
         selected: frequencySelection,
         selectedIds: newSelection,
       },
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         filtered: filteredVariables,
       },
     });
@@ -197,8 +202,8 @@ export default function CreateSubscriptions(
     const newSelection: ModelInfo[] = getOptionListData(modelSelection);
     setState({
       ...state,
-      models: {
-        ...state.models,
+      source_id: {
+        ...state.source_id,
         selected: modelSelection,
         selectedIds: newSelection,
       },
@@ -210,19 +215,19 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(realmSelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variables),
+      getAll(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
     setState({
       ...state,
-      realms: {
-        ...state.realms,
+      realm: {
+        ...state.realm,
         selected: realmSelection,
         selectedIds: newSelection,
       },
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         filtered: filteredVariables,
       },
     });
@@ -234,8 +239,8 @@ export default function CreateSubscriptions(
     const newSelection: string[] = getOptionListValues(variableSelection);
     setState({
       ...state,
-      variables: {
-        ...state.variables,
+      variable_id: {
+        ...state.variable_id,
         selected: variableSelection,
         selectedIds: newSelection,
       },
@@ -248,12 +253,35 @@ export default function CreateSubscriptions(
     setState({ ...state, name: nameStr });
   };
 
+  const selectorTitle = (title: string, tooltip: string): JSX.Element => {
+    if (tooltip === "") {
+      return <div>{title}</div>;
+    }
+
+    return (
+      <div>
+        <Tooltip placement="top" title={tooltip}>
+          <QuestionCircleTwoTone
+            translate=""
+            style={{
+              fontSize: "0.7em",
+              margin: "5px",
+              verticalAlign: "top",
+            }}
+          />
+        </Tooltip>
+        {title}
+      </div>
+    );
+  };
+
   const stateSelector = (
     header: string,
+    tooltip: string,
     field: FIELDS,
     handler: (selection: ValueType<SelectorOption<any>>) => Promise<void>
   ): JSX.Element => (
-    <Form.Item label={header} name="field">
+    <Form.Item label={selectorTitle(header, tooltip)} name="field">
       <Selector
         options={state[field].filtered}
         selectedOptions={state[field].selected}
@@ -268,13 +296,14 @@ export default function CreateSubscriptions(
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         name="CreateSubscriptions"
+        style={{minHeight: "1024px"}}
       >
         <Divider orientation="center">
           <Typography.Title level={3}>Create New Subscription</Typography.Title>
         </Divider>
         <Row align="middle">
           <Col span={8} style={{ textAlign: "right", paddingRight: ".5em" }}>
-            Name (Optional):
+            Subscription Name (Optional):
           </Col>
           <Col span={16}>
             <Input
@@ -302,14 +331,18 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter by Activity:",
-          FIELDS.activities,
+          "Filter by Activities",
+          "You can narrow activity drop-down results by entering the name within the input field. \
+          The activities selected will be used to filter the experiments drop-down below.",
+          FIELDS.activity_id,
           activityHandler
         )}
-        {state.experiments.filtered && // eslint-disable-line
+        {state.experiment_id.filtered && // eslint-disable-line
           stateSelector(
-            "Select Experiments:",
-            FIELDS.experiments,
+            "Select Experiments",
+            "You can narrow experiment drop-down results by typing in the input field. \
+            Note: Experiments listed will be filtered by the activities selected above.",
+            FIELDS.experiment_id,
             experimentHandler
           )}
         <Divider orientation="left">
@@ -318,20 +351,33 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter By Frequency:",
-          FIELDS.frequencies,
+          "Filter By Frequency",
+          "Use this field to narrow down the variable drop-down results by frequency.",
+          FIELDS.frequency,
           frequencyHandler
         )}
-        {stateSelector("Filter By Model Realm:", FIELDS.realms, realmHandler)}
         {stateSelector(
-          "Select Variable(s):",
-          FIELDS.variables,
+          "Filter By Model Realm",
+          "Use this field to narrow down the variable drop-down results by model realm.",
+          FIELDS.realm,
+          realmHandler
+        )}
+        {stateSelector(
+          "Select Variable(s)",
+          "Select which variables you want to subscribe to. You can narrow results by using\
+          the filters above, or by typing the specific variable name within this field.",
+          FIELDS.variable_id,
           variableHandler
         )}
         <Divider orientation="left">
           <Typography.Title level={4}>Subscribe to model(s)</Typography.Title>
         </Divider>
-        {stateSelector("Select Model(s):", FIELDS.models, modelHandler)}
+        {stateSelector(
+          "Select Model(s)",
+          "You can narrow down model results by typing the name within the input field.",
+          FIELDS.source_id,
+          modelHandler
+        )}
         <Form.Item wrapperCol={{ offset: 12 }}>
           <Button type="primary" htmlType="submit" onClick={submitClicked}>
             Submit

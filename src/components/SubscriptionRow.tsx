@@ -1,4 +1,4 @@
-import { Tag, Button, Space, Popover } from "antd";
+import { Tag, Button, Space, Popover, Tooltip } from "antd";
 import React from "react";
 import chromaJs from "chroma-js";
 import { SelectorOption, getOptionItem } from "../data/dataProvider";
@@ -16,11 +16,54 @@ interface ISubPanelProps {
   dataType: FIELDS;
 }
 
+interface ISubPanelItem {
+  id: string;
+  tooltip: string;
+  dataType: FIELDS;
+}
+
+function SubscriptionItem(props: ISubPanelItem): JSX.Element {
+  const opt: SelectorOption<any> = getOptionItem(props.dataType, props.id);
+  const col: chromaJs.Color = chromaJs(opt.color);
+  const key = `${props.dataType}_${props.id}`;
+
+  return (
+    <Tooltip placement="top" title={`${props.tooltip}`}>
+      <Tag
+        // eslint-disable-next-line react/no-array-index-key
+        key={key}
+        style={{
+          color: col.darken().css(),
+          backgroundColor: col.alpha(0.1).css(),
+          borderColor: col.css(),
+          padding: ".2em",
+          margin: ".2em",
+        }}
+      >
+        {renderOption(opt)}
+      </Tag>
+    </Tooltip>
+  );
+}
+
 function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
   if (props.ids.length === 0) {
     return <div />;
   }
   const color: chromaJs.Color = chromaJs(props.color);
+
+  // Render just the one item
+  if (props.ids.length === 1) {
+    return (
+      <SubscriptionItem
+        dataType={props.dataType}
+        id={props.ids[0]}
+        tooltip={`Category: ${props.title}`}
+      />
+    );
+  }
+
+  // Render a panel with multiple itesm under same category
   return (
     <Popover
       trigger="click"
@@ -29,38 +72,31 @@ function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
       content={
         <div style={{ maxWidth: "270px" }}>
           {props.ids.map((id: string) => {
-            const opt: SelectorOption<any> = getOptionItem(props.dataType, id);
-            const col: chromaJs.Color = chromaJs(opt.color);
-            const key = `${props.dataType}_${id}`;
-
             return (
-              <Tag
-                // eslint-disable-next-line react/no-array-index-key
-                key={key}
-                style={{
-                  color: col.darken().css(),
-                  backgroundColor: col.alpha(0.1).css(),
-                  borderColor: col.css(),
-                  padding: ".2em",
-                  margin: ".2em",
-                }}
-              >
-                {renderOption(opt)}
-              </Tag>
+              <SubscriptionItem
+                id={id}
+                dataType={props.dataType}
+                tooltip="Click for more details."
+              />
             );
           })}
         </div>
       }
     >
-      <Button
-        style={{
-          color: color.darken().css(),
-          backgroundColor: color.alpha(0.2).css(),
-          borderColor: color.css(),
-        }}
+      <Tooltip
+        placement="top"
+        title={`Click to view list of subscribed ${props.title}`}
       >
-        {props.title}
-      </Button>
+        <Button
+          style={{
+            color: color.darken().css(),
+            backgroundColor: color.alpha(0.2).css(),
+            borderColor: color.css(),
+          }}
+        >
+          {props.title}
+        </Button>
+      </Tooltip>
     </Popover>
   );
 }
@@ -69,52 +105,53 @@ export default function SubscriptionRow(props: ISubRowProps): JSX.Element {
   if (props.record) {
     return (
       <Space size="small" align="center">
-        {props.record.activities && props.record.activities.length > 0 && (
+        {props.record.activity_id && props.record.activity_id.length > 0 && (
           <SubscriptionPanel
-            dataType={FIELDS.activities}
+            dataType={FIELDS.activity_id}
             color="lightblue"
             title="Activities"
-            ids={props.record.activities}
+            ids={props.record.activity_id}
           />
         )}
-        {props.record.experiments && props.record.experiments.length > 0 && (
+        {props.record.experiment_id &&
+          props.record.experiment_id.length > 0 && (
+            <SubscriptionPanel
+              dataType={FIELDS.experiment_id}
+              color="lightblue"
+              title="Experiments"
+              ids={props.record.experiment_id}
+            />
+          )}
+        {props.record.frequency && props.record.frequency.length > 0 && (
           <SubscriptionPanel
-            dataType={FIELDS.experiments}
-            color="lightblue"
-            title="Experiments"
-            ids={props.record.experiments}
-          />
-        )}
-        {props.record.frequencies && props.record.frequencies.length > 0 && (
-          <SubscriptionPanel
-            dataType={FIELDS.frequencies}
+            dataType={FIELDS.frequency}
             color="lightblue"
             title="Frequencies"
-            ids={props.record.frequencies}
+            ids={props.record.frequency}
           />
         )}
-        {props.record.models && props.record.models.length > 0 && (
+        {props.record.source_id && props.record.source_id.length > 0 && (
           <SubscriptionPanel
-            dataType={FIELDS.models}
+            dataType={FIELDS.source_id}
             color="lightblue"
             title="Models"
-            ids={props.record.models}
+            ids={props.record.source_id}
           />
         )}
-        {props.record.realms && props.record.realms.length > 0 && (
+        {props.record.realm && props.record.realm.length > 0 && (
           <SubscriptionPanel
-            dataType={FIELDS.realms}
+            dataType={FIELDS.realm}
             color="lightblue"
             title="Realms"
-            ids={props.record.realms}
+            ids={props.record.realm}
           />
         )}
-        {props.record.variables && props.record.variables.length > 0 && (
+        {props.record.variable_id && props.record.variable_id.length > 0 && (
           <SubscriptionPanel
-            dataType={FIELDS.variables}
+            dataType={FIELDS.variable_id}
             color="lightblue"
             title="Variables"
-            ids={props.record.variables}
+            ids={props.record.variable_id}
           />
         )}
       </Space>

@@ -4,34 +4,40 @@
 #It assumes this repo is in the same directory as the COG repo.
 #A fork of the COG repo is required to run this script. Forked COG repo: https://github.com/downiec/COG
 
+# Exit for any error
+set -e
+
 #Build the React Application
 if [ "$1" = "--build" ]; then
     npm run build
 fi
 
 #Export config directory
-export COG_CONFIG_DIR=../COG/
+COG_DIR=../COG/
 
 #Update latest React App files
+
+# Remove existing files if they exist, ignore error if they don't exist
 echo "Removing old js files."
-rm ${COG_CONFIG_DIR}cog/static/cog/cog-react/js/*
+rm ${COG_DIR}cog/static/cog/cog-react/js/* || true
 echo "Removing old css files."
-rm ${COG_CONFIG_DIR}cog/static/cog/cog-react/css/*
+rm ${COG_DIR}cog/static/cog/cog-react/css/* || true
+# Copy new files into appropriate location within COG repo
 echo "Copying new js files."
-mkdir -p ${COG_CONFIG_DIR}cog/static/cog/cog-react/js/
-cp build/static/js/*.js ${COG_CONFIG_DIR}cog/static/cog/cog-react/js/
-cp build/static/js/*.map ${COG_CONFIG_DIR}cog/static/cog/cog-react/js/
+mkdir -p ${COG_DIR}cog/static/cog/cog-react/js/
+cp build/static/js/*.js ${COG_DIR}cog/static/cog/cog-react/js/
+cp build/static/js/*.map ${COG_DIR}cog/static/cog/cog-react/js/
 echo "Copying new css files."
-mkdir -p ${COG_CONFIG_DIR}cog/static/cog/cog-react/css/
-cp build/static/css/* ${COG_CONFIG_DIR}cog/static/cog/cog-react/css/
-echo "Setting up COG server"
+mkdir -p ${COG_DIR}cog/static/cog/cog-react/css/
+cp build/static/css/* ${COG_DIR}cog/static/cog/cog-react/css/
 
 #Run cog server and (restart if the cog server is already running)
-if PID=$(lsof -i:8000 -t); then
+echo "Setting up COG server"
+if PID=$(lsof -i:3000 -t); then
     echo "Restarting COG server..."
     kill $PID
 else
     echo "Starting COG server..."
 fi
 
-python ${COG_CONFIG_DIR}manage.py runserver
+python ${COG_DIR}manage.py runserver 0.0.0.0:3000

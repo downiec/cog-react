@@ -28,6 +28,7 @@ module.exports = {
     //"class-methods-use-this": "off",
     //"comma-dangle": "off",
     //"consistent-return": "off",
+    "no-multi-str": "warn",
     "no-console": ["warn", { allow: ["error"] }],
     "no-unused-vars": "warn",
     quotes: ["warn", "double"],

@@ -68,14 +68,14 @@ export const customStyles = {
 
 export const defaultSubscriptions: Subscription[] = [
   {
-    id: 1,
+    id: 1234567,
     timestamp: Date.now(),
     period: "weekly",
-    activities: ["CMIP"],
-    experiments: [],
-    frequencies: [],
-    models: [],
-    realms: ["land"],
-    variables: ["clt"],
+    activity_id: ["CMIP"],
+    experiment_id: [],
+    frequency: [],
+    source_id: [],
+    realm: ["land"],
+    variable_id: ["clt"],
   },
 ];
