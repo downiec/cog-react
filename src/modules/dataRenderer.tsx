@@ -1,50 +1,10 @@
-import React, { useState } from "react";
-import { Button, Popover } from "antd";
-import chromaJs from "chroma-js";
-import { convertStrToHexColor } from "../utilities/mainUtils";
-import {
-  areVariables,
-  ExperimentInfo,
-  isExperiment,
-  isModel,
-  SelectorOption,
-  VariableInfo,
-} from "./dataProvider";
+/* eslint-disable @typescript-eslint/no-explicit-any*/
 
-export const colorByName = (value: [string, any]): string => {
-  return convertStrToHexColor(value[0], {
-    minColor: [20, 20, 20],
-    maxColor: [220, 220, 220],
-  });
-};
-
-export const colorShadesBlue = (value: [string, any]): string => {
-  return convertStrToHexColor(value[0], {
-    minColor: [50, 100, 200],
-    maxColor: [120, 200, 255],
-  });
-};
-
-export const colorShadesGreen = (value: [string, any]): string => {
-  return convertStrToHexColor(value[0], {
-    minColor: [50, 200, 120],
-    maxColor: [150, 255, 200],
-  });
-};
-
-export const colorByActivity = (value: [string, ExperimentInfo]): string => {
-  return convertStrToHexColor(value[1].activity_id[0], {
-    minColor: [20, 20, 20],
-    maxColor: [220, 220, 220],
-  });
-};
-
-export const colorByRealm = (value: [string, VariableInfo]): string => {
-  return convertStrToHexColor(value[1].modeling_realm, {
-    minColor: [50, 200, 120],
-    maxColor: [150, 255, 200],
-  });
-};
+import React, { useState } from 'react';
+import { Button, Popover } from 'antd';
+import chromaJs from 'chroma-js';
+import { SelectorOption } from '../types';
+import { isExperiment, isModel, areVariables } from './dataProvider';
 
 function showData(
   id: number,
@@ -55,7 +15,7 @@ function showData(
     if (Array.isArray(data)) {
       return (
         <div key={id}>
-          <b>{name}</b>: {data.join(", ")}
+          <b>{name}</b>: {data.join(', ')}
           <br />
         </div>
       );
@@ -76,13 +36,13 @@ function defaultOption(option: SelectorOption<any>): JSX.Element {
     <Popover
       trigger="click"
       placement="bottom"
-      overlayStyle={{ minWidth: "250px" }}
+      overlayStyle={{ minWidth: '250px' }}
       title={
         <div
           style={{
             color: color.css(),
-            fontSize: "1.5em",
-            width: "270px",
+            fontSize: '1.5em',
+            width: '270px',
           }}
         >
           Description
@@ -91,11 +51,8 @@ function defaultOption(option: SelectorOption<any>): JSX.Element {
       content={
         <div
           style={{
-            maxWidth: "270px",
-            color: color
-              .desaturate()
-              .darken()
-              .css(),
+            maxWidth: '270px',
+            color: color.desaturate().darken().css(),
           }}
         >
           {option.data}
@@ -115,7 +72,7 @@ function defaultOption(option: SelectorOption<any>): JSX.Element {
   );
 }
 
-interface IDataRenderProps {
+export interface IDataRenderProps {
   option: SelectorOption<any>;
   headerTxt: string;
   descriptionTxt: string;
@@ -124,52 +81,52 @@ interface IDataRenderProps {
   data: any[];
 }
 
-function DataPopover(props: IDataRenderProps): JSX.Element {
+export function DataPopover(props: IDataRenderProps): JSX.Element {
   const [show, setShow] = useState(false);
 
   const color: chromaJs.Color = chromaJs(props.option.color);
-  const toggle = (): void => {
+  const toggle = (event: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+    event.stopPropagation();
     setShow(!show);
   };
   return (
     <Popover
       trigger="click"
       placement="bottom"
-      overlayStyle={{ minWidth: "250px" }}
+      overlayStyle={{ minWidth: '250px' }}
       title={
         <div
           style={{
             color: color.css(),
-            fontSize: "1.5em",
-            width: "270px",
+            fontSize: '1.5em',
+            width: '270px',
           }}
         >
           {props.headerTxt}
-          <Button
-            className="float-right"
-            style={{
-              color: color.css(),
-              backgroundColor: color.alpha(0.2).css(),
-              borderColor: color.alpha(0.3).css(),
-            }}
-            onClick={toggle}
-          >
-            {props.buttonTxt}
-          </Button>
+          {props.data && (
+            <Button
+              style={{
+                float: 'right',
+                color: color.css(),
+                backgroundColor: color.alpha(0.2).css(),
+                borderColor: color.alpha(0.3).css(),
+              }}
+              onClick={toggle}
+            >
+              {props.buttonTxt}
+            </Button>
+          )}
         </div>
       }
       content={
         <div
           style={{
-            maxWidth: "270px",
-            color: color
-              .desaturate()
-              .darken()
-              .css(),
+            maxWidth: '270px',
+            color: color.desaturate().darken().css(),
           }}
         >
           {props.descriptionTxt}
-          <div style={{ display: show ? "block" : "none", maxWidth: "250px" }}>
+          <div style={{ display: show ? 'block' : 'none', maxWidth: '250px' }}>
             {props.dataHeaders.map((header: string, idx: number) => {
               return showData(idx, header, props.data[idx]);
             })}
@@ -203,14 +160,14 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
         descriptionTxt={option.data.description}
         buttonTxt="Detail"
         dataHeaders={[
-          "Start Year",
-          "End Year",
-          "Min Years Per Sim",
-          "Experiment ID",
-          "Sub Experiment ID",
-          "Experiment",
-          "Activities",
-          "Tier",
+          'Start Year',
+          'End Year',
+          'Min Years Per Sim',
+          'Experiment ID',
+          'Sub Experiment ID',
+          'Experiment',
+          'Activities',
+          'Tier',
         ]}
         data={[
           option.data.start_year,
@@ -234,11 +191,11 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
         descriptionTxt={option.data.label_extended}
         buttonTxt="Detail"
         dataHeaders={[
-          "Model",
-          "Institution ID",
-          "Release Year",
-          "Label",
-          "Activity Participation",
+          'Model',
+          'Institution ID',
+          'Release Year',
+          'Label',
+          'Activity Participation',
         ]}
         data={[
           option.data.source_id,
@@ -259,13 +216,13 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
         descriptionTxt={option.data[0].comment}
         buttonTxt="More Info"
         dataHeaders={[
-          "Standard Name",
-          "Long Name",
-          "Modeling Realm",
-          "Dimensions",
-          "Frequency",
-          "Units",
-          "Out Name",
+          'Standard Name',
+          'Long Name',
+          'Modeling Realm',
+          'Dimensions',
+          'Frequency',
+          'Units',
+          'Out Name',
         ]}
         data={[
           option.data[0].standard_name,

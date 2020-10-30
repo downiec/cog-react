@@ -1,6 +1,6 @@
 import chromaJs from "chroma-js";
 
-type color = [number, number, number];
+type Color = [number, number, number];
 
 /**
  * Converts a string into a number. The same string input will always return the same number output.
@@ -22,8 +22,8 @@ function convertStrToNum(str: string, maxVal: number): number {
 export function convertStrToChromaColor(
   str: string,
   rgbRange?: {
-    minColor: color;
-    maxColor: color;
+    minColor: Color;
+    maxColor: Color;
   }
 ): chromaJs.Color {
   let newStr = str;
@@ -38,7 +38,7 @@ export function convertStrToChromaColor(
   const baseNum: number = convertStrToNum(newStr, 16777215);
 
   // Convert value to RGB value array
-  const colors: color = chromaJs(baseNum).rgb();
+  const colors: Color = chromaJs(baseNum).rgb();
 
   // Modify RGB values based on rgbRange desired
   if (rgbRange) {
@@ -58,40 +58,9 @@ export function convertStrToChromaColor(
 export function convertStrToHexColor(
   str: string,
   rgbRange?: {
-    minColor: color;
-    maxColor: color;
+    minColor: Color;
+    maxColor: Color;
   }
 ): string {
   return convertStrToChromaColor(str, rgbRange).hex();
 }
-
-// The following function are copying from
-// https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
-export function getCookie(name: string) {
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== "") {
-    const cookies = document.cookie.split(";");
-    for (let i = 0; i < cookies.length; i += 1) {
-      const cookie = cookies[i].trim();
-      // Does this cookie string begin with the name we want?
-      if (cookie.substring(0, name.length + 1) === `${name}=`) {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
-      }
-    }
-  }
-  return cookieValue;
-}
-
-export const memoize = (fn: any) => {
-  const cache: any = {};
-  return (...args: any) => {
-    const stringArgs: any = JSON.stringify(args);
-    // eslint-disable-next-line no-multi-assign
-    const result: any = (cache[stringArgs] =
-      typeof cache[stringArgs] === "undefined"
-        ? fn(...args)
-        : cache[stringArgs]);
-    return result;
-  };
-};

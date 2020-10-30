@@ -1,32 +1,30 @@
 {
   "name": "cog-react",
-<<<<<<< HEAD
-  "version": "0.2.1",
-=======
-  "version": "0.3.0",
->>>>>>> 4646d4cedc01fb12f080b9b74d09013a7e85d371
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
-    "@types/chroma-js": "^1.4.3",
-    "@types/jest": "^24.0.21",
-    "@types/node": "^12.0.12",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.3",
-    "@types/react-select": "^3.0.8",
-    "antd": "^4.2.4",
+    "@testing-library/react": "^11.1.0",
+    "@types/chroma-js": "2.1.0",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-select": "^3.0.21",
+    "antd": "4.6.6",
     "bind-decorator": "^1.0.11",
     "chroma-js": "^2.1.0",
     "dayjs": "^1.8.27",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
     "node-sass": "^4.14.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "react-select": "^3.0.8",
-    "react-windowed-select": "^2.0.2",
-    "sass": "^1.26.5"
+    "react-select": "^3.1.0",
+    "react-windowed-select": "^2.0.3",
+    "sass": "^1.26.5",
+    "save-dev": "0.0.1-security"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,7 +33,8 @@
     "eject": "react-scripts eject",
     "COG_build": ". ./COG_start.sh --build",
     "COG": ". ./COG_start.sh",
-    "build-json": "node src/utilities/jsonGenerator.js",
+    "build-json": "node ./src/data/jsonGenerator.js",
+    "lint": "eslint './src/**/*.{js,jsx,ts,tsx,json}' --fix --no-error-on-unmatched-pattern",
     "lint-fix": "npx prettier-tslint fix '**/*.ts'",
     "lint-check": "npx prettier-tslint check '**/*.ts'"
   },
@@ -55,17 +54,39 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-typescript": "8.0.2",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.1.0",
     "fibers": "^5.0.0",
-    "prettier": "1.19.1",
-    "typescript": "^3.6.4"
+    "prettier": "2.1.2",
+    "typescript": "3.9.7"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!src/index.tsx",
+      "!**/serviceWorker.js",
+      "!**/react-app-env.d.ts",
+      "!**/lib/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      },
+      "./src/components/App/App.tsx": {
+        "lines": 100
+      }
+    }
   }
 }

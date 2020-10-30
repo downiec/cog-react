@@ -3,8 +3,8 @@ import reactDom from "react-dom";
 import "./index.css";
 import App, { IAppProps } from "./components/App";
 import * as serviceWorker from "./serviceWorker";
-import { defaultSubscriptions } from "./constants";
-import { Subscription } from "./customTypes";
+import { defaultSubscriptions } from "./modules/constants";
+import { Subscription } from "./types";
 
 declare global {
   interface Window {

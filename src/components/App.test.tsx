@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import react from "react";
 import reactDom from "react-dom";
 import App, { IAppProps } from "./App";

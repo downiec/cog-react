@@ -1,17 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   activityData,
   experimentData,
   frequencyData,
   modelData,
   realmData,
-} from "./output/appdata";
-import { variableData } from "./output/variableData";
-import { FIELDS } from "../customTypes";
+} from '../data/output/appdata';
+import { variableData } from '../data/output/variableData';
+import { FIELDS } from '../types';
 
-export function importDataList(data: FIELDS): any {
+export function importDataList(dataType: FIELDS): any {
   // Note that currently this returns hardcoded data found in the 'appdata.ts' file
   // This function will be updated to use an API call when API is ready.
-  switch (data) {
+  switch (dataType) {
     case FIELDS.activity_id:
       return activityData;
     case FIELDS.experiment_id:
@@ -45,11 +46,11 @@ export function importDataItem(type: FIELDS, id: string): any {
     case FIELDS.realm:
       data[id] = realmData[id];
       break;
-    case FIELDS.variable_id:
-      data[id] = variableData[id];
-      break;
     case FIELDS.source_id:
       data[id] = modelData[id];
+      break;
+    case FIELDS.variable_id:
+      data[id] = variableData[id];
       break;
     default:
       return {};

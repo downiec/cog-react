@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-multi-str */
-/* eslint-disable @typescript-eslint/camelcase */
 import {
   Typography,
   Button,
@@ -11,32 +14,30 @@ import {
   Col,
   Modal,
   Tooltip,
-} from "antd";
-import { QuestionCircleTwoTone } from "@ant-design/icons";
-import { RadioChangeEvent } from "antd/lib/radio";
-import React, { useState } from "react";
-import { ValueType } from "react-select/src/types";
-import { Selector } from "./Selector";
+} from 'antd';
+import { QuestionCircleTwoTone } from '@ant-design/icons';
+import { RadioChangeEvent } from 'antd/lib/radio';
+import React, { useState } from 'react';
+import { ValueType } from 'react-select/src/types';
+import { Selector } from './Selector';
 import {
   applyFilters,
-  ExperimentInfo,
   filterByActivity,
   filterByFrequency,
   filterByRealm,
-  getAll,
+  getAllOptions,
   getOptionListData,
   getOptionListValues,
+} from '../modules/dataProvider';
+import {
+  Period,
+  FIELDS,
+  ExperimentInfo,
   ModelInfo,
   SelectorOption,
   VariableInfo,
-} from "../data/dataProvider";
-
-import { Period, FIELDS } from "../customTypes";
-import ErrorBoundary from "./ErrorBoundary";
-
-export interface ISubscribeProps {
-  submitSubscriptions: (state: ISubscribeState) => Promise<void>;
-}
+} from '../types';
+import ErrorBoundary from './ErrorBoundary';
 
 export interface IOptionState<InfoType, IDType> {
   filtered: ValueType<SelectorOption<InfoType>>;
@@ -55,6 +56,11 @@ export interface ISubscribeState {
   variable_id: IOptionState<VariableInfo[], string>;
 }
 
+export interface ISubscribeProps {
+  submitSubscriptions: (state: ISubscribeState) => Promise<void>;
+  initialState?: ISubscribeState;
+}
+
 const errorRender: JSX.Element = (
   <p>
     <h3>An error occured with this form.</h3>
@@ -62,35 +68,35 @@ const errorRender: JSX.Element = (
 );
 
 const initialState: ISubscribeState = {
-  name: "",
-  period: "weekly",
+  name: '',
+  period: 'weekly',
   activity_id: {
-    filtered: getAll(FIELDS.activity_id),
+    filtered: getAllOptions(FIELDS.activity_id),
     selected: null,
     selectedIds: [],
   },
   experiment_id: {
-    filtered: getAll(FIELDS.experiment_id),
+    filtered: getAllOptions(FIELDS.experiment_id),
     selected: null,
     selectedIds: [],
   },
   frequency: {
-    filtered: getAll(FIELDS.frequency),
+    filtered: getAllOptions(FIELDS.frequency),
     selected: null,
     selectedIds: [],
   },
   source_id: {
-    filtered: getAll(FIELDS.source_id),
+    filtered: getAllOptions(FIELDS.source_id),
     selected: null,
     selectedIds: [],
   },
   realm: {
-    filtered: getAll(FIELDS.realm),
+    filtered: getAllOptions(FIELDS.realm),
     selected: null,
     selectedIds: [],
   },
   variable_id: {
-    filtered: getAll(FIELDS.variable_id),
+    filtered: getAllOptions(FIELDS.variable_id),
     selected: null,
     selectedIds: [],
   },
@@ -102,10 +108,10 @@ export default function CreateSubscriptions(
   const [state, setState] = useState<ISubscribeState>(initialState);
 
   const notifyFreqOpts: { label: Period; value: Period }[] = [
-    { label: "daily", value: "daily" },
-    { label: "weekly", value: "weekly" },
-    { label: "biweekly", value: "biweekly" },
-    { label: "monthly", value: "monthly" },
+    { label: 'daily', value: 'daily' },
+    { label: 'weekly', value: 'weekly' },
+    { label: 'biweekly', value: 'biweekly' },
+    { label: 'monthly', value: 'monthly' },
   ];
 
   const submitClicked = (): void => {
@@ -118,10 +124,10 @@ export default function CreateSubscriptions(
       state.variable_id.selectedIds.length <= 0
     ) {
       Modal.error({
-        title: "Notice",
+        title: 'Notice',
         centered: true,
         content:
-          "Make a selection of at least one item, to submit your subscription.",
+          'Make a selection of at least one item, to submit your subscription.',
       });
       return;
     }
@@ -138,7 +144,7 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(activitySelection);
     const filteredExperiments = applyFilters<ExperimentInfo>(
-      getAll(FIELDS.experiment_id),
+      getAllOptions(FIELDS.experiment_id),
       [filterByActivity],
       newSelection
     );
@@ -178,7 +184,7 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(frequencySelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variable_id),
+      getAllOptions(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
@@ -215,7 +221,7 @@ export default function CreateSubscriptions(
   ): Promise<void> => {
     const newSelection: string[] = getOptionListValues(realmSelection);
     const filteredVariables = applyFilters<VariableInfo[]>(
-      getAll(FIELDS.variable_id),
+      getAllOptions(FIELDS.variable_id),
       [filterByFrequency, filterByRealm],
       newSelection
     );
@@ -249,12 +255,12 @@ export default function CreateSubscriptions(
 
   const nameHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let nameStr: string = event.target.value;
-    nameStr = nameStr.replace(/[^1-9A-z_ ]|\^/gm, "");
+    nameStr = nameStr.replace(/[^1-9A-z_ ]|\^/gm, '');
     setState({ ...state, name: nameStr });
   };
 
   const selectorTitle = (title: string, tooltip: string): JSX.Element => {
-    if (tooltip === "") {
+    if (tooltip === '') {
       return <div>{title}</div>;
     }
 
@@ -262,11 +268,11 @@ export default function CreateSubscriptions(
       <div>
         <Tooltip placement="top" title={tooltip}>
           <QuestionCircleTwoTone
-            translate=""
+            translate="no"
             style={{
-              fontSize: "0.7em",
-              margin: "5px",
-              verticalAlign: "top",
+              fontSize: '0.7em',
+              margin: '5px',
+              verticalAlign: 'top',
             }}
           />
         </Tooltip>
@@ -296,13 +302,13 @@ export default function CreateSubscriptions(
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         name="CreateSubscriptions"
-        style={{minHeight: "1024px"}}
+        style={{ minHeight: '1024px' }}
       >
         <Divider orientation="center">
           <Typography.Title level={3}>Create New Subscription</Typography.Title>
         </Divider>
         <Row align="middle">
-          <Col span={8} style={{ textAlign: "right", paddingRight: ".5em" }}>
+          <Col span={8} style={{ textAlign: 'right', paddingRight: '.5em' }}>
             Subscription Name (Optional):
           </Col>
           <Col span={16}>
@@ -331,17 +337,17 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter by Activities",
-          "You can narrow activity drop-down results by entering the name within the input field. \
-          The activities selected will be used to filter the experiments drop-down below.",
+          'Filter by Activities',
+          'You can narrow activity drop-down results by entering the name within the input field. \
+            The activities selected will be used to filter the experiments drop-down below.',
           FIELDS.activity_id,
           activityHandler
         )}
         {state.experiment_id.filtered && // eslint-disable-line
           stateSelector(
-            "Select Experiments",
-            "You can narrow experiment drop-down results by typing in the input field. \
-            Note: Experiments listed will be filtered by the activities selected above.",
+            'Select Experiments',
+            'You can narrow experiment drop-down results by typing in the input field. \
+              Note: Experiments listed will be filtered by the activities selected above.',
             FIELDS.experiment_id,
             experimentHandler
           )}
@@ -351,21 +357,21 @@ export default function CreateSubscriptions(
           </Typography.Title>
         </Divider>
         {stateSelector(
-          "Filter By Frequency",
-          "Use this field to narrow down the variable drop-down results by frequency.",
+          'Filter By Frequency',
+          'Use this field to narrow down the variable drop-down results by frequency.',
           FIELDS.frequency,
           frequencyHandler
         )}
         {stateSelector(
-          "Filter By Model Realm",
-          "Use this field to narrow down the variable drop-down results by model realm.",
+          'Filter By Model Realm',
+          'Use this field to narrow down the variable drop-down results by model realm.',
           FIELDS.realm,
           realmHandler
         )}
         {stateSelector(
-          "Select Variable(s)",
-          "Select which variables you want to subscribe to. You can narrow results by using\
-          the filters above, or by typing the specific variable name within this field.",
+          'Select Variable(s)',
+          'Select which variables you want to subscribe to. You can narrow results by using\
+            the filters above, or by typing the specific variable name within this field.',
           FIELDS.variable_id,
           variableHandler
         )}
@@ -373,8 +379,8 @@ export default function CreateSubscriptions(
           <Typography.Title level={4}>Subscribe to model(s)</Typography.Title>
         </Divider>
         {stateSelector(
-          "Select Model(s)",
-          "You can narrow down model results by typing the name within the input field.",
+          'Select Model(s)',
+          'You can narrow down model results by typing the name within the input field.',
           FIELDS.source_id,
           modelHandler
         )}

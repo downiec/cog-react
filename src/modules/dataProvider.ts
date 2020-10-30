@@ -1,14 +1,50 @@
-import { ValueType } from "react-select/src/types";
-import { isNullOrUndefined, isArray } from "util";
-import { importDataItem, importDataList } from "./dataImporter";
-import { memoize } from "../utilities/mainUtils";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ValueType } from 'react-select/src/types';
+import { importDataItem, importDataList } from './dataImporter';
 import {
-  colorByActivity,
-  colorByName,
-  colorShadesBlue,
-  colorShadesGreen,
-} from "./dataRenderer";
-import { FIELDS } from "../customTypes";
+  ExperimentInfo,
+  FIELDS,
+  ModelInfo,
+  SelectorOption,
+  VariableInfo,
+} from '../types';
+import { convertStrToHexColor } from './utils';
+
+export const colorByName = (value: [string, any]): string => {
+  return convertStrToHexColor(value[0], {
+    minColor: [20, 20, 20],
+    maxColor: [220, 220, 220],
+  });
+};
+
+export const colorShadesBlue = (value: [string, any]): string => {
+  return convertStrToHexColor(value[0], {
+    minColor: [50, 100, 200],
+    maxColor: [120, 200, 255],
+  });
+};
+
+export const colorShadesGreen = (value: [string, any]): string => {
+  return convertStrToHexColor(value[0], {
+    minColor: [50, 200, 120],
+    maxColor: [150, 255, 200],
+  });
+};
+
+export const colorByActivity = (value: [string, ExperimentInfo]): string => {
+  return convertStrToHexColor(value[1].activity_id[0], {
+    minColor: [20, 20, 20],
+    maxColor: [220, 220, 220],
+  });
+};
+
+export const colorByRealm = (value: [string, VariableInfo]): string => {
+  return convertStrToHexColor(value[1].modeling_realm, {
+    minColor: [50, 200, 120],
+    maxColor: [150, 255, 200],
+  });
+};
 
 export function isExperiment(object: any): object is ExperimentInfo {
   if (!object) {
@@ -31,6 +67,10 @@ export function isModel(object: any): object is ModelInfo {
   return object.source_id !== undefined;
 }
 
+export function areVariables(object: any): object is VariableInfo[] {
+  return Array.isArray(object) && isVariable(object[0]);
+}
+
 export function createOptions<T>(
   data: { [key: string]: T },
   colorFunc?: (value: [string, T]) => string
@@ -43,7 +83,10 @@ export function createOptions<T>(
   const entries = Object.entries(data);
 
   entries.forEach((value: [string, T]) => {
-    const col: string = colorFunc ? colorFunc(value) : "black";
+    if (!value[1]) {
+      return;
+    }
+    const col: string = colorFunc ? colorFunc(value) : 'black';
 
     options.push({
       label: value[0],
@@ -61,6 +104,8 @@ function getOptions(
   data: { [key: string]: any }
 ): ValueType<SelectorOption<any>> {
   switch (dataType) {
+    case FIELDS.activity_id:
+      return createOptions(data, colorByName);
     case FIELDS.experiment_id:
       return createOptions(data, colorByActivity);
     case FIELDS.frequency:
@@ -68,11 +113,13 @@ function getOptions(
     case FIELDS.realm:
       return createOptions(data, colorShadesGreen);
     default:
-      return createOptions(data, colorByName);
+      return createOptions(data, (): string => {
+        return 'grey';
+      });
   }
 }
 
-function getAllOptions(dataType: FIELDS): any {
+export function getAllOptions(dataType: FIELDS): any {
   const data = importDataList(dataType);
   return getOptions(dataType, data);
 }
@@ -83,89 +130,15 @@ export function getOptionItem(
 ): SelectorOption<any> {
   const data = importDataItem(dataType, id);
   const opts = getOptions(dataType, data);
-  if (!isNullOrUndefined(opts) && isArray(opts)) {
+  if (!(opts === null || opts === undefined) && Array.isArray(opts)) {
     return opts[0];
   }
   return opts as SelectorOption<any>;
 }
 
-export function getOptionList(
-  dataType: FIELDS,
-  ids: string[] | undefined
-): ValueType<SelectorOption<any>>[] {
-  if (!ids) {
-    return [undefined];
-  }
-
-  const data = importDataList(dataType);
-  const options: any[] = ids.map((id: string) => {
-    return getOptions(dataType, data[id]);
-  });
-  return options;
-}
-
-export const getAll: (data: FIELDS) => ValueType<SelectorOption<any>> = memoize(
-  getAllOptions
-);
-
-export function areVariables(object: any): object is VariableInfo[] {
-  return Array.isArray(object) && isVariable(object[0]);
-}
-
-export interface SelectorOption<T> {
-  color: string;
-  label: string;
-  value: string;
-  data: T;
-}
-
-export interface ExperimentInfo {
-  activity_id: string[];
-  additional_allowed_model_components: string[];
-  description: string;
-  end_year: string;
-  experiment: string;
-  experiment_id: string;
-  min_number_yrs_per_sim: string;
-  parent_activity_id: string[];
-  parent_experiment_id: string[];
-  required_model_components: string[];
-  start_year: string;
-  sub_experiment_id: string[];
-  tier: string;
-}
-
-export interface VariableInfo {
-  frequency: string;
-  modeling_realm: string;
-  standard_name: string;
-  units: string;
-  cell_methods: string;
-  cell_measures: string;
-  long_name: string;
-  comment: string;
-  dimensions: string;
-  out_name: string;
-  type: string;
-  positive: string;
-  valid_min: string;
-  valid_max: string;
-  ok_min_mean_abs: string;
-  ok_max_mean_abs: string;
-}
-
-export interface ModelInfo {
-  institution_id: string[];
-  label: string;
-  label_extended: string;
-  release_year: string;
-  source_id: string;
-  activity_participation: string[];
-}
-
 export function applyFilters<T>(
   dataList: ValueType<SelectorOption<T>>,
-  filterFunctions: Array<(data: SelectorOption<T>, otherData: any) => boolean>,
+  filterFunctions: Array<(data: SelectorOption<T>, filterData: any) => boolean>,
   otherData: any
 ): ValueType<SelectorOption<T>> {
   if (!dataList) {
