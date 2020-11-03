@@ -2,13 +2,13 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { FIELDS, VariableInfo } from '../types';
-import { colorByRealm, getOptionItem } from './dataProvider';
+import DataProvider from './dataProvider';
 import { renderOption, DataPopover, IDataRenderProps } from './dataRenderer';
 
 describe('Test colorByRealm', () => {
   it('returns a hex color based on the modeling_realm', () => {
     expect(
-      colorByRealm(['Test', { modeling_realm: 'test' } as VariableInfo])
+      DataProvider.colorByRealm(['Test', { modeling_realm: 'test' } as VariableInfo])
     ).toEqual('#8beda0');
   });
 });
@@ -104,24 +104,25 @@ describe('Test DataPopover component', () => {
 });
 
 describe('Test renderOption renders the appropriate DataPopover', () => {
+  const provider = new DataProvider();
   it('renders an empty div if no option is provided', () => {
     const option: any = undefined;
     expect(renderOption(option)).toEqual(<div />);
   });
   it('renders an experiment popover if data is experiment type', () => {
-    const option = getOptionItem(FIELDS.experiment_id, '1pctCO2');
+    const option = provider.getOptionItem(FIELDS.experiment_id, '1pctCO2');
     expect(renderOption(option)).toBeTruthy();
   });
   it('renders an experiment popover if data is model type', () => {
-    const option = getOptionItem(FIELDS.source_id, 'ACCESS-CM2');
+    const option = provider.getOptionItem(FIELDS.source_id, 'ACCESS-CM2');
     expect(renderOption(option)).toBeTruthy();
   });
   it('renders an experiment popover if data is variable type', () => {
-    const option = getOptionItem(FIELDS.variable_id, 'clt');
+    const option = provider.getOptionItem(FIELDS.variable_id, 'clt');
     expect(renderOption(option)).toBeTruthy();
   });
   it('renders default popover if option is not specified types above', () => {
-    const option: any = getOptionItem(FIELDS.realm, 'land');
+    const option: any = provider.getOptionItem(FIELDS.realm, 'land');
     expect(renderOption(option)).toBeTruthy();
   });
 });

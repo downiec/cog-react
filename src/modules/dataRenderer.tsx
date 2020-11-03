@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button, Popover } from 'antd';
 import chromaJs from 'chroma-js';
 import { SelectorOption } from '../types';
-import { isExperiment, isModel, areVariables } from './dataProvider';
+import DataProvider from './dataProvider';
 
 function showData(
   id: number,
@@ -152,7 +152,7 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
     return <div />;
   }
 
-  if (isExperiment(option.data)) {
+  if (DataProvider.isExperiment(option.data)) {
     return (
       <DataPopover
         option={option}
@@ -183,7 +183,7 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
     );
   }
 
-  if (isModel(option.data)) {
+  if (DataProvider.isModel(option.data)) {
     return (
       <DataPopover
         option={option}
@@ -208,7 +208,7 @@ export function renderOption(option: SelectorOption<any>): JSX.Element {
     );
   }
 
-  if (areVariables(option.data)) {
+  if (DataProvider.areVariables(option.data)) {
     return (
       <DataPopover
         option={option}

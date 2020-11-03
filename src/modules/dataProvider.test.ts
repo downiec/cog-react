@@ -1,101 +1,99 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ExperimentInfo, FIELDS, SelectorOption, VariableInfo } from '../types';
-import {
-  isExperiment,
-  isModel,
-  isVariable,
-  areVariables,
-  getOptionItem,
-  getOptionListData,
-  getOptionListValues,
-  applyFilters,
-  filterByActivity,
-  filterByFrequency,
-  filterByRealm,
-  createOptions,
-  getAllOptions,
-} from './dataProvider';
+import DataProvider from './dataProvider';
+
+const provider = new DataProvider();
 
 describe('Test isExperiment', () => {
   it('returns false if input is not an experiment', () => {
-    expect(isExperiment({})).toEqual(false);
-    expect(isExperiment(null)).toEqual(false);
+    expect(DataProvider.isExperiment({})).toEqual(false);
+    expect(DataProvider.isExperiment(null)).toEqual(false);
   });
   it('returns true is object has experiment id', () => {
-    expect(isExperiment({ experiment_id: 'test' })).toEqual(true);
+    expect(DataProvider.isExperiment({ experiment_id: 'test' })).toEqual(true);
   });
 });
 
 describe('Test isModel', () => {
   it('returns false if input is not a model', () => {
-    expect(isModel({})).toEqual(false);
-    expect(isModel(null)).toEqual(false);
+    expect(DataProvider.isModel({})).toEqual(false);
+    expect(DataProvider.isModel(null)).toEqual(false);
   });
   it('returns true is object has source id', () => {
-    expect(isModel({ source_id: 'test' })).toEqual(true);
+    expect(DataProvider.isModel({ source_id: 'test' })).toEqual(true);
   });
 });
 
 describe('Test isVariable', () => {
   it('returns false if input is not a variable', () => {
-    expect(isVariable({})).toEqual(false);
-    expect(isVariable(null)).toEqual(false);
+    expect(DataProvider.isVariable({})).toEqual(false);
+    expect(DataProvider.isVariable(null)).toEqual(false);
   });
   it('returns true is object has a standard name', () => {
-    expect(isVariable({ standard_name: 'test' })).toEqual(true);
+    expect(DataProvider.isVariable({ standard_name: 'test' })).toEqual(true);
   });
 });
 
 describe('Test areVariables', () => {
   it('returns false if input is not an array', () => {
-    expect(areVariables({})).toEqual(false);
-    expect(areVariables(null)).toEqual(false);
+    expect(DataProvider.areVariables({})).toEqual(false);
+    expect(DataProvider.areVariables(null)).toEqual(false);
   });
   it('returns false if it is not an array of variables', () => {
-    expect(areVariables([1, 2, 3, 4])).toEqual(false);
+    expect(DataProvider.areVariables([1, 2, 3, 4])).toEqual(false);
     expect(
-      areVariables([{ source_id: test }, { standard_name: test }, {}])
+      DataProvider.areVariables([
+        { source_id: test },
+        { standard_name: test },
+        {},
+      ])
     ).toEqual(false);
   });
   it('returns true is object has source id', () => {
     expect(
-      areVariables([{ standard_name: 'test' }, { standard_name: 'test' }])
+      DataProvider.areVariables([
+        { standard_name: 'test' },
+        { standard_name: 'test' },
+      ])
     ).toEqual(true);
   });
 });
 
 describe('Test getAll', () => {
   it('returns all data of specified type', () => {
-    expect(getAllOptions(FIELDS.activity_id)).toBeDefined();
+    expect(provider.getAllOptions(FIELDS.activity_id)).toBeDefined();
   });
   it('returns all data of specified type', () => {
-    expect(getAllOptions(FIELDS.activity_id)).toBeDefined();
+    expect(provider.getAllOptions(FIELDS.activity_id)).toBeDefined();
   });
 });
 
 describe('Test createOptions', () => {
   it('returns null if no data is provided', () => {
-    expect(createOptions<string>((null as unknown) as {})).toEqual(null);
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    expect(DataProvider.createOptions<string>((null as unknown) as {})).toEqual(
+      null
+    );
   });
   it('returns a default option list from single data', () => {
     const testData = { key: 'test' };
-    expect(createOptions<string>(testData)).toEqual([
+    expect(DataProvider.createOptions<string>(testData)).toEqual([
       { label: 'key', value: 'key', data: 'test', color: 'black' },
     ]);
   });
   it('returns a default option list from multiple data keys', () => {
     const testData = { key: 'test', key2: 'test2' };
-    expect(createOptions<string>(testData)).toEqual([
+    expect(DataProvider.createOptions<string>(testData)).toEqual([
       { label: 'key', value: 'key', data: 'test', color: 'black' },
       { label: 'key2', value: 'key2', data: 'test2', color: 'black' },
     ]);
   });
   it('returns options using speified color function', () => {
     const testData = { key: 'test', key2: 'test2' };
-    const colorFunc = (value: [string, string]) => {
+    const colorFunc = (): string => {
       return 'red';
     };
-    expect(createOptions<string>(testData, colorFunc)).toEqual([
+    expect(DataProvider.createOptions<string>(testData, colorFunc)).toEqual([
       { label: 'key', value: 'key', data: 'test', color: 'red' },
       { label: 'key2', value: 'key2', data: 'test2', color: 'red' },
     ]);
@@ -104,24 +102,26 @@ describe('Test createOptions', () => {
 
 describe('Test getOptionItem', () => {
   it('returns undefined if id is invalid', () => {
-    expect(getOptionItem(FIELDS.activity_id, 'bad_id')).toEqual(undefined);
+    expect(provider.getOptionItem(FIELDS.activity_id, 'bad_id')).toEqual(
+      undefined
+    );
   });
   it('returns undefined if id or field is undefined', () => {
-    expect(getOptionItem(undefined as any, undefined as any)).toEqual(
+    expect(provider.getOptionItem(undefined as any, undefined as any)).toEqual(
       undefined
     );
   });
   it('returns object with data if it is valid', () => {
-    expect(getOptionItem(FIELDS.activity_id, 'C4MIP')).toBeDefined();
+    expect(provider.getOptionItem(FIELDS.activity_id, 'C4MIP')).toBeDefined();
   });
 });
 
 describe('Test getOptionListValues', () => {
   it('returns an empty list if given empty options list', () => {
-    expect(getOptionListValues([])).toEqual([]);
+    expect(DataProvider.getOptionListValues([])).toEqual([]);
   });
   it('returns an empty list if given undefined data', () => {
-    expect(getOptionListValues(undefined)).toEqual([]);
+    expect(DataProvider.getOptionListValues(undefined)).toEqual([]);
   });
   it('returns list of one item if given a single option', () => {
     const option: SelectorOption<string> = {
@@ -130,7 +130,7 @@ describe('Test getOptionListValues', () => {
       data: 'data',
       color: 'red',
     };
-    expect(getOptionListValues(option)).toEqual(['test']);
+    expect(DataProvider.getOptionListValues(option)).toEqual(['test']);
   });
   it('returns a list of multiple items if multiple options', () => {
     const options: SelectorOption<string>[] = [
@@ -147,16 +147,19 @@ describe('Test getOptionListValues', () => {
         color: 'red',
       },
     ];
-    expect(getOptionListValues(options)).toEqual(['test', 'test2']);
+    expect(DataProvider.getOptionListValues(options)).toEqual([
+      'test',
+      'test2',
+    ]);
   });
 });
 
 describe('Test getOptionListData', () => {
   it('returns an empty list if given empty options list', () => {
-    expect(getOptionListData([])).toEqual([]);
+    expect(DataProvider.getOptionListData([])).toEqual([]);
   });
   it('returns an empty list if given undefined data', () => {
-    expect(getOptionListData(undefined)).toEqual([]);
+    expect(DataProvider.getOptionListData(undefined)).toEqual([]);
   });
   it('returns list of one item if given a single option', () => {
     const option: SelectorOption<string> = {
@@ -165,7 +168,7 @@ describe('Test getOptionListData', () => {
       data: 'test',
       color: 'red',
     };
-    expect(getOptionListData(option)).toEqual(['test']);
+    expect(DataProvider.getOptionListData(option)).toEqual(['test']);
   });
   it('returns a list of multiple items if multiple options', () => {
     const options: SelectorOption<string>[] = [
@@ -182,37 +185,49 @@ describe('Test getOptionListData', () => {
         color: 'red',
       },
     ];
-    expect(getOptionListData(options)).toEqual(['test', 'test2']);
+    expect(DataProvider.getOptionListData(options)).toEqual(['test', 'test2']);
   });
 });
 
 describe('Test applyFilters using activity filter', () => {
-  const filter = filterByActivity;
-  const allExperiments = getAllOptions(FIELDS.experiment_id);
-  const oneExperiment = getOptionItem(FIELDS.experiment_id, '1pctCO2');
+  const filter = DataProvider.filterByActivity;
+  const allExperiments = provider.getAllOptions(FIELDS.experiment_id);
+  const oneExperiment = provider.getOptionItem(FIELDS.experiment_id, '1pctCO2');
 
   it('returns undefined if data list provided was undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<ExperimentInfo>(undefined, [filter], newSelection)
+      DataProvider.applyFilters<ExperimentInfo>(
+        undefined,
+        [filter],
+        newSelection
+      )
     ).toEqual(undefined);
   });
   it('returns all data if selection is undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<ExperimentInfo>(allExperiments, [filter], newSelection)
+      DataProvider.applyFilters<ExperimentInfo>(
+        allExperiments,
+        [filter],
+        newSelection
+      )
     ).toEqual(allExperiments);
   });
   it('returns single item if data is only single item and selection undefined', () => {
     expect(
-      applyFilters<ExperimentInfo>(oneExperiment, [filter], undefined)
+      DataProvider.applyFilters<ExperimentInfo>(
+        oneExperiment,
+        [filter],
+        undefined
+      )
     ).toEqual(oneExperiment);
   });
   it('returns empty list if filter value is not found', () => {
     expect(
-      applyFilters<ExperimentInfo>(
+      DataProvider.applyFilters<ExperimentInfo>(
         allExperiments,
         [filter],
         'invalid_activity_id'
@@ -221,7 +236,7 @@ describe('Test applyFilters using activity filter', () => {
   });
   it('returns filtered list if filter value is found', () => {
     const allItemsArray = allExperiments as Array<SelectorOption<any>>;
-    const filteredArray = applyFilters<ExperimentInfo>(
+    const filteredArray = DataProvider.applyFilters<ExperimentInfo>(
       allExperiments,
       [filter],
       'C4MIP'
@@ -231,37 +246,53 @@ describe('Test applyFilters using activity filter', () => {
 });
 
 describe('Test applyFilters using frequency filter', () => {
-  const filter = filterByFrequency;
-  const allVariables = getAllOptions(FIELDS.variable_id);
-  const oneVariable = getOptionItem(FIELDS.frequency, 'clt');
+  const filter = DataProvider.filterByFrequency;
+  const allVariables = provider.getAllOptions(FIELDS.variable_id);
+  const oneVariable = provider.getOptionItem(FIELDS.frequency, 'clt');
 
   it('returns undefined if data list provided was undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<VariableInfo[]>(undefined, [filter], newSelection)
+      DataProvider.applyFilters<VariableInfo[]>(
+        undefined,
+        [filter],
+        newSelection
+      )
     ).toEqual(undefined);
   });
   it('returns all data if selection is undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<VariableInfo[]>(allVariables, [filter], newSelection)
+      DataProvider.applyFilters<VariableInfo[]>(
+        allVariables,
+        [filter],
+        newSelection
+      )
     ).toEqual(allVariables);
   });
   it('returns single item if data is only single item and selection undefined', () => {
     expect(
-      applyFilters<VariableInfo[]>(oneVariable, [filter], undefined)
+      DataProvider.applyFilters<VariableInfo[]>(
+        oneVariable,
+        [filter],
+        undefined
+      )
     ).toEqual(oneVariable);
   });
   it('returns empty list if filter value is not found', () => {
     expect(
-      applyFilters<VariableInfo[]>(allVariables, [filter], 'invalid_frequency')
+      DataProvider.applyFilters<VariableInfo[]>(
+        allVariables,
+        [filter],
+        'invalid_frequency'
+      )
     ).toEqual([]);
   });
   it('returns filtered list if filter value is found', () => {
     const allItemsArray = allVariables as Array<SelectorOption<any>>;
-    const filteredArray = applyFilters<VariableInfo[]>(
+    const filteredArray = DataProvider.applyFilters<VariableInfo[]>(
       allVariables,
       [filter],
       '1hr'
@@ -271,37 +302,53 @@ describe('Test applyFilters using frequency filter', () => {
 });
 
 describe('Test applyFilters using realm filter', () => {
-  const filter = filterByRealm;
-  const allVariables = getAllOptions(FIELDS.variable_id);
-  const oneVariable = getOptionItem(FIELDS.realm, 'clt');
+  const filter = DataProvider.filterByRealm;
+  const allVariables = provider.getAllOptions(FIELDS.variable_id);
+  const oneVariable = provider.getOptionItem(FIELDS.realm, 'clt');
 
   it('returns undefined if data list provided was undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<VariableInfo[]>(undefined, [filter], newSelection)
+      DataProvider.applyFilters<VariableInfo[]>(
+        undefined,
+        [filter],
+        newSelection
+      )
     ).toEqual(undefined);
   });
   it('returns all data if selection is undefined', () => {
     const selection: any = undefined;
-    const newSelection: string[] = getOptionListValues(selection);
+    const newSelection: string[] = DataProvider.getOptionListValues(selection);
     expect(
-      applyFilters<VariableInfo[]>(allVariables, [filter], newSelection)
+      DataProvider.applyFilters<VariableInfo[]>(
+        allVariables,
+        [filter],
+        newSelection
+      )
     ).toEqual(allVariables);
   });
   it('returns single item if data is only single item and selection undefined', () => {
     expect(
-      applyFilters<VariableInfo[]>(oneVariable, [filter], undefined)
+      DataProvider.applyFilters<VariableInfo[]>(
+        oneVariable,
+        [filter],
+        undefined
+      )
     ).toEqual(oneVariable);
   });
   it('returns empty list if filter value is not found', () => {
     expect(
-      applyFilters<VariableInfo[]>(allVariables, [filter], 'invalid_realm')
+      DataProvider.applyFilters<VariableInfo[]>(
+        allVariables,
+        [filter],
+        'invalid_realm'
+      )
     ).toEqual([]);
   });
   it('returns filtered list if filter value is found', () => {
     const allItemsArray = allVariables as Array<SelectorOption<any>>;
-    const filteredArray = applyFilters<VariableInfo[]>(
+    const filteredArray = DataProvider.applyFilters<VariableInfo[]>(
       allVariables,
       [filter],
       'land'

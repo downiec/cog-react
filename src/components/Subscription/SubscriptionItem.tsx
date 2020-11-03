@@ -1,7 +1,7 @@
 import { Tag, Tooltip } from 'antd';
 import React from 'react';
 import chromaJs from 'chroma-js';
-import { getOptionItem } from '../../modules/dataProvider';
+import DataProvider from '../../modules/dataProvider';
 import { renderOption } from '../../modules/dataRenderer';
 import { FIELDS, SelectorOption } from '../../types';
 
@@ -12,7 +12,7 @@ interface ISubPanelItem {
 }
 
 export default function SubscriptionItem(props: ISubPanelItem): JSX.Element {
-  const opt: SelectorOption<any> = getOptionItem(props.dataType, props.id);
+  const opt: SelectorOption<any> = DataProvider.getInstance().getOptionItem(props.dataType, props.id);
   const col: chromaJs.Color = chromaJs(opt.color);
   const key = `${props.dataType}_${props.id}`;
 
