@@ -63,7 +63,7 @@ const errorRender: JSX.Element = (
 export default function CreateSubscriptions(
   props: ISubscribeProps
 ): JSX.Element {
-  const dataProvider = DataProvider.getInstance();
+  const dataProvider = DataProvider.getInstance(props.appData);
   const initialState: ISubscribeState = {
     name: '',
     period: 'weekly',
@@ -135,7 +135,9 @@ export default function CreateSubscriptions(
   const activityHandler = async (
     activitySelection: ValueType<SelectorOption<string>>
   ): Promise<void> => {
-    const newSelection: string[] = DataProvider.getOptionListValues(activitySelection);
+    const newSelection: string[] = DataProvider.getOptionListValues(
+      activitySelection
+    );
     const filteredExperiments = DataProvider.applyFilters<ExperimentInfo>(
       dataProvider.getAllOptions(FIELDS.experiment_id),
       [DataProvider.filterByActivity],
@@ -175,7 +177,9 @@ export default function CreateSubscriptions(
   const frequencyHandler = async (
     frequencySelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
-    const newSelection: string[] = DataProvider.getOptionListValues(frequencySelection);
+    const newSelection: string[] = DataProvider.getOptionListValues(
+      frequencySelection
+    );
     const filteredVariables = DataProvider.applyFilters<VariableInfo[]>(
       dataProvider.getAllOptions(FIELDS.variable_id),
       [DataProvider.filterByFrequency, DataProvider.filterByRealm],
@@ -198,7 +202,9 @@ export default function CreateSubscriptions(
   const modelHandler = async (
     modelSelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
-    const newSelection: ModelInfo[] = DataProvider.getOptionListData(modelSelection);
+    const newSelection: ModelInfo[] = DataProvider.getOptionListData(
+      modelSelection
+    );
     setState({
       ...state,
       source_id: {
@@ -212,7 +218,9 @@ export default function CreateSubscriptions(
   const realmHandler = async (
     realmSelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
-    const newSelection: string[] = DataProvider.getOptionListValues(realmSelection);
+    const newSelection: string[] = DataProvider.getOptionListValues(
+      realmSelection
+    );
     const filteredVariables = DataProvider.applyFilters<VariableInfo[]>(
       dataProvider.getAllOptions(FIELDS.variable_id),
       [DataProvider.filterByFrequency, DataProvider.filterByRealm],
@@ -235,7 +243,9 @@ export default function CreateSubscriptions(
   const variableHandler = async (
     variableSelection: ValueType<SelectorOption<any>>
   ): Promise<void> => {
-    const newSelection: string[] = DataProvider.getOptionListValues(variableSelection);
+    const newSelection: string[] = DataProvider.getOptionListValues(
+      variableSelection
+    );
     setState({
       ...state,
       variable_id: {

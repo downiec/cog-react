@@ -12,12 +12,22 @@ interface ISubPanelItem {
 }
 
 export default function SubscriptionItem(props: ISubPanelItem): JSX.Element {
-  const opt: SelectorOption<any> = DataProvider.getInstance().getOptionItem(props.dataType, props.id);
-  const col: chromaJs.Color = chromaJs(opt.color);
+  const opt: SelectorOption<any> = DataProvider.getInstance().getOptionItem(
+    props.dataType,
+    props.id
+  );
+  let col: chromaJs.Color;
+  let msg = props.tooltip;
+  if (opt) {
+    col = chromaJs(opt.color);
+  } else {
+    col = chromaJs('black');
+    msg = "Note: This ID was not found and may have been removed from drop-down data.";
+  }
   const key = `${props.dataType}_${props.id}`;
 
   return (
-    <Tooltip placement="top" title={`${props.tooltip}`}>
+    <Tooltip placement="top" title={`${msg}`}>
       <Tag
         key={key}
         style={{
@@ -28,7 +38,8 @@ export default function SubscriptionItem(props: ISubPanelItem): JSX.Element {
           margin: '.2em',
         }}
       >
-        {renderOption(opt)}
+        {opt && renderOption(opt)}
+        {!opt && `${props.dataType}: ${props.id}`}
       </Tag>
     </Tooltip>
   );
