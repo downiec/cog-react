@@ -1,9 +1,10 @@
+/* eslint-disable */
 /**
  * This script will read several JSON files containing raw data needed for the application
  * and will then generate an a file which will contain data needed by jsonReader.ts
  */
 
-let fs = require("fs");
+const fs = require("fs");
 
 // DIRECTORIES
 const JSON_INPUT_DIR = "src/data/json/";
@@ -22,7 +23,8 @@ const MAIN_FILE = "appdata.ts";
 const VARIABLE_FILE = "variableData.ts";
 
 // Basic constants
-const HEADER = `\/\/This file contains JSON objects needed for application.\n\n`;
+const HEADER = "/* eslint-disable import/prefer-default-export */ \
+//This file contains JSON objects needed for application.\n\n";
 
 const dataKeys = {
   activity: "activityData",
@@ -30,7 +32,7 @@ const dataKeys = {
   frequency: "frequencyData",
   realm: "realmData",
   variable: "variableData",
-  model: "modelData"
+  model: "modelData",
 };
 
 // Writes data synchronously to specified file (creates if doens't exist), returns message when finished.
@@ -47,16 +49,16 @@ function appendToFile(file, data, message) {
 
 // Reads JSON data from file, parses and returns data as string.
 function readJSONdata(JSONfile) {
-  let rawData = fs.readFileSync(JSONfile);
-  let parsedData = JSON.parse(rawData);
+  const rawData = fs.readFileSync(JSONfile);
+  const parsedData = JSON.parse(rawData);
   return parsedData;
 }
 
 // Creates object of activity data from input file and appends it to output file
 function appendActivitiesData(key, inputFile, outputFile) {
-  let json = readJSONdata(inputFile);
-  let exportString = `export const ${key}=${JSON.stringify(
-    json["activity_id"]
+  const json = readJSONdata(inputFile);
+  const exportString = `export const ${key}=${JSON.stringify(
+    json.activity_id
   )};\n\n`;
   appendToFile(outputFile, exportString, "Activities built!");
   return json;
@@ -64,9 +66,9 @@ function appendActivitiesData(key, inputFile, outputFile) {
 
 // Creates object of experiment data from input file and appends it to output file
 function appendExperimentsData(key, inputFile, outputFile) {
-  let json = readJSONdata(inputFile);
-  let exportString = `export const ${key}=${JSON.stringify(
-    json["experiment_id"]
+  const json = readJSONdata(inputFile);
+  const exportString = `export const ${key}=${JSON.stringify(
+    json.experiment_id
   )};\n\n`;
   appendToFile(outputFile, exportString, "Experiments built!");
   return json;
@@ -74,9 +76,9 @@ function appendExperimentsData(key, inputFile, outputFile) {
 
 // Creates object of frequency data from input file and appends it to output file
 function appendFrequencyData(key, inputFile, outputFile) {
-  let json = readJSONdata(inputFile);
-  let exportString = `export const ${key}=${JSON.stringify(
-    json["frequency"]
+  const json = readJSONdata(inputFile);
+  const exportString = `export const ${key}=${JSON.stringify(
+    json.frequency
   )};\n\n`;
   appendToFile(outputFile, exportString, "Frequencies built!");
   return json;
@@ -84,19 +86,17 @@ function appendFrequencyData(key, inputFile, outputFile) {
 
 // Creates object of frequency data from input file and appends it to output file
 function appendRealmData(key, inputFile, outputFile) {
-  let json = readJSONdata(inputFile);
-  let exportString = `export const ${key}=${JSON.stringify(
-    json["realm"]
-  )};\n\n`;
+  const json = readJSONdata(inputFile);
+  const exportString = `export const ${key}=${JSON.stringify(json.realm)};\n\n`;
   appendToFile(outputFile, exportString, "Realm data built!");
   return json;
 }
 
 // Creates object of source ID data from input file and appends it to output file
 function appendModelData(key, inputFile, outputFile) {
-  let json = readJSONdata(inputFile);
-  let exportString = `export const ${key}=${JSON.stringify(
-    json["source_id"]
+  const json = readJSONdata(inputFile);
+  const exportString = `export const ${key}=${JSON.stringify(
+    json.source_id
   )};\n\n`;
   appendToFile(outputFile, exportString, "Source ID built!");
   return json;
@@ -104,24 +104,24 @@ function appendModelData(key, inputFile, outputFile) {
 
 // Creates an object containing variable data from specified directory of JSON files
 function createVariablesFiles(key, directory, outputFile) {
-  //Get and create object containing a dictionary for each frequency
+  // Get and create object containing a dictionary for each frequency
   console.log("=======Generating variable data files=======");
 
   let jsonData;
-  let variables = {};
+  const variables = {};
 
-  //listing all files using forEach
-  let files = fs.readdirSync(directory);
+  // listing all files using forEach
+  const files = fs.readdirSync(directory);
   console.log("Reading through directory contents..");
   files.forEach(function(file) {
     // Read JSON from file
-    jsonData = readJSONdata(`${directory}/${file}`)["variable_entry"];
+    jsonData = readJSONdata(`${directory}/${file}`).variable_entry;
 
     if (jsonData) {
       // Take each variable from file and add to variable data
-      Object.keys(jsonData).forEach(variable => {
-        if(variables[variable]){
-          variables[variable].push(jsonData[variable])
+      Object.keys(jsonData).forEach((variable) => {
+        if (variables[variable]) {
+          variables[variable].push(jsonData[variable]);
         } else {
           variables[variable] = [jsonData[variable]];
         }
@@ -133,7 +133,7 @@ function createVariablesFiles(key, directory, outputFile) {
   console.log("Data processed, creating file...");
 
   // Write the variableData JSON
-  let header = `\/\/This file contains the variables found in: ${directory}\n
+  const header = `\/\/This file contains the variables found in: ${directory}\n
   export const ${key}=${JSON.stringify(variables)}`;
   writeToFile(outputFile, header, "Variables file complete!");
 }

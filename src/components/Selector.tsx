@@ -1,13 +1,13 @@
-import React from "react";
-import { Layout } from "antd";
-import Select from "react-windowed-select";
-import animated from "react-select/animated";
-import { ValueType } from "react-select/src/types";
-import { SelectComponents } from "react-select/src/components";
-import ErrorBoundary from "./ErrorBoundary";
-import { SelectorOption } from "../data/dataProvider";
-import { customStyles } from "../constants";
-import { renderOption } from "../data/dataRenderer";
+import React from 'react';
+import { Layout } from 'antd';
+import Select from 'react-windowed-select';
+import animated from 'react-select/animated';
+import { ValueType } from 'react-select/src/types';
+import { SelectComponents } from 'react-select/src/components';
+import ErrorBoundary from './ErrorBoundary';
+import { customStyles } from '../modules/constants';
+import { renderOption } from '../modules/dataRenderer';
+import { SelectorOption } from '../types';
 
 const errorRender: JSX.Element = (
   <Layout>
@@ -57,7 +57,7 @@ export function Selector(props: ISelectorProps): JSX.Element {
         noOptionsMessage={(obj: { inputValue: string }): string => {
           return obj.inputValue
             ? `'${obj.inputValue}' was not found.`
-            : "No options available.";
+            : 'No options available.';
         }}
       />
     </ErrorBoundary>

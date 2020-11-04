@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export interface IErrorBoundaryProps {
   errorRender?: JSX.Element;
@@ -13,7 +13,7 @@ export default class ErrorBoundary extends React.Component<
   IErrorBoundaryProps,
   IErrorBoundaryState
 > {
-  public static getDerivedStateFromError(error: any): {} {
+  public static getDerivedStateFromError(error: any): Record<string, unknown> {
     console.error(error);
     // Update state so the next render will show the fallback UI.
     return { hasError: true };

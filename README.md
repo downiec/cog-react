@@ -1,6 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Setup
+## Using drop-down components or subscription pages in your project
+Run:
+```
+npm install --save esgf-subscriptions
+```
+
+## ESGF Cog Setup
 
 To install, do the following:
 ```
@@ -28,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.<br>
 
-### `npm run COG`
+### `npm run COG` (starts COG) or `npm run COG_build` (builds and copies over latest updates before starting COG)
 
 #### IMPORTANT You will need the COG setup files containing config files in order to interact with COG server.  
 
@@ -40,7 +46,7 @@ appear within the COG application. Once the service is started, you can view the
 If you are routed to the login screen, you can login by:
 * Click the button near the ‘OpenID’ label.
 * Select ‘LLNL Test Dev IDP’ from the drop down.
-*Or use: 'DOE Lawrence Livermore National Laboratory' (LLNL) if Test Dev doesn't work.
+*Or use the other LLNL option if Test Dev doesn't work.
 * Click ‘login’
 * Enter username and password.
 * Click ‘SUBMIT’

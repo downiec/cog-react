@@ -1,17 +1,12 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Layout, Card, Tabs } from "antd";
 import CreateSubscriptions, { ISubscribeState } from "./CreateSubscriptions";
 import ViewSubscriptions from "./ViewSubscriptions";
-import { ExperimentInfo, ModelInfo } from "../data/dataProvider";
-import { getCookie } from "../utilities/mainUtils";
-import { Subscription } from "../customTypes";
+import { Subscription, ExperimentInfo, ModelInfo, Panes } from "../types";
 
-enum Panes {
-  "AddSubs" = "1",
-  "ViewSubs" = "2",
-}
 export interface IAppProps {
   post_url: string; // eslint-disable-line
   saved_subs: Subscription[];
@@ -48,6 +43,24 @@ export default function App(props: IAppProps): JSX.Element {
       return undefined;
     }
   };
+
+  // The following function are copying from
+  // https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
+  const getCookie = (name: string): string | null => {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i += 1) {
+        const cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === `${name}=`) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
 
   const generateRequest = (
     formData: { [key: string]: any },
@@ -125,7 +138,7 @@ export default function App(props: IAppProps): JSX.Element {
 
     // Create subscription object to pass to backend
     const time: number = Date.now();
-    const newSub: {} = {
+    const newSub: Record<string,unknown> = {
       timestamp: time,
       period: subState.period,
       name: subState.name,
@@ -143,11 +156,17 @@ export default function App(props: IAppProps): JSX.Element {
     // Send request and await for response
     const response = await sendRequest(request);
 
+    // Exit if response is undefined
+    if(response===undefined){
+      return;
+    }
+
     // Update current subscription state, using response id
     const data: Subscription[] = state.currentSubs;
 
     // Save in front-end state
     data.push({
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       id: response.id,
       timestamp: time,
       period: subState.period,

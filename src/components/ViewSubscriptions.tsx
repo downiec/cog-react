@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import {
   Typography,
   Button,
@@ -6,12 +7,13 @@ import {
   Space,
   Modal,
   Tooltip,
-} from "antd";
-import { QuestionCircleTwoTone } from "@ant-design/icons";
-import React from "react";
-import { Subscription } from "../customTypes";
-import SubscriptionRow from "./SubscriptionRow";
-import ErrorBoundary from "./ErrorBoundary";
+  Form,
+} from 'antd';
+import { QuestionCircleTwoTone } from '@ant-design/icons';
+import React from 'react';
+import { Subscription } from '../types';
+import SubscriptionRow from './Subscription/SubscriptionRow';
+import ErrorBoundary from './ErrorBoundary';
 
 const errorRender: JSX.Element = (
   <p>
@@ -50,66 +52,66 @@ export default function ViewSubscriptions(
   function renderTitle(title: string, tooltip: string): () => JSX.Element {
     return (): JSX.Element => {
       return (
-        <h6 style={{ margin: 0, padding: 0 }}>
+        <h4 style={{ margin: 0, padding: 0 }}>
           {title}
-          {tooltip !== "" ? (
+          {tooltip !== '' ? (
             <Tooltip placement="top" title={tooltip}>
               <QuestionCircleTwoTone
-                translate=""
+                translate="no"
                 style={{
-                  fontSize: "0.7em",
-                  verticalAlign: "top",
-                  margin: "5px",
+                  fontSize: '0.9em',
+                  verticalAlign: 'top',
+                  margin: '5px',
                 }}
               />
             </Tooltip>
           ) : null}
-        </h6>
+        </h4>
       );
     };
   }
 
   const removeAllSubs = (): void => {
     Modal.error({
-      title: "Notice",
+      title: 'Notice',
       centered: true,
       okCancel: true,
       onOk: (): void => {
         props.deleteSubscriptions(props.currentSubs);
       },
-      content: "Are you sure you wish to remove ALL of your subscriptions?",
+      content: 'Are you sure you wish to remove ALL of your subscriptions?',
     });
   };
 
   const subTableColumns = [
     {
-      title: renderTitle("ID", ""),
-      dataIndex: "id",
-      key: "id",
+      title: renderTitle('ID', ''),
+      dataIndex: 'id',
+      key: 'id',
     },
     {
       title: renderTitle(
-        "Period",
-        "The frequency for subscription notifications. Click the filter icon to filter subscriptions by period."
+        'Period',
+        'The frequency for subscription notifications. Click the filter icon to filter subscriptions by period.'
       ),
-      dataIndex: "period",
-      key: "period",
+      dataIndex: 'period',
+      key: 'period',
       filters: [
         {
-          text: "daily",
-          value: "daily",
+          text: 'daily',
+          value: 'daily',
         },
         {
-          text: "weekly",
-          value: "weekly",
+          text: 'weekly',
+          value: 'weekly',
         },
         {
-          text: "biweekly",
-          value: "biweekly",
+          text: 'biweekly',
+          value: 'biweekly',
         },
         {
-          text: "monthly",
-          value: "monthly",
+          text: 'monthly',
+          value: 'monthly',
         },
       ],
       filterMultiple: true,
@@ -118,26 +120,26 @@ export default function ViewSubscriptions(
     },
     {
       title: renderTitle(
-        "Name",
-        "(Optional) The name used to identify the subscription."
+        'Name',
+        '(Optional) The name used to identify the subscription.'
       ),
-      dataIndex: "name",
-      key: "name",
+      dataIndex: 'name',
+      key: 'name',
     },
     {
       title: renderTitle(
-        "Selections",
-        "You can click an item below to view more information for that subscription item."
+        'Selections',
+        'You can click an item below to view more information for that subscription item.'
       ),
-      dataIndex: "selections",
-      key: "selections",
+      dataIndex: 'selections',
+      key: 'selections',
       render: (text: string, record: Subscription): JSX.Element => {
         return <SubscriptionRow record={record} />;
       },
     },
     {
-      title: renderTitle("Actions", ""),
-      key: "action",
+      title: renderTitle('Actions', ''),
+      key: 'action',
       render: (text: string, record: Subscription): JSX.Element => (
         <Space size="small">
           <Button
@@ -158,18 +160,26 @@ export default function ViewSubscriptions(
 
   return (
     <ErrorBoundary errorRender={errorRender}>
-      <Divider>
-        <Typography.Title level={3}>Current Subscriptions</Typography.Title>
-      </Divider>
-      <Button onClick={removeAllSubs} type="primary" danger>
-        Unsubscribe All
-      </Button>
-      <Table
-        scroll={{ x: true, scrollToFirstRowOnChange: true }}
-        columns={subTableColumns}
-        dataSource={dataSource}
-        pagination={{ hideOnSinglePage: true }}
-      />
+      <Form
+        labelCol={{ span: 8 }}
+        wrapperCol={{ span: 16 }}
+        name="CreateSubscriptions"
+        style={{ minHeight: '1024px' }}
+      >
+        <Divider>
+          <Typography.Title level={3}>Current Subscriptions</Typography.Title>
+        </Divider>
+        <Button onClick={removeAllSubs} type="primary" danger>
+          Unsubscribe All
+        </Button>
+        <Table
+          size="large"
+          scroll={{ x: true, scrollToFirstRowOnChange: true }}
+          columns={subTableColumns}
+          dataSource={dataSource}
+          pagination={{ hideOnSinglePage: true }}
+        />
+      </Form>
     </ErrorBoundary>
   );
 }
