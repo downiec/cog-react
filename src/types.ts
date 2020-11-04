@@ -1,5 +1,4 @@
 /* eslint-disable no-shadow */
-
 export enum Panes {
   'AddSubs' = '1',
   'ViewSubs' = '2',
