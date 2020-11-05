@@ -1,23 +1,19 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.0",
-  "private": false,
-  "dependencies": {
-    "@ant-design/icons": "^4.2.2",
-    "antd": "4.6.6",
-    "bind-decorator": "^1.0.11",
-    "chroma-js": "^2.1.0",
-    "dayjs": "^1.8.27",
-    "mobx": "^5.14.2",
-    "mobx-react": "^6.1.4",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
-    "react-select": "^3.1.0",
-    "react-windowed-select": "^2.0.3",
-    "sass": "^1.26.5",
-    "save-dev": "0.0.1-security"
+  "version": "0.4.1",
+  "description": "A package that provides the front-end components for ESGF subscription features.",
+  "homepage": "https://github.com/downiec/esgf-subscriptions",
+  "bugs": {
+    "url": "https://github.com/downiec/esgf-subscriptions/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "ESGF Dev Team",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/downiec/esgf-subscriptions.git"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,6 +41,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "antd": "4.6.6",
+    "bind-decorator": "^1.0.11",
+    "chroma-js": "^2.1.0",
+    "dayjs": "^1.8.27",
+    "mobx": "^5.14.2",
+    "mobx-react": "^6.1.4",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
+    "react-windowed-select": "^2.0.3",
+    "sass": "^1.26.5",
+    "save-dev": "0.0.1-security"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.3.0",
