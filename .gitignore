@@ -10,6 +10,7 @@
 
 # production
 /build
+/pkgOutput
 
 # misc
 .DS_Store

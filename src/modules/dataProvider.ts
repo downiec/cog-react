@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ValueType } from 'react-select/src/types';
-import DataImporter, { IComponentData } from './dataImporter';
+import DataImporter, { IComponentData } from './DataImporter';
 import {
   ExperimentInfo,
   FIELDS,
