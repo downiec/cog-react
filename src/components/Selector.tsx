@@ -7,7 +7,7 @@ import { SelectComponents } from 'react-select/src/components';
 import ErrorBoundary from './ErrorBoundary';
 import { customStyles } from '../modules/constants';
 import { renderOption } from '../modules/renderData';
-import { SelectorOption } from '../types';
+import { SelectorOption } from '../modules/types';
 
 const errorRender: JSX.Element = (
   <Layout>

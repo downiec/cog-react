@@ -8,7 +8,7 @@ import {
   realmData,
 } from '../data/output/appdata';
 import { variableData } from '../data/output/variableData';
-import { FIELDS } from '../types';
+import { FIELDS } from './types';
 
 export type IComponentData = {
   activityData: { [id: string]: string };

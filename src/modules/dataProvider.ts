@@ -9,7 +9,7 @@ import {
   ModelInfo,
   SelectorOption,
   VariableInfo,
-} from '../types';
+} from './types';
 import { convertStrToHexColor } from './utils';
 
 export default class DataProvider {

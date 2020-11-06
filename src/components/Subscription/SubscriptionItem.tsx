@@ -3,7 +3,7 @@ import React from 'react';
 import chromaJs from 'chroma-js';
 import DataProvider from '../../modules/DataProvider';
 import { renderOption } from '../../modules/renderData';
-import { FIELDS, SelectorOption } from '../../types';
+import { FIELDS, SelectorOption } from '../../modules/types';
 
 interface ISubPanelItem {
   id: string;

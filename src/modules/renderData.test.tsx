@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { render } from '@testing-library/react';
 import React from 'react';
-import { FIELDS, VariableInfo } from '../types';
+import { FIELDS, VariableInfo } from './types';
 import DataProvider from './DataProvider';
 import { renderOption, DataPopover, IDataRenderProps } from './renderData';
 

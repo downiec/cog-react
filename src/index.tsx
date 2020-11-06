@@ -1,10 +1,9 @@
 import react from "react";
 import reactDom from "react-dom";
-import "./index.css";
 import App, { IAppProps } from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { defaultSubscriptions } from "./modules/constants";
-import { Subscription, ExperimentInfo, ModelInfo, VariableInfo } from "./types";
+import { Subscription, ExperimentInfo, ModelInfo, VariableInfo } from "./modules/types";
 import CreateSubscriptions, { ISubscribeState, ISubscribeProps } from "./components/CreateSubscriptions";
 import ViewSubscriptions from "./components/ViewSubscriptions";
 import DataImporter, { IComponentData } from "./modules/DataImporter";

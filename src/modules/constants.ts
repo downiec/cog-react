@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import chromaJs from 'chroma-js';
-import { Subscription } from '../types';
+import { Subscription } from './types';
 
 // eslint-disable-next-line import/prefer-default-export
 export const customStyles = {

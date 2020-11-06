@@ -28,7 +28,7 @@ import {
   ModelInfo,
   SelectorOption,
   VariableInfo,
-} from '../types';
+} from '../modules/types';
 import ErrorBoundary from './ErrorBoundary';
 import { IComponentData } from '../modules/DataImporter';
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FIELDS } from '../types';
+import { FIELDS } from './types';
 import {
   activityData,
   experimentData,
