@@ -1,6 +1,6 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "A package that provides the front-end components for ESGF subscription features.",
   "homepage": "https://github.com/downiec/esgf-subscriptions",
   "bugs": {
