@@ -9,18 +9,18 @@
   "license": "BSD-3-Clause",
   "author": "ESGF Dev Team",
   "files": [
-    "pkgOutput/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}"
+    "build"
   ],
-  "main": "pkgOutput/index.js",
-  "types": "pkgOutput/index.d.ts",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/downiec/esgf-subscriptions.git"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "prepare": "tsc -p npm_publish_tsconfig.json && echo 'Finished building NPM package'",
+    "build": "rollup -c",
+    "prepare": "echo 'Finished building NPM package'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "COG_build": ". ./COG_start.sh --build",
@@ -56,25 +56,32 @@
     "react-windowed-select": "^2.0.3"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "@testing-library/react": "^11.1.0",
     "@types/chroma-js": "2.1.0",
     "@types/jest": "22.2.3",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^16.9.54",
+    "@types/react-dom": "^16.9.9",
     "@types/react-select": "^3.0.21",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
-    "eslint": "6.8.0",
     "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
     "eslint-config-airbnb": "18.2.0",
-    "eslint-config-react-app": "5.2.1",
     "eslint-config-airbnb-typescript": "8.0.2",
     "eslint-config-prettier": "6.11.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.1.0",
+    "node-sass": "^5.0.0",
+    "rollup": "^2.33.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "3.9.7"
   },
   "jest": {

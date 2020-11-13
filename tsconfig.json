@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "build",
     "target": "es5",
     "types": [
       "jest"
     ],
     "lib": [
+      "es6",
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es2016",
+      "es2017"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,9 +23,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "sourceMap": true,
   },
   "include": [
-    "src"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "src/**/*.test.tsx"
   ]
 }

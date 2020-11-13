@@ -68,6 +68,6 @@ export type {
   IComponentData,
   ExperimentInfo,
   ModelInfo,
-  Subscription,
-  VariableInfo
+  VariableInfo,
+  Subscription
 };
