@@ -27,11 +27,12 @@
     "sourceMap": true,
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
   ],
   "exclude": [
     "node_modules",
     "build",
+    "rollup.config.js",
     "src/**/*.test.tsx"
   ]
 }
