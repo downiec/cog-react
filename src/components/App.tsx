@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 import { Layout, Card, Tabs } from "antd";
 import CreateSubscriptions, { ISubscribeState } from "./CreateSubscriptions";
 import ViewSubscriptions from "./ViewSubscriptions";
-import { Subscription, ExperimentInfo, ModelInfo, Panes } from "../types";
+import { Subscription, ExperimentInfo, ModelInfo, Panes } from "../modules/types";
 
 export interface IAppProps {
   post_url: string; // eslint-disable-line

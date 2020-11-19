@@ -1,7 +1,7 @@
 import { Button, Popover, Tooltip } from 'antd';
 import React from 'react';
 import chromaJs from 'chroma-js';
-import { FIELDS } from '../../types';
+import { FIELDS } from '../../modules/types';
 import SubscriptionItem from './SubscriptionItem';
 
 interface ISubPanelProps {

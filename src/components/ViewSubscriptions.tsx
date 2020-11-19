@@ -11,7 +11,7 @@ import {
 } from 'antd';
 import { QuestionCircleTwoTone } from '@ant-design/icons';
 import React from 'react';
-import { Subscription } from '../types';
+import { Subscription } from '../modules/types';
 import SubscriptionRow from './Subscription/SubscriptionRow';
 import ErrorBoundary from './ErrorBoundary';
 

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { render } from '@testing-library/react';
 import React from 'react';
-import { FIELDS, VariableInfo } from '../types';
-import DataProvider from './dataProvider';
-import { renderOption, DataPopover, IDataRenderProps } from './dataRenderer';
+import { FIELDS, VariableInfo } from './types';
+import DataProvider from './DataProvider';
+import { renderOption, DataPopover, IDataRenderProps } from './renderData';
 
 describe('Test colorByRealm', () => {
   it('returns a hex color based on the modeling_realm', () => {

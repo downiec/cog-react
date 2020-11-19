@@ -1,6 +1,6 @@
 import React from 'react';
 import { Space } from 'antd';
-import { Subscription, FIELDS } from '../../types';
+import { Subscription, FIELDS } from '../../modules/types';
 import SubscriptionPanel from './SubscriptionPanel';
 
 interface ISubRowProps {

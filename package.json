@@ -1,27 +1,27 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.0",
-  "private": false,
-  "dependencies": {
-    "@ant-design/icons": "^4.2.2",
-    "antd": "4.6.6",
-    "bind-decorator": "^1.0.11",
-    "chroma-js": "^2.1.0",
-    "dayjs": "^1.8.27",
-    "mobx": "^5.14.2",
-    "mobx-react": "^6.1.4",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
-    "react-select": "^3.1.0",
-    "react-windowed-select": "^2.0.3",
-    "sass": "^1.26.5",
-    "save-dev": "0.0.1-security"
+  "version": "0.4.6",
+  "description": "A package that provides the front-end components for ESGF subscription features.",
+  "homepage": "https://github.com/downiec/esgf-subscriptions",
+  "bugs": {
+    "url": "https://github.com/downiec/esgf-subscriptions/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "ESGF Dev Team",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "typings": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/downiec/esgf-subscriptions.git"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
+    "prepare": "echo 'Finished building NPM package'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "COG_build": ". ./COG_start.sh --build",
@@ -46,25 +46,46 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "antd": "4.6.6",
+    "chroma-js": "^2.1.0",
+    "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
+    "react-windowed-select": "^2.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.3.0",
-    "@typescript-eslint/parser": "4.3.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "@testing-library/react": "^11.1.0",
     "@types/chroma-js": "2.1.0",
-    "@types/jest": "^26.0.14",
-    "@types/node": "^14.11.2",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
+    "@types/jest": "22.2.3",
+    "@types/react": "^16.9.54",
+    "@types/react-dom": "^16.9.9",
     "@types/react-select": "^3.0.21",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
+    "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.2.0",
     "eslint-config-airbnb-typescript": "8.0.2",
     "eslint-config-prettier": "6.11.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.1.0",
-    "fibers": "^5.0.0",
-    "prettier": "2.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup": "^2.33.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "3.9.7"
   },
   "jest": {

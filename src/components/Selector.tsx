@@ -6,8 +6,8 @@ import { ValueType } from 'react-select/src/types';
 import { SelectComponents } from 'react-select/src/components';
 import ErrorBoundary from './ErrorBoundary';
 import { customStyles } from '../modules/constants';
-import { renderOption } from '../modules/dataRenderer';
-import { SelectorOption } from '../types';
+import { renderOption } from '../modules/renderData';
+import { SelectorOption } from '../modules/types';
 
 const errorRender: JSX.Element = (
   <Layout>

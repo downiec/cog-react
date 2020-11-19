@@ -1,9 +1,9 @@
 import { Tag, Tooltip } from 'antd';
 import React from 'react';
 import chromaJs from 'chroma-js';
-import DataProvider from '../../modules/dataProvider';
-import { renderOption } from '../../modules/dataRenderer';
-import { FIELDS, SelectorOption } from '../../types';
+import DataProvider from '../../modules/DataProvider';
+import { renderOption } from '../../modules/renderData';
+import { FIELDS, SelectorOption } from '../../modules/types';
 
 interface ISubPanelItem {
   id: string;
