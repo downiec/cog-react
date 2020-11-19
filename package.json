@@ -1,6 +1,6 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A package that provides the front-end components for ESGF subscription features.",
   "homepage": "https://github.com/downiec/esgf-subscriptions",
   "bugs": {
@@ -13,6 +13,7 @@
   ],
   "main": "build/index.js",
   "module": "build/index.es.js",
+  "typings": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/downiec/esgf-subscriptions.git"
@@ -49,15 +50,13 @@
     "@ant-design/icons": "^4.2.2",
     "antd": "4.6.6",
     "chroma-js": "^2.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-scripts": "^3.4.3",
     "react-select": "^3.1.0",
     "react-windowed-select": "^2.0.3"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
@@ -81,6 +80,8 @@
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rollup": "^2.33.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^3.1.8",
