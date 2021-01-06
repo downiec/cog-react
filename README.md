@@ -12,7 +12,7 @@ To install, do the following:
 ```
 # Clone cog-react repo and COG fork, they should be in the same directory
 git clone https://github.com/downiec/COG
-git clone https://github.com/downiec/cog-react.git
+git clone https://github.com/downiec/esgf-subscriptions.git
 
 # Go into cog-react repo and install
 cd cog-react
