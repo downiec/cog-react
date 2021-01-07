@@ -2,7 +2,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { FIELDS, VariableInfo } from './types';
-import DataProvider from './DataProvider';
+import DataProvider from './dataProvider';
 import { renderOption, DataPopover, IDataRenderProps } from './renderData';
 
 describe('Test colorByRealm', () => {

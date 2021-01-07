@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ExperimentInfo, FIELDS, SelectorOption, VariableInfo } from './types';
-import DataProvider from './DataProvider';
+import DataProvider from './dataProvider';
 
 const provider = new DataProvider();
 

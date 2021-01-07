@@ -6,8 +6,8 @@ import { defaultSubscriptions } from "./modules/constants";
 import { Subscription, ExperimentInfo, ModelInfo, VariableInfo } from "./modules/types";
 import CreateSubscriptions, { ISubscribeState, ISubscribeProps } from "./components/CreateSubscriptions";
 import ViewSubscriptions from "./components/ViewSubscriptions";
-import DataImporter, { IComponentData } from "./modules/DataImporter";
-import DataProvider from "./modules/DataProvider";
+import DataImporter, { IComponentData } from "./modules/dataImporter";
+import DataProvider from "./modules/dataProvider";
 import { convertStrToChromaColor, convertStrToHexColor } from "./modules/utils";
 
 declare global {

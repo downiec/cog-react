@@ -1,7 +1,7 @@
 import { Tag, Tooltip } from 'antd';
 import React from 'react';
 import chromaJs from 'chroma-js';
-import DataProvider from '../../modules/DataProvider';
+import DataProvider from '../../modules/dataProvider';
 import { renderOption } from '../../modules/renderData';
 import { FIELDS, SelectorOption } from '../../modules/types';
 

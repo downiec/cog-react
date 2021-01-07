@@ -20,7 +20,7 @@ import { RadioChangeEvent } from 'antd/lib/radio';
 import React, { useState } from 'react';
 import { ValueType } from 'react-select/src/types';
 import { Selector } from './Selector';
-import DataProvider from '../modules/DataProvider';
+import DataProvider from '../modules/dataProvider';
 import {
   Period,
   FIELDS,
@@ -30,7 +30,7 @@ import {
   VariableInfo,
 } from '../modules/types';
 import ErrorBoundary from './ErrorBoundary';
-import { IComponentData } from '../modules/DataImporter';
+import { IComponentData } from '../modules/dataImporter';
 
 interface IOptionState<InfoType, IDType> {
   filtered: ValueType<SelectorOption<InfoType>>;
