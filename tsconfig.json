@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "build",
+    "declarationDir": "bundle",
     "target": "es5",
     "types": [
       "jest"
@@ -31,6 +31,7 @@
   ],
   "exclude": [
     "node_modules",
+    "bundle",
     "build",
     "rollup.config.js",
     "src/**/*.test.tsx"

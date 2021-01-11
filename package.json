@@ -1,6 +1,6 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "A package that provides the front-end components for ESGF subscription features.",
   "homepage": "https://github.com/downiec/esgf-subscriptions",
   "bugs": {
@@ -9,11 +9,11 @@
   "license": "BSD-3-Clause",
   "author": "ESGF Dev Team",
   "files": [
-    "build"
+    "bundle"
   ],
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "typings": "build/index.d.ts",
+  "main": "bundle/index.js",
+  "module": "bundle/index.es.js",
+  "typings": "bundle/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/downiec/esgf-subscriptions.git"
@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c",
+    "build-static": "react-scripts build",
     "prepare": "echo 'Finished building NPM package'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
