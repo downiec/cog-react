@@ -98,6 +98,10 @@ if [[ "$1" = "--build" ]]; then
 elif [[ "$1" = "--run" ]]; then
     startLocalCOG
 elif [[ "$1" = "--copy" ]]; then
+    if [[ -d "$2" ]]; then
+        echo $2
+        COG_REACT=$2
+    fi
     cleanDir
     copyFiles
 else

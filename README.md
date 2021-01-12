@@ -63,7 +63,7 @@ The above command will first build the front-end, then copy it into the COG appl
 
 ### `./COG_tasks.sh --copy`
 
-The above command will copy over static files from current front-end to place them in the appropriate COG installation directory.
+The above command will copy over static files from current front-end to place them in the appropriate COG installation directory. You can specify the location within the cog_build.config file (default), or you can set the path as an argument: `./COG_tasks.sh --copy <path_to_copy_to>`
 ### `./COG_tasks.sh --build`
 
 Above command will build the esgf-subscriptions application for legacy COG integration. The build is minified and the filenames include the hashes.<br>
