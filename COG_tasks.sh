@@ -15,41 +15,45 @@ else
     echo "Make sure it is in the same directory as COG_tasks.sh"
 fi
 
-# Check config file variables
-ERR=0
+# Check cog directory
 if [[ ! -d $COG_DIR ]]; then
     echo "COG_DIR variable is not a valid directory."
-    ERR=1
-fi
-if [[ ! -f $CONDA_EXE ]]; then
-    echo "CONDA_EXE variable is not a valid file."
-    ERR=1
-else
-    source $CONDA_EXE
-    RET=$?
-    if [[ ! ${RET} -eq 0 ]]; then
-        echo "Setting conda source directory failed."
-        ERR=1
-    fi
-fi
-if [[ -z $CONDA_ENV ]]; then
-    echo "CONDA_ENV variable is empty."
-    ERR=1
-else
-    conda activate $CONDA_ENV
-    RET=$?
-    if [[ ! ${RET} -eq 0 ]]; then
-        echo "Activating conda environment failed."
-        ERR=1
-    fi
-fi
-if [[ ! $ERR -eq 0 ]]; then
-    echo "There were one or more issues with config settings."
     echo "Check the variables set in: $cog_config"
     exit
 fi
 
 COG_REACT=${COG_DIR}static/cog/cog-react/
+
+# Check config file variables for conda setup
+function prepareConda (){
+    if [[ ! -f $CONDA_EXE ]]; then
+        echo "CONDA_EXE variable is not a valid file."
+        ERR=1
+    else
+        source $CONDA_EXE
+        RET=$?
+        if [[ ! ${RET} -eq 0 ]]; then
+            echo "Setting conda source directory failed."
+            ERR=1
+        fi
+    fi
+    if [[ -z $CONDA_ENV ]]; then
+        echo "CONDA_ENV variable is empty."
+        ERR=1
+    else
+        conda activate $CONDA_ENV
+        RET=$?
+        if [[ ! ${RET} -eq 0 ]]; then
+            echo "Activating conda environment failed."
+            ERR=1
+        fi
+    fi
+    if [[ ! $ERR -eq 0 ]]; then
+        echo "There were one or more issues with config settings."
+        echo "Check the variables set in: $cog_config"
+        exit
+    fi
+}
 
 function cleanDir (){
     mkdir -p ${COG_REACT}js/
@@ -71,6 +75,7 @@ function copyFiles (){
 }
 
 function buildCogReact (){
+    prepareConda
     npx react-scripts build
 }
 
