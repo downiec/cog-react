@@ -54,6 +54,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## COG Integration and Testing
 
+Before starting, make sure the 'cog_build.config' file has the appropriate parameters set. Otherwise you will get error messages indicating issues.
+
 Note: You may need to run some of the scripts for copying over files into the COG installation directory using `sudo` privileges.
 ### `./COG_tasks.sh`
 

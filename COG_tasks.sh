@@ -6,13 +6,47 @@
 # Exit for any error
 set -e
 
-# Set the correct COG directory
+# Set the config file
+cog_config="cog_build.config"
+if [[ -f ${cog_config} ]]; then
+    . ${cog_config}
+else
+    echo "$cog_config file not found."
+    echo "Make sure it is in the same directory as COG_tasks.sh"
+fi
+
+# Check config file variables
+ERR=0
 if [[ ! -d $COG_DIR ]]; then
-    read -e -p "Enter the path to the current COG installation: " COG_DIR
-    while [[ ! -d $COG_DIR ]]; do
-        echo "Invalid directory path entered."
-        read -e -p "Enter the path to the current COG installation: " COG_DIR
-    done
+    echo "COG_DIR variable is not a valid directory."
+    ERR=1
+fi
+if [[ ! -f $CONDA_EXE ]]; then
+    echo "CONDA_EXE variable is not a valid file."
+    ERR=1
+else
+    source $CONDA_EXE
+    RET=$?
+    if [[ ! ${RET} -eq 0 ]]; then
+        echo "Setting conda source directory failed."
+        ERR=1
+    fi
+fi
+if [[ -z $CONDA_ENV ]]; then
+    echo "CONDA_ENV variable is empty."
+    ERR=1
+else
+    conda activate $CONDA_ENV
+    RET=$?
+    if [[ ! ${RET} -eq 0 ]]; then
+        echo "Activating conda environment failed."
+        ERR=1
+    fi
+fi
+if [[ ! $ERR -eq 0 ]]; then
+    echo "There were one or more issues with config settings."
+    echo "Check the variables set in: $cog_config"
+    exit
 fi
 
 COG_REACT=${COG_DIR}static/cog/cog-react/
@@ -28,7 +62,6 @@ function cleanDir (){
 }
 
 function copyFiles (){
-    cleanDir
     # Copy new files into appropriate location within COG repo
     echo "Copying new js files."
     cp build/static/js/*.js ${COG_REACT}js/
@@ -38,7 +71,7 @@ function copyFiles (){
 }
 
 function buildCogReact (){
-    npm run build-static
+    npx react-scripts build
     cleanDir
     copyFiles
 }
@@ -59,7 +92,7 @@ function startLocalCOG (){
 #Build the React Application
 if [[ "$1" = "--build" ]]; then
     buildCogReact
-elif [ "$1" = "--run"]; then
+elif [[ "$1" = "--run" ]]; then
     startLocalCOG
 else
     buildCogReact
