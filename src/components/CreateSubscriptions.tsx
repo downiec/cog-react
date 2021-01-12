@@ -258,7 +258,7 @@ export default function CreateSubscriptions(
 
   const nameHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     let nameStr: string = event.target.value;
-    nameStr = nameStr.replace(/[^1-9A-z_ ]|\^/gm, '');
+    nameStr = nameStr.replace(/[^0-9A-z_+-= ]|\^/gm, '');
     setState({ ...state, name: nameStr });
   };
 

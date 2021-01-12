@@ -9,11 +9,11 @@
   "license": "BSD-3-Clause",
   "author": "ESGF Dev Team",
   "files": [
-    "bundle"
+    "build/package"
   ],
-  "main": "bundle/index.js",
-  "module": "bundle/index.es.js",
-  "typings": "bundle/index.d.ts",
+  "main": "build/package/index.js",
+  "module": "build/package/index.es.js",
+  "typings": "build/package/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/downiec/esgf-subscriptions.git"
@@ -25,8 +25,8 @@
     "prepare": "echo 'Finished building NPM package'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "COG_build": ". ./COG_start.sh --build",
-    "COG": ". ./COG_start.sh",
+    "build-cog": "sudo . ./COG_tasks.sh --build",
+    "start-cog": "sudo . ./COG_tasks.sh --run",
     "build-json": "node ./src/data/jsonGenerator.js",
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx,json}' --fix --no-error-on-unmatched-pattern",
     "lint-fix": "npx prettier-tslint fix '**/*.ts'",

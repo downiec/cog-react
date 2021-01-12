@@ -1,49 +1,63 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Using drop-down components or subscription pages in your project
-Run:
-```
-npm install --save esgf-subscriptions
-```
+# Using drop-down components in your project
 
-## ESGF Cog Setup
+### Install the components:
 
-To install, do the following:
+`npm install --save esgf-subscriptions`
+
+### Then implement in your project using example: [ESGF-Subscriptions App](components/App.tsx)
+
+<br >
+
+# Developer Info:
+
+## Clone esgf-subscriptions repo and COG fork, they should be in the same directory
+`git clone https://github.com/downiec/COG`
+
+`git clone https://github.com/downiec/esgf-subscriptions.git`
+## Developing the npm package
+
+After making changes you need:
+### `npm run build`
+
+Builds the app as an NPM package for publication using Rollup.js.<br>
+The package is then ready to be published or tested!
+
+
+## ESGF Cog Static App Intergation
+
+To install as an app within the COG installation, do the following:
+
 ```
-# Clone cog-react repo and COG fork, they should be in the same directory
-git clone https://github.com/downiec/COG
-git clone https://github.com/downiec/esgf-subscriptions.git
-
-# Go into cog-react repo and install
-cd cog-react
+# Within esgf-subscriptions repo
 npm install
-
-# You should now be able to run scripts as described below.
+npm run build-cog
 ```
 
-## Available Scripts
+You should now be able to run scripts as described below.
 
-In the cog-react repo, you can run:
+## Available Scripts (run from the esgf-subscriptions repo)
 
 ### `npm start`
 
-Runs the app in the development mode. This will only show the Cog-React front-end
-as it looks and behaves OUTSIDE of COG.<br>
+Runs the app in the development mode. This will only show the Cog-React front-end as it looks and behaves OUTSIDE of COG.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.<br>
 
-### `npm run COG` (starts COG) or `npm run COG_build` (builds and copies over latest updates before starting COG)
+### `npm run build-cog`
 
-#### IMPORTANT You will need the COG setup files containing config files in order to interact with COG server.  
+This will build the esgf-subscriptions application for legacy COG integration and copy over static files from the current front-end to place them in the appropriate COG installation directory. 
+The build is minified and the filenames include the hashes.<br>
 
-Starts up a forked instance of the COG Django application. Then it will copy over static files from this Cog-React
-front-end application and place them in the appropriate directory in order to view the react front-end as it would
-appear within the COG application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
+### `npm run start-cog`
 
-#### Note:
-If you are routed to the login screen, you can login by:
+Starts up a forked instance of the COG Django application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
+#### IMPORTANT: You will need the COG setup files containing config files in order to interact with COG server. Make sure you already built the application with: `npm run build-cog`
+
+#### After cog service starts if you are routed to the login screen, you can login by:
 * Click the button near the ‘OpenID’ label.
 * Select ‘LLNL Test Dev IDP’ from the drop down.
 *Or use the other LLNL option if Test Dev doesn't work.
@@ -55,16 +69,6 @@ If you are routed to the login screen, you can login by:
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 <!--
 ### `npm run eject`
