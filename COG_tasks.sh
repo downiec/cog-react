@@ -9,7 +9,12 @@ set -e
 # Set the correct COG directory
 if [[ ! -d $COG_DIR ]]; then
     read -e -p "Enter the path to the current COG installation: " COG_DIR
+    while [[ ! -d $COG_DIR ]]; do
+        echo "Invalid directory path entered."
+        read -e -p "Enter the path to the current COG installation: " COG_DIR
+    done
 fi
+
 COG_REACT=${COG_DIR}static/cog/cog-react/
 
 function cleanDir (){

@@ -10,29 +10,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <br >
 
-# Developer Info:
 
-## Clone esgf-subscriptions repo and COG fork, they should be in the same directory
+# Developer Initial Setup
+### Clone esgf-subscriptions repo and COG fork, they should be in the same directory:
+
 `git clone https://github.com/downiec/COG`
 
 `git clone https://github.com/downiec/esgf-subscriptions.git`
-## Developing the npm package
+## Developing as NPM package
 
-After making changes you need:
+After making changes, build package using:
 ### `npm run build`
 
 Builds the app as an NPM package for publication using Rollup.js.<br>
 The package is then ready to be published or tested!
 
+## Integrating with COG
 
-## ESGF Cog Static App Intergation
-
-To install as an app within the COG installation, do the following:
+To install as an app within the COG repo, do the following:
 
 ```
 # Within esgf-subscriptions repo
 npm install
-npm run build-cog
+./COG_tasks.sh --build #May need sudo privileges
 ```
 
 You should now be able to run scripts as described below.
@@ -41,21 +41,33 @@ You should now be able to run scripts as described below.
 
 ### `npm start`
 
-Runs the app in the development mode. This will only show the Cog-React front-end as it looks and behaves OUTSIDE of COG.<br>
+Command above runs the app in the development mode. This will only show the esgf-subscriptions front-end as it looks and behaves OUTSIDE of COG.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.<br>
 
-### `npm run build-cog`
+### `npm test`
 
-This will build the esgf-subscriptions application for legacy COG integration and copy over static files from the current front-end to place them in the appropriate COG installation directory. 
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## COG Integration and Testing
+
+Note: You may need to run some of the scripts for copying over files into the COG installation directory using `sudo` privileges.
+### `./COG_tasks.sh`
+
+The above command will first build the front-end, copy it into the COG application, then run it; combining the two commands described below.
+
+### `./COG_tasks.sh --build`
+
+Above command will build the esgf-subscriptions application for legacy COG integration and copy over static files from the current front-end to place them in the appropriate COG installation directory. 
 The build is minified and the filenames include the hashes.<br>
 
-### `npm run start-cog`
+### `./COG_tasks.sh --run`
 
-Starts up a forked instance of the COG Django application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
-#### IMPORTANT: You will need the COG setup files containing config files in order to interact with COG server. Make sure you already built the application with: `npm run build-cog`
+Above command starts up a forked instance of the COG Django application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
+#### IMPORTANT: You will need the COG setup files containing config files in order to interact with COG server. Make sure you already built the application previously with: `./COG_tasks.sh --build`
 
 #### After cog service starts if you are routed to the login screen, you can login by:
 * Click the button near the ‘OpenID’ label.
@@ -64,11 +76,6 @@ Starts up a forked instance of the COG Django application. Once the service is s
 * Click ‘login’
 * Enter username and password.
 * Click ‘SUBMIT’
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 <!--
 ### `npm run eject`
