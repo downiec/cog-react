@@ -56,20 +56,22 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Before starting, make sure the 'cog_build.config' file has the appropriate parameters set. Otherwise you will get error messages indicating issues.
 
-Note: You may need to run some of the scripts for copying over files into the COG installation directory using `sudo` privileges.
+Note: You may need to run some of the script for copying over files into the COG installation directory using `sudo` privileges if the target directory requires.
 ### `./COG_tasks.sh`
 
-The above command will first build the front-end, copy it into the COG application, then run it; combining the two commands described below.
+The above command will first build the front-end, then copy it into the COG application; combining the two commands described below.
 
+### `./COG_tasks.sh --copy`
+
+The above command will copy over static files from current front-end to place them in the appropriate COG installation directory.
 ### `./COG_tasks.sh --build`
 
-Above command will build the esgf-subscriptions application for legacy COG integration and copy over static files from the current front-end to place them in the appropriate COG installation directory. 
-The build is minified and the filenames include the hashes.<br>
+Above command will build the esgf-subscriptions application for legacy COG integration. The build is minified and the filenames include the hashes.<br>
 
 ### `./COG_tasks.sh --run`
 
 Above command starts up a forked instance of the COG Django application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
-#### IMPORTANT: You will need the COG setup files containing config files in order to interact with COG server. Make sure you already built the application previously with: `./COG_tasks.sh --build`
+#### IMPORTANT: You will need the COG setup files (for the COG installation) containing config files in order to interact with COG server. Make sure you already built the application previously with: `./COG_tasks.sh --build`
 
 #### After cog service starts if you are routed to the login screen, you can login by:
 * Click the button near the ‘OpenID’ label.

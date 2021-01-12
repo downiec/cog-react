@@ -72,8 +72,6 @@ function copyFiles (){
 
 function buildCogReact (){
     npx react-scripts build
-    cleanDir
-    copyFiles
 }
 
 #Run local cog server and (restart if the cog server is already running)
@@ -94,7 +92,11 @@ if [[ "$1" = "--build" ]]; then
     buildCogReact
 elif [[ "$1" = "--run" ]]; then
     startLocalCOG
+elif [[ "$1" = "--copy" ]]; then
+    cleanDir
+    copyFiles
 else
     buildCogReact
-    startLocalCOG
+    cleanDir
+    copyFiles
 fi
