@@ -1,6 +1,6 @@
 {
   "name": "esgf-subscriptions",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "A package that provides the front-end components for ESGF subscription features.",
   "homepage": "https://github.com/downiec/esgf-subscriptions",
   "bugs": {
@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c",
+    "build-cog": "source ./COG_tasks.sh --build && sudo ./COG_tasks.sh --copy",
     "prepare": "echo 'Finished building NPM package'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -48,6 +49,7 @@
     "@ant-design/icons": "^4.2.2",
     "antd": "4.6.6",
     "chroma-js": "^2.1.0",
+    "fsevents": "^2.3.1",
     "react-scripts": "^3.4.3",
     "react-select": "^3.1.0",
     "react-windowed-select": "^2.0.3"

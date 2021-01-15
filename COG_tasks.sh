@@ -3,16 +3,14 @@
 #This is a script meant for development only.
 #A fork of the COG repo is required to run this script. Forked COG repo: https://github.com/downiec/COG
 
-# Exit for any error
-set -e
-
 # Set the config file
-cog_config="cog_build.config"
+cog_config=${PWD}/"cog_build.config"
 if [[ -f ${cog_config} ]]; then
-    . ${cog_config}
+    source ${cog_config} 
 else
     echo "$cog_config file not found."
-    echo "Make sure it is in the same directory as COG_tasks.sh"
+    echo "Make sure it is in the same directory as COG_tasks.sh\n"
+    exit 1
 fi
 
 # Check cog directory
@@ -59,19 +57,37 @@ function cleanDir (){
     mkdir -p ${COG_REACT}js/
     mkdir -p ${COG_REACT}css/
     # Remove existing files if they exist, ignore error if they don't exist
-    echo "Removing old js files."
-    rm ${COG_REACT}js/* || true
-    echo "Removing old css files."
-    rm ${COG_REACT}css/* || true
+    
+    rm -f ${COG_REACT}js/*.js 2> /dev/null
+    if [[ "$?" = 1 ]]; then
+        echo "Clean failed. If permission denied, try: sudo ./COG_tasks.sh --copy"
+        exit 1
+    fi
+    rm -f ${COG_REACT}js/*.js.map
+    rm -f ${COG_REACT}css/*.css
+    rm -f ${COG_REACT}css/*.css.map
+    if [[ "$?" -eq "0" ]]; then
+        echo "Removed old files successfully."
+    else
+        echo "Error occurred removing css files."
+    fi
 }
 
 function copyFiles (){
     # Copy new files into appropriate location within COG repo
-    echo "Copying new js files."
-    cp build/static/js/*.js ${COG_REACT}js/
+    cp build/static/js/*.js ${COG_REACT}js/ 2> /dev/null
+    if [[ "$?" = 1 ]]; then
+        echo "Copy failed. If permission denied, try: sudo ./COG_tasks.sh --copy"
+        exit 1
+    fi
     cp build/static/js/*.map ${COG_REACT}js/
-    echo "Copying new css files."
     cp build/static/css/* ${COG_REACT}css/
+    
+    if [[ "$?" -eq "0" ]]; then
+        echo "Copied over files successfully."
+    else
+        echo $'Error occurred copying files.'
+    fi
 }
 
 function buildCogReact (){
@@ -105,7 +121,7 @@ elif [[ "$1" = "--copy" ]]; then
     cleanDir
     copyFiles
 else
-    buildCogReact
+    buildCogReact 
     cleanDir
     copyFiles
 fi

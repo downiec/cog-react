@@ -57,13 +57,15 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Before starting, make sure the 'cog_build.config' file has the appropriate parameters set. Otherwise you will get error messages indicating issues.
 
 Note: You may need to run some of the script for copying over files into the COG installation directory using `sudo` privileges if the target directory requires.
-### `./COG_tasks.sh`
+### `npm run build-cog`
 
 The above command will first build the front-end, then copy it into the COG application; combining the two commands described below.
 
 ### `./COG_tasks.sh --copy`
 
 The above command will copy over static files from current front-end to place them in the appropriate COG installation directory. You can specify the location within the cog_build.config file (default), or you can set the path as an argument: `./COG_tasks.sh --copy <path_to_copy_to>`
+NOTE: This command may be necessary if sudo privileges are needed to copy.
+
 ### `./COG_tasks.sh --build`
 
 Above command will build the esgf-subscriptions application for legacy COG integration. The build is minified and the filenames include the hashes.<br>
