@@ -7,7 +7,7 @@ import {
   modelData,
   realmData,
 } from '../data/output/appdata';
-import DataImporter from './DataImporter';
+import DataImporter from './dataImporter';
 import { variableData } from '../data/output/variableData';
 
 const dataImporter = new DataImporter();

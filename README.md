@@ -1,70 +1,87 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Using drop-down components or subscription pages in your project
-Run:
-```
-npm install --save esgf-subscriptions
-```
+# Using drop-down components in your project
 
-## ESGF Cog Setup
+### Install the components:
 
-To install, do the following:
+`npm install --save esgf-subscriptions`
+
+### Then implement in your project using example: [ESGF-Subscriptions App](components/App.tsx)
+
+<br >
+
+
+# Developer Initial Setup
+### Clone esgf-subscriptions repo and COG fork, they should be in the same directory:
+
+`git clone https://github.com/downiec/COG`
+
+`git clone https://github.com/downiec/esgf-subscriptions.git`
+## Developing as NPM package
+
+After making changes, build package using:
+### `npm run build`
+
+Builds the app as an NPM package for publication using Rollup.js.<br>
+The package is then ready to be published or tested!
+
+## Integrating with COG
+
+To install as an app within the COG repo, do the following:
+
 ```
-# Clone cog-react repo and COG fork, they should be in the same directory
-git clone https://github.com/downiec/COG
-git clone https://github.com/downiec/esgf-subscriptions.git
-
-# Go into cog-react repo and install
-cd cog-react
+# Within esgf-subscriptions repo
 npm install
-
-# You should now be able to run scripts as described below.
+./COG_tasks.sh --build #May need sudo privileges
 ```
 
-## Available Scripts
+You should now be able to run scripts as described below.
 
-In the cog-react repo, you can run:
+## Available Scripts (run from the esgf-subscriptions repo)
 
 ### `npm start`
 
-Runs the app in the development mode. This will only show the Cog-React front-end
-as it looks and behaves OUTSIDE of COG.<br>
+Command above runs the app in the development mode. This will only show the esgf-subscriptions front-end as it looks and behaves OUTSIDE of COG.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.<br>
-
-### `npm run COG` (starts COG) or `npm run COG_build` (builds and copies over latest updates before starting COG)
-
-#### IMPORTANT You will need the COG setup files containing config files in order to interact with COG server.  
-
-Starts up a forked instance of the COG Django application. Then it will copy over static files from this Cog-React
-front-end application and place them in the appropriate directory in order to view the react front-end as it would
-appear within the COG application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
-
-#### Note:
-If you are routed to the login screen, you can login by:
-* Click the button near the ‘OpenID’ label.
-* Select ‘LLNL Test Dev IDP’ from the drop down.
-*Or use the other LLNL option if Test Dev doesn't work.
-* Click ‘login’
-* Enter username and password.
-* Click ‘SUBMIT’
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## COG Integration and Testing
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before starting, make sure the 'cog_build.config' file has the appropriate parameters set. Otherwise you will get error messages indicating issues.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Note: You may need to run some of the script for copying over files into the COG installation directory using `sudo` privileges if the target directory requires.
+### `npm run build-cog`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The above command will first build the front-end, then copy it into the COG application; combining the two commands described below.
+
+### `./COG_tasks.sh --copy`
+
+The above command will copy over static files from current front-end to place them in the appropriate COG installation directory. You can specify the location within the cog_build.config file (default), or you can set the path as an argument: `./COG_tasks.sh --copy <path_to_copy_to>`
+NOTE: This command may be necessary if sudo privileges are needed to copy.
+
+### `./COG_tasks.sh --build`
+
+Above command will build the esgf-subscriptions application for legacy COG integration. The build is minified and the filenames include the hashes.<br>
+
+### `./COG_tasks.sh --run`
+
+Above command starts up a forked instance of the COG Django application. Once the service is started, you can view the page here: http://localhost:8000/subscription/
+#### IMPORTANT: You will need the COG setup files (for the COG installation) containing config files in order to interact with COG server. Make sure you already built the application previously with: `./COG_tasks.sh --build`
+
+#### After cog service starts if you are routed to the login screen, you can login by:
+* Click the button near the ‘OpenID’ label.
+* Select ‘LLNL Test Dev IDP’ from the drop down.
+*Or use the other LLNL option if Test Dev doesn't work.
+* Click ‘login’
+* Enter username and password.
+* Click ‘SUBMIT’
 
 <!--
 ### `npm run eject`

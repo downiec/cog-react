@@ -6,8 +6,8 @@ import { defaultSubscriptions } from "./modules/constants";
 import { Subscription, ExperimentInfo, ModelInfo, VariableInfo } from "./modules/types";
 import CreateSubscriptions, { ISubscribeState, ISubscribeProps } from "./components/CreateSubscriptions";
 import ViewSubscriptions from "./components/ViewSubscriptions";
-import DataImporter, { IComponentData } from "./modules/DataImporter";
-import DataProvider from "./modules/DataProvider";
+import DataImporter, { IComponentData } from "./modules/dataImporter";
+import DataProvider from "./modules/dataProvider";
 import { convertStrToChromaColor, convertStrToHexColor } from "./modules/utils";
 
 declare global {
@@ -15,7 +15,7 @@ declare global {
     react_mount: any; // eslint-disable-line
     token: string;
     props: {
-      token: string;
+      csrftoken: string;
       post_url: string; // eslint-disable-line
       saved_subs: Subscription[];
     };
@@ -23,12 +23,12 @@ declare global {
 }
 
 try {
-  const regex = /value='(.+)'/gm;
+  const regex = /value=('|")(.+)('|")/gm;
   let m;
   // eslint-disable-next-line
   if ((m = regex.exec(window.token)) !== null) {
     // eslint-disable-next-line prefer-destructuring
-    window.props.token = m[1]; // Get the token
+    window.props.csrftoken = m[2]; // Get the token
   }
 
   const element: any = react.createElement(App, window.props);
@@ -40,7 +40,7 @@ try {
   );
 } catch (error) {
   const props: IAppProps = { post_url: "", saved_subs: defaultSubscriptions }; // eslint-disable-line
-
+  console.error(error);
   // Renders the react app in a dev server apart from COG and Django
   reactDom.render(
     react.createElement(App, props),

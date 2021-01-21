@@ -8,6 +8,7 @@ import ViewSubscriptions from "./ViewSubscriptions";
 import { Subscription, ExperimentInfo, ModelInfo, Panes } from "../modules/types";
 
 export interface IAppProps {
+  csrftoken?: string;
   post_url: string; // eslint-disable-line
   saved_subs: Subscription[];
 }
@@ -32,6 +33,8 @@ export default function App(props: IAppProps): JSX.Element {
       const response: Response = await fetch(request);
       if (response.status >= 200 && response.status < 300) {
         const jsonResponse = await response.json();
+        console.log('Server response:');
+        console.log(jsonResponse);
         return jsonResponse;
       }
       console.error(`Something went wrong with request to API server! \n\
@@ -44,24 +47,6 @@ export default function App(props: IAppProps): JSX.Element {
     }
   };
 
-  // The following function are copying from
-  // https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
-  const getCookie = (name: string): string | null => {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== "") {
-      const cookies = document.cookie.split(";");
-      for (let i = 0; i < cookies.length; i += 1) {
-        const cookie = cookies[i].trim();
-        // Does this cookie string begin with the name we want?
-        if (cookie.substring(0, name.length + 1) === `${name}=`) {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
-
   const generateRequest = (
     formData: { [key: string]: any },
     action: string
@@ -71,11 +56,7 @@ export default function App(props: IAppProps): JSX.Element {
     reqData.action = action;
     reqData.payload = formData;
 
-    // Get required csrf token for posting request.
-    const csrftoken = getCookie("csrftoken");
-
-    // eslint-disable-next-line
-    const { post_url } = props;
+    const { post_url, csrftoken } = props;
     const request: Request = new Request(post_url, {
       method: "POST",
       body: JSON.stringify(reqData),
@@ -138,7 +119,7 @@ export default function App(props: IAppProps): JSX.Element {
 
     // Create subscription object to pass to backend
     const time: number = Date.now();
-    const newSub: Record<string,unknown> = {
+    const newSub: Record<string, unknown> = {
       timestamp: time,
       period: subState.period,
       name: subState.name,
@@ -157,7 +138,7 @@ export default function App(props: IAppProps): JSX.Element {
     const response = await sendRequest(request);
 
     // Exit if response is undefined
-    if(response===undefined){
+    if (response === undefined) {
       return;
     }
 

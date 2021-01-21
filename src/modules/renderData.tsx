@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button, Popover } from 'antd';
 import chromaJs from 'chroma-js';
 import { SelectorOption } from './types';
-import DataProvider from './DataProvider';
+import DataProvider from './dataProvider';
 
 function showData(
   id: number,
