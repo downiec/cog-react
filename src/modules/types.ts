@@ -17,7 +17,7 @@ export type SubType = 'Experiment' | 'Variable' | 'Model';
 export type Period = 'daily' | 'weekly' | 'biweekly' | 'monthly';
 
 export type Subscription = {
-  id: number;
+  id: number | string;
   period: Period;
   timestamp: number;
   name?: string;

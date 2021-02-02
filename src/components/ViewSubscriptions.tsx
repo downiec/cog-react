@@ -34,11 +34,13 @@ export default function ViewSubscriptions(
   props: ICurrentSubsProps
 ): JSX.Element {
   let deleteSub: Subscription | undefined;
-  const removeSub = (id: number, timestamp: number): void => {
-    if (id >= 0) {
+  const removeSub = (id: number | string, timestamp: number): void => {
+    // Remove using id if it is valid (string or number)
+    if ((typeof id === 'string' && id !== "") || (typeof id === 'number' && id >= 0)) {
       deleteSub = props.currentSubs.find((sub: Subscription) => {
         return sub.id === id;
       });
+    // If no ide, then subscription exists only in front-end, remove using timestamp
     } else {
       deleteSub = props.currentSubs.find((sub: Subscription) => {
         return sub.timestamp === timestamp;

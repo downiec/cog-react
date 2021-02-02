@@ -33,8 +33,6 @@ export default function App(props: IAppProps): JSX.Element {
       const response: Response = await fetch(request);
       if (response.status >= 200 && response.status < 300) {
         const jsonResponse = await response.json();
-        console.log('Server response:');
-        console.log(jsonResponse);
         return jsonResponse;
       }
       console.error(`Something went wrong with request to API server! \n\
@@ -56,8 +54,8 @@ export default function App(props: IAppProps): JSX.Element {
     reqData.action = action;
     reqData.payload = formData;
 
-    const { post_url, csrftoken } = props;
-    const request: Request = new Request(post_url, {
+    const { post_url: postURL, csrftoken } = props;
+    const request: Request = new Request(postURL, {
       method: "POST",
       body: JSON.stringify(reqData),
       headers: {
