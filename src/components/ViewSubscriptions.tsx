@@ -10,6 +10,7 @@ import {
   Form,
 } from 'antd';
 import { QuestionCircleTwoTone } from '@ant-design/icons';
+// eslint-disable-next-line
 import React from 'react';
 import { Subscription } from '../modules/types';
 import SubscriptionRow from './Subscription/SubscriptionRow';

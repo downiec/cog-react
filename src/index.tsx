@@ -40,7 +40,6 @@ try {
   );
 } catch (error) {
   const props: IAppProps = { post_url: "", saved_subs: defaultSubscriptions }; // eslint-disable-line
-  console.error(error);
   // Renders the react app in a dev server apart from COG and Django
   reactDom.render(
     react.createElement(App, props),

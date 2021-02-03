@@ -17,6 +17,7 @@ import {
 } from 'antd';
 import { QuestionCircleTwoTone } from '@ant-design/icons';
 import { RadioChangeEvent } from 'antd/lib/radio';
+// eslint-disable-next-line
 import React, { useState } from 'react';
 import { ValueType } from 'react-select/src/types';
 import { Selector } from './Selector';

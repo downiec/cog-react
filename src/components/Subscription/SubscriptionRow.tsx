@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react';
 import { Space } from 'antd';
 import { Subscription, FIELDS } from '../../modules/types';

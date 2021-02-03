@@ -1,4 +1,5 @@
 import { Tag, Tooltip } from 'antd';
+// eslint-disable-next-line
 import React from 'react';
 import chromaJs from 'chroma-js';
 import DataProvider from '../../modules/dataProvider';
