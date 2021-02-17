@@ -88,11 +88,11 @@ export default function ViewSubscriptions(
   };
 
   const subTableColumns = [
-    {
+    /* {
       title: renderTitle('ID', ''),
       dataIndex: 'id',
       key: 'id',
-    },
+    }, */
     {
       title: renderTitle(
         'Period',
