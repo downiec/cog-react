@@ -23,7 +23,8 @@ const errorRender: JSX.Element = (
 );
 
 export interface ICurrentSubsProps {
-  deleteSubscriptions: (subs: Subscription[]) => Promise<void>;
+  deleteSubscriptions: ((subs: Subscription[]) => Promise<void>)
+  | ((subs: Subscription[]) => void);
   currentSubs: Subscription[];
 }
 
@@ -41,7 +42,7 @@ export default function ViewSubscriptions(
       deleteSub = props.currentSubs.find((sub: Subscription) => {
         return sub.id === id;
       });
-    // If no ide, then subscription exists only in front-end, remove using timestamp
+      // If no ide, then subscription exists only in front-end, remove using timestamp
     } else {
       deleteSub = props.currentSubs.find((sub: Subscription) => {
         return sub.timestamp === timestamp;

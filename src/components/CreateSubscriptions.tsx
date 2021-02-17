@@ -51,7 +51,8 @@ export interface ISubscribeState {
 }
 
 export interface ISubscribeProps {
-  submitSubscriptions: (state: ISubscribeState) => Promise<void>;
+  submitSubscriptions: ((state: ISubscribeState) => Promise<void>)
+  | ((state: ISubscribeState) => void);
   appData?: IComponentData;
 }
 
