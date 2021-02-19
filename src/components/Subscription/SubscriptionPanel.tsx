@@ -1,4 +1,4 @@
-import { Button, Popover, Tooltip } from 'antd';
+import { Button, Popover } from 'antd';
 // eslint-disable-next-line
 import React from 'react';
 import chromaJs from 'chroma-js';
@@ -24,7 +24,6 @@ export default function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
       <SubscriptionItem
         dataType={props.dataType}
         id={props.ids[0]}
-        tooltip={`Category: ${props.title}`}
       />
     );
   }
@@ -43,27 +42,21 @@ export default function SubscriptionPanel(props: ISubPanelProps): JSX.Element {
                 <SubscriptionItem
                   id={id}
                   dataType={props.dataType}
-                  tooltip="Click for more details."
                 />
               );
             })}
           </div>
         }
       >
-        <Tooltip
-          placement="top"
-          title={`Click to view list of subscribed ${props.title}`}
+        <Button
+          style={{
+            color: color.darken().css(),
+            backgroundColor: color.alpha(0.2).css(),
+            borderColor: color.css(),
+          }}
         >
-          <Button
-            style={{
-              color: color.darken().css(),
-              backgroundColor: color.alpha(0.2).css(),
-              borderColor: color.css(),
-            }}
-          >
-            {props.title}
-          </Button>
-        </Tooltip>
+          {props.title}
+        </Button>
       </Popover>
     </div>
   );
